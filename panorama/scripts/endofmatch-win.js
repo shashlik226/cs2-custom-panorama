@@ -1,0 +1,113 @@
+"use strict";
+/// <reference path="csgo.d.ts" />
+/// <reference path="common/formattext.ts" />
+/// <reference path="mock_adapter.ts" />
+/// <reference path="endofmatch.ts" />
+var EOM_Win;
+(function (EOM_Win) {
+    const _m_pauseBeforeEnd = 5.0;
+    const _m_cP = $.GetContextPanel();
+    let _m_oMatchEndData = undefined;
+    let _m_oScoreData = undefined;
+    const _m_nT = 2;
+    function _SetVictoryStatement() {
+        if (!_m_cP || !_m_cP.IsValid())
+            return;
+        if (!_m_oMatchEndData)
+            return;
+        if (!_m_oScoreData)
+            return;
+        const winningTeamNumber = _m_oMatchEndData.winning_team_number;
+        let result = "#eom-result-tie3";
+        let localPlayerTeamScore = _m_oScoreData.teamdata["TERRORIST"].score;
+        let otherTeamNumber = _m_oScoreData.teamdata["CT"].score;
+        _m_cP.RemoveClass('eom-win_won');
+        _m_cP.RemoveClass('eom-win_lost');
+        _m_cP.SetDialogVariable("teamname", "");
+        if (winningTeamNumber) {
+            const localPlayerTeamNumber = MockAdapter.GetPlayerTeamNumber(MockAdapter.GetLocalPlayerXuid());
+            const mode = EOM_Characters.GetModeForEndOfMatchPurposes();
+            const bForceShowWinningTeam = EOM_Characters.ShowWinningTeam(mode);
+            if (GameStateAPI.IsDemoOrHltv() || (localPlayerTeamNumber != 2 && localPlayerTeamNumber != 3) || bForceShowWinningTeam) {
+                localPlayerTeamScore = winningTeamNumber == _m_nT ? _m_oScoreData.teamdata["TERRORIST"].score : _m_oScoreData.teamdata["CT"].score;
+                otherTeamNumber = winningTeamNumber == _m_nT ? _m_oScoreData.teamdata["CT"].score : _m_oScoreData.teamdata["TERRORIST"].score;
+                result = "#eom-result-win3";
+                _m_cP.SetHasClass('eom-win_won', true);
+            }
+            else {
+                localPlayerTeamScore = localPlayerTeamNumber == _m_nT ? _m_oScoreData.teamdata["TERRORIST"].score : _m_oScoreData.teamdata["CT"].score;
+                otherTeamNumber = localPlayerTeamNumber == _m_nT ? _m_oScoreData.teamdata["CT"].score : _m_oScoreData.teamdata["TERRORIST"].score;
+                result = winningTeamNumber == localPlayerTeamNumber ? "#eom-result-win3" : "#eom-result-loss3";
+                _m_cP.SetHasClass('eom-win_won', winningTeamNumber == localPlayerTeamNumber);
+                _m_cP.SetHasClass('eom-win_lost', winningTeamNumber != localPlayerTeamNumber);
+            }
+        }
+        if (_m_oMatchEndData.hasOwnProperty('match_cancelled') && _m_oMatchEndData.match_cancelled) {
+            _m_cP.SetHasClass('eom-win_won', false);
+            _m_cP.SetHasClass('eom-win_lost', false);
+            result = '#SFUI_match_cancelled';
+        }
+        if (_m_oMatchEndData.hasOwnProperty('cancel_reason_code') && _m_oMatchEndData.cancel_reason_code) {
+            _ShowMatchCancelledEarlyWithReasonExplanation(_m_oMatchEndData.cancel_reason_code);
+        }
+        _m_cP.SetDialogVariable("win-result", $.Localize(result));
+        _m_cP.SetDialogVariableInt("score_local_player", localPlayerTeamScore);
+        _m_cP.SetDialogVariableInt("score_other", otherTeamNumber);
+        _AnimStart();
+    }
+    function _AnimStart() {
+        const elPanel = $.GetContextPanel().FindChildTraverse('WinTeam');
+        elPanel.TriggerClass('show');
+    }
+    function _ShowMatchCancelledEarlyWithReasonExplanation(cancel_reason_code) {
+        const elPanel = $.GetContextPanel().FindChildTraverse('EomCancelReason' + cancel_reason_code);
+        if (elPanel) {
+            elPanel.AddClass('show');
+        }
+    }
+    function _DisplayMe() {
+        _m_oMatchEndData = MockAdapter.GetMatchEndWinDataJSO();
+        _m_oScoreData = MockAdapter.GetScoreDataJSO();
+        if (!_m_oMatchEndData)
+            return false;
+        if (!_m_oScoreData ||
+            !_m_oScoreData["teamdata"] ||
+            !_m_oScoreData["teamdata"]["CT"] ||
+            !_m_oScoreData["teamdata"]["TERRORIST"])
+            return false;
+        if (_m_oMatchEndData.hasOwnProperty('winning_player'))
+            return false;
+        if (GameStateAPI.GetGameModeInternalName(false) == 'deathmatch')
+            return false;
+        _SetVictoryStatement();
+        return true;
+    }
+    function Start() {
+        if (MockAdapter.GetMockData() && !MockAdapter.GetMockData().includes('EOM_WIN')) {
+            _End();
+            return;
+        }
+        if (_DisplayMe()) {
+            EndOfMatch.SwitchToPanel('eom-win');
+            EndOfMatch.StartDisplayTimer(_m_pauseBeforeEnd);
+            $.Schedule(_m_pauseBeforeEnd, _End);
+        }
+        else {
+            _End();
+            return;
+        }
+    }
+    function _End() {
+        EndOfMatch.ShowNextPanel();
+    }
+    function Shutdown() {
+    }
+    {
+        EndOfMatch.RegisterPanelObject({
+            name: 'eom-win',
+            Start: Start,
+            Shutdown: Shutdown
+        });
+    }
+})(EOM_Win || (EOM_Win = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW5kb2ZtYXRjaC13aW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9jb250ZW50L2NzZ28vcGFub3JhbWEvc2NyaXB0cy9lbmRvZm1hdGNoLXdpbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsa0NBQWtDO0FBQ2xDLDZDQUE2QztBQUM3Qyx3Q0FBd0M7QUFDeEMsc0NBQXNDO0FBRXRDLElBQVUsT0FBTyxDQWlLaEI7QUFqS0QsV0FBVSxPQUFPO0lBR2hCLE1BQU0saUJBQWlCLEdBQUcsR0FBRyxDQUFDO0lBQzlCLE1BQU0sS0FBSyxHQUFHLENBQUMsQ0FBQyxlQUFlLEVBQUUsQ0FBQztJQUVsQyxJQUFJLGdCQUFnQixHQUFnQyxTQUFTLENBQUM7SUFDOUQsSUFBSSxhQUFhLEdBQTBCLFNBQVMsQ0FBQztJQUdyRCxNQUFNLEtBQUssR0FBRyxDQUFDLENBQUM7SUFFaEIsU0FBUyxvQkFBb0I7UUFFNUIsSUFBSyxDQUFDLEtBQUssSUFBSSxDQUFDLEtBQUssQ0FBQyxPQUFPLEVBQUU7WUFDOUIsT0FBTztRQUVSLElBQUssQ0FBQyxnQkFBZ0I7WUFDckIsT0FBTztRQUVSLElBQUssQ0FBQyxhQUFhO1lBQ2xCLE9BQU87UUFHUixNQUFNLGlCQUFpQixHQUFHLGdCQUFnQixDQUFDLG1CQUFtQixDQUFDO1FBRS9ELElBQUksTUFBTSxHQUFHLGtCQUFrQixDQUFDO1FBQ2hDLElBQUksb0JBQW9CLEdBQUcsYUFBYSxDQUFDLFFBQVEsQ0FBRSxXQUFXLENBQUcsQ0FBQyxLQUFLLENBQUM7UUFDeEUsSUFBSSxlQUFlLEdBQUcsYUFBYSxDQUFDLFFBQVEsQ0FBRSxJQUFJLENBQUcsQ0FBQyxLQUFLLENBQUM7UUFDNUQsS0FBSyxDQUFDLFdBQVcsQ0FBRSxhQUFhLENBQUUsQ0FBQztRQUNuQyxLQUFLLENBQUMsV0FBVyxDQUFFLGNBQWMsQ0FBRSxDQUFDO1FBQ3BDLEtBQUssQ0FBQyxpQkFBaUIsQ0FBRSxVQUFVLEVBQUUsRUFB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

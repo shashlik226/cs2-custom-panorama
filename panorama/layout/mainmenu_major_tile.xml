@@ -1,0 +1,35 @@
+<!-- xml reconstructed by Source 2 Viewer 14.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
+		<include src="s2r://panorama/styles/mainmenu_major_tile.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/common/licenseutil.vjs_c" />
+		<include src="s2r://panorama/scripts/generated/items_event_current_generated_store.vjs_c" />
+		<include src="s2r://panorama/scripts/mainmenu_major_tile.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="shop-ticket">
+			<Panel class="xpshop-active-pass" group="xpshop-nav">
+				<Image class="xpshop-active-pass__bg" scaling="stretch-to-fit-x-preserve-aspect" textureheight="-1" texturewidth="240" src="s2r://panorama/images/backgrounds/xpshop/pass_bg.vsvg" />
+				<Panel class="xpshop-active-pass__content" />
+				<Label id="id-xpshop-pass-activate-btn" class="xpshop__tracks_upsell-btn confirm-btn activate-pass-btn" text="{s:action-text}" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="mainmenu-major-tile">
+		<Label class="stratum-medium-condensed mainmenu-major-tile__title" text="{s:hub-title-bar-caption}" />
+		<Button id="id-btn-open-major-hub" class="mainmenu-major-tile__btn" hittest="true">
+			<Image id="id-img-open-major-hub" class="mainmenu-major-tile__image" />
+		</Button>
+		<Panel id="id-items-banner" class="mainmenu-major-tile__new-items">
+			<Panel class="full-height">
+				<ItemImage id="id-open-major-item-image-0" scaling="stretch-to-fit-preserve-aspect" class="" />
+				<ItemImage id="id-open-major-item-image-1" scaling="stretch-to-fit-preserve-aspect" class="" />
+				<ItemImage id="id-open-major-item-image-2" scaling="stretch-to-fit-preserve-aspect" class="" />
+			</Panel>
+			<Label class="stratum-medium-condensed" text="{s:items-text}" />
+		</Panel>
+	</Panel>
+</root>
