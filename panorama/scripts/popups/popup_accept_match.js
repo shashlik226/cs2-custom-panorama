@@ -22,7 +22,7 @@ var PopupAcceptMatch;
     let m_jsTimerUpdateHandle = false;
     function Init() {
         const elPlayerSlots = $.GetContextPanel().FindChildInLayoutFile('AcceptMatchSlots');
-        elPlayerSlots.RemoveAndDeleteChildren();
+        elPlayerSlots.RemoveAndDeleteChildren(); 
         const settings = $.GetContextPanel().GetAttributeString('map_and_isreconnect', '');
         m_gsLocation = $.GetContextPanel().GetAttributeString('location', '');
         m_gsPing = parseInt($.GetContextPanel().GetAttributeString('ping', '0'));
@@ -54,6 +54,10 @@ var PopupAcceptMatch;
         }
         _PopulatePlayerList();
         $.DispatchEvent('MuteStreamPanel');
+        
+        let glbObj = UiToolkitAPI.GetGlobalObject();
+        if(glbObj.autoAcceptEnabled)
+            $.Schedule(5, OnAcceptMatchPressed);
     }
     PopupAcceptMatch.Init = Init;
     function _PopulatePlayerList() {

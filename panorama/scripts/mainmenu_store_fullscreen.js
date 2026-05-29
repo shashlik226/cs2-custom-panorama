@@ -181,6 +181,10 @@ var MainMenuStore;
                 let btnString = key === 'tournament' ?
                     `#store_nav_${key}_${g_ActiveTournamentInfo.eventid}` :
                     `#store_nav_${key}`;
+
+                if(key == 'allitems')
+                    btnString = 'ВСЕ ПРЕДМЕТЫ';
+
                 $.CreatePanel('Label', elButton, '', {
                     text: btnString
                 });
@@ -240,9 +244,7 @@ var MainMenuStore;
                 elPanel = $.CreatePanel('JSDelayLoadList', elParent, panelIdString, {
                     class: 'store-dynamic-lister',
                     itemwidth: "178px",
-                    itemheight: "280px",
-                    spacersize: "4px",
-                    spacerperiod: "4px"
+                    itemheight: "280px"
                 });
                 UpdateDynamicLister(elPanel, typeKey);
             }

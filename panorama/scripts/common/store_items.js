@@ -64,7 +64,7 @@ var StoreItems;
                 m_oItemsByCategory.store.push({ id: FauxItemId });
             }
         }
-        for (let i = 0; i < 20000; i++) {
+        for (let i = 0; i < 30000; i++) {
 			var itemId = InventoryAPI.GetFauxItemIDFromDefAndPaintIndex( i, 0 );
 			var itemName = InventoryAPI.GetItemName(itemId);
 

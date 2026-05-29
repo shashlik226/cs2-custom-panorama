@@ -85,6 +85,9 @@
 								<Image class="mainmenu-top-navbar__radio-btn__icon" src="s2r://panorama/images/icons/ui/settings.vsvg" />
 								<Frame id="MainMenuSettingsAlert" class="hidden" src="s2r://panorama/layout/btn_alert.vxml_c" />
 							</RadioButton>
+							<Button id="MainMenuNavBarDevContextMenu" class="mainmenu-top-navbar__radio-iconbtn" group="NavBar" onactivate="MainMenu.ShowDevContextMenu();" >
+								<Image class="mainmenu-top-navbar__radio-btn__icon" src="s2r://panorama/images/icons/ui/zoo.vsvg" />
+							</Button>
 							<Button id="MainMenuNavBarQuit" class="mainmenu-top-navbar__radio-iconbtn mainmenu-top-navbar__radio-iconbtn--quit MainMenuModeOnly" onactivate="MainMenu.OnQuitButtonPressed(); $.DispatchEvent( &apos;CSGOPlaySoundEffect&apos;, &apos;UIPanorama.mainmenu_press_quit&apos;, &apos;MOUSE&apos; );" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;MainMenuNavBarQuit&apos;, &apos;#tooltip_navbar_quit&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
 								<Image class="mainmenu-top-navbar__radio-btn__icon" src="s2r://panorama/images/icons/ui/power.vsvg" />
 							</Button>

@@ -1614,6 +1614,13 @@ var MainMenu;
     function _MainInitBackgroundMovie() {
         _UpdateBackgroundMap();
     }
+    function _ShowDevContextMenu() {
+        let glbObj = UiToolkitAPI.GetGlobalObject();
+		let items = [];
+        items.push({ label: (glbObj.autoAcceptEnabled ? 'Disable AutoAccept' : 'Enable AutoAccept'), jsCallback: () => {glbObj.autoAcceptEnabled = !glbObj.autoAcceptEnabled} });
+    	UiToolkitAPI.ShowSimpleContextMenu( '', 'DevContextMenu', items );
+	}
+    MainMenu.ShowDevContextMenu = _ShowDevContextMenu;
     {
         $.LogChannel("p.mainmenu", "LV_DEFAULT", "#aaff80");
         $.RegisterForUnhandledEvent('HideContentPanel', _OnHideContentPanel);
