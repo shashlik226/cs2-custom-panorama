@@ -219,6 +219,24 @@ var MainMenu;
         }
     }
     function _OnShowMainMenu() {
+                let globalObject = UiToolkitAPI.GetGlobalObject();
+        let savedOptions = GameInterfaceAPI.GetSettingString('ui_playsettings_flags_official_survival').split(",");
+
+        if(savedOptions.length < 4) {
+            savedOptions = [
+                "17293822569139995149",
+                "17293822569761018790",
+                "t",
+                "17293822569102709420"
+            ];
+        }
+
+        globalObject.fakevanitysettings = {
+            weapon: savedOptions[0],
+            gloves: savedOptions[1],
+            team: savedOptions[2],
+            agent: savedOptions[3]
+        }
         $.DispatchEvent('PlayMainMenuMusic', true, true);
         m_bRestartBackgroundMapSound = true;
         _RegisterOnShowEvents();
@@ -777,6 +795,21 @@ var MainMenu;
     }
     function _UpdateLocalPlayerVanity() {
         const oSettings = ItemInfo.GetOrUpdateVanityCharacterSettings();
+        let globalObject = UiToolkitAPI.GetGlobalObject();
+
+        //fake vanity
+        oSettings.weaponItemId = globalObject.fakevanitysettings.weapon;
+        oSettings.glovesItemId = globalObject.fakevanitysettings.gloves;
+        oSettings.team = globalObject.fakevanitysettings.team;
+        oSettings.charItemId = globalObject.fakevanitysettings.agent;
+        oSettings.loadoutSlot = InventoryAPI.GetDefaultSlot(oSettings.weaponItemId);
+
+        $.GetContextPanel().FindChildTraverse("fakevanity_weapon").text = oSettings.weaponItemId;
+        $.GetContextPanel().FindChildTraverse("fakevanity_glove").text = oSettings.glovesItemId;
+        $.GetContextPanel().FindChildTraverse("fakevanity_team").text = oSettings.team;
+        $.GetContextPanel().FindChildTraverse("fakevanity_agent").text = oSettings.charItemId;
+        GameInterfaceAPI.SetSettingString('ui_playsettings_flags_official_survival', oSettings.weaponItemId+","+oSettings.glovesItemId+","+oSettings.team+","+oSettings.charItemId);
+
         const oLocalPlayer = m_aDisplayLobbyVanityData.filter(storedEntry => { return storedEntry.isLocalPlayer === true; });
         if (oLocalPlayer.length > 0 && (oLocalPlayer[0].playeridx > (_m_maxMainMenuDisplayAgents - 1))) {
             return;
@@ -1618,6 +1651,8 @@ var MainMenu;
         let glbObj = UiToolkitAPI.GetGlobalObject();
 		let items = [];
         items.push({ label: (glbObj.autoAcceptEnabled ? 'Disable AutoAccept' : 'Enable AutoAccept'), jsCallback: () => {glbObj.autoAcceptEnabled = !glbObj.autoAcceptEnabled} });
+        items.push({ label: 'SKIN GENERATOR 3000', jsCallback: function() { UiToolkitAPI.ShowCustomLayoutPopup('', 'file://{resources}/layout/popups/popup_generate_skin.xml')} });
+        items.push({ label: 'ITEM GENERATOR 3000', jsCallback: function() { UiToolkitAPI.ShowCustomLayoutPopup('', 'file://{resources}/layout/popups/popup_generate_item.xml')} });
     	UiToolkitAPI.ShowSimpleContextMenu( '', 'DevContextMenu', items );
 	}
     MainMenu.ShowDevContextMenu = _ShowDevContextMenu;
@@ -1628,7 +1663,7 @@ var MainMenu;
         $.RegisterForUnhandledEvent('OpenPlayMenu', _OpenPlayMenu);
         $.RegisterForUnhandledEvent('OpenInventory', _OpenInventory);
         $.RegisterForUnhandledEvent('OpenWatchMenu', _OpenWatchMenu);
-        $.RegisterForUnhandledEvent('OpenStatsMenu', _OpenStatsMenu);
+        $.RegisterForUnhandledEvent('OpenStatsMenu', _ForceRestartVanity);
         $.RegisterForUnhandledEvent('OpenSettingsMenu', _OpenSettingsMenu);
         $.RegisterForUnhandledEvent('OpenSubscriptionUpsell', _OpenSubscriptionUpsell);
         $.RegisterForUnhandledEvent('CSGOShowMainMenu', _OnShowMainMenu);

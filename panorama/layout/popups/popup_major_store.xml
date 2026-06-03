@@ -75,7 +75,7 @@
 				<Panel class="major-store__item-tile__image-container" hittest="false">
 					<ItemImage id="id-store-item-image" scaling="stretch-to-fit-preserve-aspect" hittest="false" />
 					<MapItemPreviewPanel id="id-store-item-model" class="major-store__item-tile__model" map="ui/xpshop_item" initial_entity="item" mouse_rotate="false" require-composition-layer="true" transparent-background="true" />
-					<Button id="id-inspect-sticker" class="major-store__item-tile__btn" acceptsfocus="false" />
+					<Button id="id-inspect-sticker" class="major-store__item-tile__btn" />
 					<Panel class="major-store__item-tile__cart-btns">
 						<Button id="id-store-item-remove-from-cart-btn" class="major-store__cart-btn">
 							<Label text="-" />
@@ -90,13 +90,19 @@
 					<TooltipPanel id="id-store-item-hot-trend" tooltip="#major_store_hot_trend" class="major-store__item-trend-hot">
 						<Image textureheight="32" texturewidth="-1" src="s2r://panorama/images/icons/ui/hot_trend.vsvg" hittest="false" />
 					</TooltipPanel>
+					<TooltipPanel tooltip="#major_store_bookmark_tooltip" class="major-store__item-tile__bookmark-container">
+						<ToggleButton id="id-store-item-bookmark" class="major-store__item-tile__bookmark">
+							<Image textureheight="24px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+							<Image textureheight="24px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
+						</ToggleButton>
+					</TooltipPanel>
 				</Panel>
 			</Panel>
 		</snippet>
 		<snippet name="banner-popular-entry">
 			<Panel class="popup-major-store__banner__popular-entry" scaling="stretch-to-fit-preserve-aspect">
-				<Label id="id-popularity-number" class="stratum-bold-condensed popup-major-store__banner__popular__label" text="{d:position}" />
-				<ItemImage id="id-major-sticker" scaling="stretch-to-fit-preserve-aspect" />
+				<Label id="id-popularity-number" class="stratum-bold-condensed popup-major-store__banner__popular__label" text="{d:position}" hittest="false" />
+				<ItemImage id="id-major-sticker" scaling="stretch-to-fit-preserve-aspect" hittest="false" />
 				<Frame id="id-popular-tile" class="popular-tile" snippet="store-tile" />
 			</Panel>
 		</snippet>
@@ -117,11 +123,19 @@
 		</snippet>
 		<snippet name="search-result">
 			<Panel class="major-store__results-tile">
-				<ItemImage id="id-result-icon" textureheight="36" texturewidth="-1" scaling="stretch-to-fit-preserve-aspect" />
-				<Panel class="top-bottom-flow top-margin-8">
-					<Label id="id-result-name" class="stratum-regular fontWeight-Light fontSize-sm" html="true" text="{s:name}" />
-					<Label class="stratum-bold fontcolor-white" html="true" text="#major_store_price" />
-				</Panel>
+				<Button id="id-result-inspect" class="left-right-flow vertical-center">
+					<ItemImage id="id-result-icon" textureheight="36" texturewidth="-1" scaling="stretch-to-fit-preserve-aspect" />
+					<Panel class="top-bottom-flow top-margin-8">
+						<Label id="id-result-name" class="stratum-regular fontWeight-Light fontSize-sm" html="true" text="{s:name}" />
+						<Label class="stratum-bold fontcolor-white" html="true" text="#major_store_price" />
+					</Panel>
+				</Button>
+				<TooltipPanel tooltip="#major_store_bookmark_tooltip" class="major-store__item-tile__bookmark-container">
+					<ToggleButton id="id-store-item-bookmark" class="major-store__item-tile__bookmark">
+						<Image textureheight="22px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+						<Image textureheight="22px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
+					</ToggleButton>
+				</TooltipPanel>
 			</Panel>
 		</snippet>
 	</snippets>
@@ -135,7 +149,7 @@
 					</Panel>
 					<Panel class="popup-major-store__top-bar__search">
 						<Image id="id-team-logo" />
-						<TextEntry id="id-major-store-search-box" placeholder="#major_store_search_placeholder" onfocus="" />
+						<TextEntry id="id-major-store-search-box" placeholder="#major_store_search_placeholder" />
 					</Panel>
 					<Panel class="left-right-flow horizontal-align-right vertical-center left-padding">
 						<Panel id="id-major-store-refresh" class="popup-major-store__top-bar__refresh">
@@ -167,18 +181,32 @@
 					</Panel>
 				</Panel>
 				<Panel id="id-major-store-banners" class="popup-major-store__banners-container hidden" hittest="false">
+					<Panel id="id-major-store-bookmark-hint" class="popup-major-store__banner__bookmarked-hint">
+						<Image textureheight="24px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+						<Label class="stratum-medium" text="#major_store_banner_hint" />
+					</Panel>
+					<Panel id="id-major-store-banners-bookmarks" class="popup-major-store__banner carousel" hittest="false">
+						<Panel class="full-width bottom-margin-16">
+							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_bookmark" />
+							<Button id="id-major-store-see-all-bookmarked-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
+								<Label text="#store_nav_more" class="stratum-medium" />
+							</Button>
+						</Panel>
+						<Carousel id="id-major-store-banner-bookmarked" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
+					</Panel>
+					<CarouselNav carouselid="id-major-store-banner-bookmarked" class="popup-major-store__popular__nav" hittest="true" />
 					<Panel class="popup-major-store__banner carousel" hittest="false">
-						<Panel class="left-right-flow bottom-margin-16">
+						<Panel class="full-width bottom-margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_popular" />
 							<Button id="id-major-store-see-all-popular-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
 								<Label text="#store_nav_more" class="stratum-medium" />
 							</Button>
 						</Panel>
-						<Carousel id="id-major-store-banner-popular" class="popup-major-store__banner__popular" hittest="false" />
+						<Carousel id="id-major-store-banner-popular" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
 					</Panel>
-					<CarouselNav carouselid="id-major-store-banner-popular" class="popup-major-store__popular__nav" hittest="true" onactivate="" />
+					<CarouselNav carouselid="id-major-store-banner-popular" class="popup-major-store__popular__nav" hittest="true" />
 					<Panel class="popup-major-store__banner" hittest="true">
-						<Panel class="left-right-flow bottom-margin-16">
+						<Panel class="full-width bottom-margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_find" />
 							<Button id="id-major-store-see-all-teams-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
 								<Label text="#store_nav_more" class="stratum-medium" />

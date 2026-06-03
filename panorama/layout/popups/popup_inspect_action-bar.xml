@@ -66,6 +66,10 @@
 			<Button id="InspectActionsButton" class="IconButton">
 				<Image class="" src="s2r://panorama/images/icons/ui/moreoptions.vsvg" />
 			</Button>
+			<ToggleButton id="id-sticker-bookmark" class="IconButton Bookmark">
+				<Image textureheight="22px" class="bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+				<Image textureheight="22px" class="bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
+			</ToggleButton>
 			<Button id="InspectOpenCheckout" class="IconButton hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;InspectOpenCheckout&apos;, &apos;#tooltip_inspect_shopping_cart&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
 				<Image class="" src="s2r://panorama/images/icons/ui/shoppingcart.vsvg" />
 				<Label class="stratum-bold-condensed" text="{d:total-items}" />

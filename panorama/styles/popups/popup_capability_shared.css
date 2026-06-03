@@ -246,6 +246,31 @@
 	opacity: .5;
 }
 
+.popup-capability__button-row ToggleButton.IconButton.Bookmark .TickBox
+{
+	visibility: collapse;
+}
+
+.popup-capability__button-row ToggleButton.IconButton.Bookmark .bookmark-filled
+{
+	opacity: 0;
+	wash-color: white;
+	transition-property: opacity;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+.popup-capability__button-row ToggleButton.IconButton.Bookmark:selected
+{
+	opacity: 1;
+	background-color: none;
+}
+
+.popup-capability__button-row ToggleButton.IconButton.Bookmark:selected .bookmark-filled
+{
+	opacity: 1;
+}
+
 #InspectOpenCheckout
 {
 	flow-children: right;

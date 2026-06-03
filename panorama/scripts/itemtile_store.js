@@ -157,7 +157,7 @@ var ItemTileStore;
             let isNotReleased = oItemData.isNotReleased ? 'true' : 'false';
             let warning = oItemData.linkedWarning ? oItemData.linkedWarning : '';
             elPanel.SetPanelEvent('onactivate', OpenContextMenu.bind(undefined, oItemData.id, oItemData.linkedid, isNotReleased, warning));
-            elPanel.SetPanelEvent('oncontextmenu', OpenContextMenu.bind(undefined, oItemData.id, oItemData.linkedid, isNotReleased, warning));
+            // elPanel.SetPanelEvent('oncontextmenu', OpenContextMenu.bind(undefined, oItemData.id, oItemData.linkedid, isNotReleased, warning));
         }
         else if (ItemInfo.ItemHasCapability(oItemData.id, 'decodable')) {
             let displayItemId = '';
@@ -179,6 +179,10 @@ var ItemTileStore;
         }
         else
             elPanel.SetPanelEvent('onactivate', ShowInspectPopup.bind(undefined, oItemData.id));
+        
+        elPanel.SetPanelEvent('oncontextmenu', () => {
+            SteamOverlayAPI.CopyTextToClipboard( oItemData.id );
+        });
     }
     function OpenOverlayToMarket(itemId) {
         let m_AppID = SteamOverlayAPI.GetAppID();

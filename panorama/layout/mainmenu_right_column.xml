@@ -5,8 +5,30 @@
 		<include src="s2r://panorama/styles/mainmenu.vcss_c" />
 		<include src="s2r://panorama/styles/mainmenu_right_column.vcss_c" />
 	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/mainmenu_right_column.vjs_c" />
+	</scripts>
 	<Panel class="mainmenu-right-column">
 		<Frame id="id-mainmenu-stream-panel" src="s2r://panorama/layout/mainmenu_stream.vxml_c" />
+		<Panel id="fakevanityentrys" hittest="true">
+			<Label text="Weapon"/>
+			<TextEntry id="fakevanity_weapon" style="margin-bottom: 5px;" placeholder="WeaponID" />
+			<Label text="GloveID"/>
+			<TextEntry id="fakevanity_glove" style="margin-bottom: 5px;" placeholder="GloveID" />
+			<Label text="Team"/>
+			<TextEntry id="fakevanity_team" style="margin-bottom: 5px;" placeholder="Team" />
+			<Label text="Agent"/>
+			<TextEntry id="fakevanity_agent" style="margin-bottom: 5px;" placeholder="Agent" />
+		</Panel>
+		<Panel class="VanityControls" hittest="true">
+			<Button id="reloadvanitybutton"
+					onactivate="MainMenuRightColumn.UpdateFakeVanity();" 
+					oncontextmenu="MainMenuRightColumn.ShowHideFakeVanityFields();"
+					onmouseover="UiToolkitAPI.ShowTextTooltip( 'reloadvanitybutton', 'ЛКМ - Обновить Vanity<br>ПКМ - Открыть настройки' );" 
+					onmouseout="UiToolkitAPI.HideTextTooltip();">
+				<Image textureheight="32" texturewidth="-1" src="s2r://panorama/images/icons/ui/refresh.vsvg" />
+			</Button>
+		</Panel>
 		<Panel id="VanityControls" hittest="true">
 			<Button id="VanityPanelGoToCharacterLoadout" onactivate="$.DispatchEvent( &apos;MainMenu_OnGoToCharacterLoadoutPressed&apos; )">
 				<Image textureheight="32" texturewidth="-1" src="s2r://panorama/images/icons/ui/settings_sliders.vsvg" />

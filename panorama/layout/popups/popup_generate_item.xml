@@ -1,0 +1,28 @@
+<!-- xml reconstructed by Source 2 Viewer 14.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/gamestyles.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popups_shared.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_generic_text_entry.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_generate_skin.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_generator.vjs_c" />
+	</scripts>
+	<Panel class="PopupPanel Hidden" popupbackground="dim" defaultfocus="TextEntry" onload="PopupGenerator.FillItems()">
+		<Label class="PopupTitle" text="ITEM GENERATOR 3000" />
+		<Panel class="Content">
+			<Panel id="Options" class="Options">
+				<DropDown class="PopupButton White" id="itemIdx" menuclass="DropDownMenu Width-250" oninputsubmit="PopupGenerator.UpdateWeaponItemPreview()" />
+			</Panel>
+			<MapItemPreviewPanel id="ItemPreview" camera="camera_weapon_0" require-composition-layer="true" transparent-background="true" disable-depth-of-field="false" player="false" map="ui/xpshop_item" initial_entity="item" panzoom_enabled="true" mouse_rotate="true" rotation_limit_x="360" rotation_limit_y="360" pin-fov="vertical" hittest="true" />
+			<ItemImage id="InspectItemImage" large="true" class="hidden" />
+		</Panel>
+		<Panel class="PopupButtonRow">
+			<TextButton class="PopupButton" text="Inspect" onactivate="PopupGenerator.InspectItem(false)" />
+			<TextButton class="PopupButton" text="Copy ItemID" onactivate="PopupGenerator.CopyActiveItemID(false)" />
+			<TextButton class="PopupButton" text="#UI_Cancel" onactivate="$.DispatchEvent( &apos;UIPopupButtonClicked&apos;, &apos;&apos; );" />
+		</Panel>
+	</Panel>
+</root>

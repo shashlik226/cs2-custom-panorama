@@ -35,7 +35,6 @@
 		</snippet>
 	</snippets>
 	<Panel class="player-card" useglobalcontext="false">
-		<HTML id="testtest" class="hidden" acceptsinput="false" acceptsfocus="false" focusonhover="false" mousetracking="false" url="about:blank" hittest="false" />
 		<CCSGOMiniProfileBackground id="AnimBackground" class="miniprofilebkg" />
 		<Panel id="JsPlayerCardSections" class="full-width">
 			<Panel id="JsPlayerCardSections" class="player-card__sections">

@@ -57,7 +57,7 @@
 						<Panel class="major-hub-store__banner__text">
 							<Label class="major-hub-store__banner__title stratum-medium-condensed" text="{s:store-title}" />
 							<Label class="major-hub-store__banner__desc stratum-regular" text="#major_hub_store_desc" />
-							<TextButton id="id-major-open-store" class="major-hub-rounded-btn top-margin-8" text="Visit the Shop" />
+							<TextButton id="id-major-open-store" class="major-hub-rounded-btn top-margin-8" text="#major_hub_visit_shop" />
 						</Panel>
 					</Panel>
 					<Panel class="major-hub-store__banner__souvenir">

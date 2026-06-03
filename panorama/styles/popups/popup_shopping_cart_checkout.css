@@ -190,7 +190,7 @@
 .cart-checkout__container .cart-checkout__summary .PopupButtonTimer Label
 {
 	font-size: 20px;
-	height: 20px;
+	height: 22px;
 	color: white;
 	margin: 10px 2px;
 }
@@ -403,6 +403,19 @@
 	flow-children: down;
 	vertical-align: center;
 	horizontal-align: right;
+}
+
+.cart-item .cart-item__right-block .cart-item__real-world-price
+{
+	font-size: 18px;
+	text-align: right;
+	horizontal-align: right;
+	margin-bottom: 2px;
+}
+
+.cart-item .cart-item__right-block .cart-item__real-world-price.hidden
+{
+	opacity: 0;
 }
 
 .cart-item .cart-item__right-block .cart-item__price
