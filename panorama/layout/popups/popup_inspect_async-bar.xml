@@ -5,6 +5,7 @@
 		<include src="s2r://panorama/styles/popups/popups_shared.vcss_c" />
 		<include src="s2r://panorama/styles/mainmenu.vcss_c" />
 		<include src="s2r://panorama/styles/popups/popup_inventory_inspect.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_can_apply_pick_slot.vcss_c" />
 		<include src="s2r://panorama/styles/popups/popup_capability_shared.vcss_c" />
 	</styles>
 	<snippets>
@@ -22,12 +23,16 @@
 			<Label id="AsyncItemWorkDesc" html="true" hittest="false" class="popup-capability__purchase__text stratum-font" text="" />
 			<Panel id="NameableSpinner" class="Spinner vertical-center horizontal-center hidden" />
 			<Panel class="spacer" />
-			<Button id="ChangeSouvenirItem" class="IconButton hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;ChangeSouvenirItem&apos;, &apos;#tooltip_change_souvenir_item&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
-				<Image class="" textureheight="36" texturewidth="36" src="s2r://panorama/images/icons/ui/trade.vsvg" />
-			</Button>
 			<TextButton id="AsyncItemWorkAcceptNegativeHold" class="PopupButtonTimer Negative AsyncItemWorkAcceptNegativeHidden" html="true" text="{s:action-label}">
 				<Panel id="id-response-btn-timer" class="user-response-btn__timer" />
 			</TextButton>
+			<Panel id="id-souvenir-discount" class="popup-capability__souvenir-discount hidden">
+				<Label id="id-souvenir-discount-percent" class="popup-capability__souvenir-discount__percent stratum-medium-condensed" text="#popup_souviner_discount" />
+				<Panel class="top-bottom-flow">
+					<Label class="popup-capability__souvenir-discount__original stratum-regular" html="true" text="{d:original-price} &lt;img src=&apos;file://{images}/icons/ui/major_coin.svg&apos; class=&apos;inline-coin-icon&apos;/&gt;" />
+					<Label class="popup-capability__souvenir-discount__cost cart-item__price stratum-regular" html="true" text="{d:price} &lt;img src=&apos;file://{images}/icons/ui/major_coin.svg&apos; class=&apos;inline-coin-icon&apos;/&gt;" />
+				</Panel>
+			</Panel>
 			<TextButton id="AsyncItemWorkAcceptConfirmHold" class="PopupButtonTimer Positive AsyncItemWorkAcceptNegativeHidden" html="true" text="{s:action-label}">
 				<Panel id="id-response-btn-timer" class="user-response-btn__timer" />
 			</TextButton>
@@ -36,9 +41,8 @@
 			<TextButton id="AsyncItemWorkCancelBtn" html="true" class="PopupButton" text="#GameUI_Close" />
 		</Panel>
 		<Panel class="left-right-flow horizontal-align-left full-height" hittest="false">
-			<DropDown class="PopupButton vertical-center horizontal-align-left" id="AsyncOfferLimitDropdown" menuclass="DropDownMenu hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;AsyncOfferLimitDropdown&apos;, &apos;#terminal_offer_limit_tooltip&apos; )" onmouseout="UiToolkitAPI.HideTextTooltip();" style="tooltip-position: right;" />
-			<Image id="MakeSouvenirPlayerSelectIcon" class="makesouvenirplayerselecticon hidden" textureheight="36" texturewidth="-1" src="s2r://panorama/images/icons/ui/filter_signature.vsvg" />
-			<DropDown class="PopupButton vertical-center horizontal-align-left" id="MakeSouvenirPlayerSelect" menuclass="DropDownMenu hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;MakeSouvenirPlayerSelect&apos;, &apos;#popup_craft_souvenir_player_tooltip&apos; )" onmouseout="UiToolkitAPI.HideTextTooltip();" style="tooltip-position: right;" />
+			<DropDown class="PopupButton vertical-center horizontal-align-left hidden" id="AsyncOfferLimitDropdown" menuclass="DropDownMenu hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;AsyncOfferLimitDropdown&apos;, &apos;#terminal_offer_limit_tooltip&apos; )" onmouseout="UiToolkitAPI.HideTextTooltip();" style="tooltip-position: right;" />
+			<DropDown class="PopupButton vertical-center horizontal-align-left hidden" id="MakeSouvenirPlayerSelect" menuclass="DropDownMenu hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;MakeSouvenirPlayerSelect&apos;, &apos;#popup_craft_souvenir_player_tooltip&apos; )" onmouseout="UiToolkitAPI.HideTextTooltip();" style="tooltip-position: right;" />
 			<Panel class="left-right-flow vertical-center hidden">
 				<RadioButton id="InspectWeaponBtn" group="popup-inspect-view" class="IconButton" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;InspectWeaponBtn&apos;, &apos;#tooltip_inspect_weapon_model&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
 					<Image class="" textureheight="36" texturewidth="36" src="s2r://panorama/images/icons/equipment/p250.vsvg" />
@@ -47,6 +51,9 @@
 					<Image class="" textureheight="36" texturewidth="36" src="s2r://panorama/images/icons/ui/first_person.vsvg" />
 				</RadioButton>
 			</Panel>
+			<Button id="ChangeSouvenirItem" class="IconButton hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;ChangeSouvenirItem&apos;, &apos;#tooltip_change_souvenir_item&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
+				<Image class="" textureheight="36" texturewidth="36" src="s2r://panorama/images/icons/ui/trade.vsvg" />
+			</Button>
 			<ToggleButton id="InspectItemModelZoom" class="PopupButton Zoom hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;InspectItemModelZoom&apos;, &apos;#tooltip_character_zoom&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();" />
 			<Button id="ChangeScenery" class="IconButton hidden" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;ChangeScenery&apos;, &apos;#tooltip_inspect_scenery&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
 				<Image class="" textureheight="36" texturewidth="36" src="s2r://panorama/images/icons/ui/picture.vsvg" />

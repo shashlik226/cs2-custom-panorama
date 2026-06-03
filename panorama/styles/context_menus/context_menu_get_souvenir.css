@@ -257,19 +257,22 @@
 {
 	horizontal-align: center;
 	margin-top: 4px;
-	background-color: rgba(255, 255, 255, 0.02);
+	background-color: positiveColor;
+	border-radius: 20px;
 }
 
 .get-souvenir-preview-btn Label
 {
-	font-size: 12px;
-	padding: 2px 4px;
+	font-size: 14px;
+	padding: 5px 16px;
 	text-align: center;
+	color: white;
+	font-family: Stratum2 medium, "Arial Unicode MS";
 }
 
 .get-souvenir-preview-btn:hover
 {
-	background-color: rgba(255, 255, 255, 0.062);
+	brightness: 1.2;
 }
 
 .get-souvenir-dropdown

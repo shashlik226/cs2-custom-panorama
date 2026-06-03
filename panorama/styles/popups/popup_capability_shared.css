@@ -150,14 +150,15 @@
 	wash-color: positiveColor;
 }
 
-.makesouvenirplayerselecticon
-{
-	transform: translateY(7px);
-}
-
 .DropDownChild .craft_souvenir_dropdown_select_player_entry_cost .inline-coin-icon
 {
 	wash-color: baseText;
+}
+
+#MakeSouvenirPlayerSelect
+{
+	border-right: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 0px;
 }
 
 #MakeSouvenirPlayerSelect .DropDownChild .craft_souvenir_dropdown_select_player_entry_cost,#MakeSouvenirPlayerSelect .DropDownChild .craft_souvenir_dropdown_select_player_entry_logo
@@ -373,6 +374,51 @@
 	height: 64px;
 }
 
+.popup-capability__souvenir-discount
+{
+	height: 48px;
+	background-color: rgba(0, 0, 0, 0.75);
+	vertical-align: center;
+	transform: translateX( 8px );
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	flow-children: right;
+	padding: 4px 18px 4px 0px;
+}
+
+.popup-capability__souvenir-discount .popup-capability__souvenir-discount__percent
+{
+	font-size: 24px;
+	color: positiveColor;
+	margin: 0px 8px 0px 16px;
+}
+
+.popup-capability__souvenir-discount .popup-capability__souvenir-discount__cost
+{
+	margin: 0px 4px;
+	font-size: 18px;
+	horizontal-align: center;
+}
+
+.popup-capability__souvenir-discount .popup-capability__souvenir-discount__original
+{
+	font-size: 14px;
+	text-decoration: line-through;
+	color: rgb(184, 184, 184);
+	horizontal-align: right;
+	font-weight: light;
+	horizontal-align: center;
+}
+
+.popup-capability__souvenir-discount .popup-capability__souvenir-discount__original .inline-coin-icon
+{
+	height: 13px;
+	width: 13px;
+	vertical-align: top;
+	transform: translateY(-2px);
+	wash-color:rgb(184, 184, 184);
+}
+
 .popup-capability__purchase .PopupButton Label
 {
 	text-transform: none;
@@ -385,7 +431,7 @@
 	transition-timing-function: ease-in-out;
 }
 
-.popup-capability__button-row .PopupButton.hidden,.popup-capability__button-row .PopupButtonTimer.hidden,.popup-capability__button-row .PopupButton.move-down,.popup-capability__button-row .PopupButtonTimer.move-down,.popup-capability__purchase.hidden,.popup-capability__button-row.hidden
+.popup-capability__button-row .PopupButton.hidden,.popup-capability__button-row .PopupButtonTimer.hidden,.popup-capability__button-row .PopupButton.move-down,.popup-capability__button-row .PopupButtonTimer.move-down,.popup-capability__purchase.hidden,.popup-capability__button-row.hidden,.popup-capability__souvenir-discount.hidden
 {
 	opacity: 0;
 	transform: translateY( 80% );

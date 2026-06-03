@@ -119,16 +119,6 @@
 	transform: scale3d( 1, 1, 1);
 }
 
-.popup-can-apply_remove_btn .inline-coin-icon
-{
-	height: 14px;
-	width: 14px;
-	vertical-align: top;
-	transform: translateY(-3px);
-	color: black;
-	wash-color: black;
-}
-
 .popup-can-apply_remove_btn:hover:not(:disabled)
 {
 	transform: scale3d( 1.05, 1.05, 1);
@@ -171,27 +161,6 @@
 	text-align: center;
 }
 
-.popup-can-apply_remove_btn .popup-can-apply_remove__label.cart-item__price
-{
-	font-size: 18px;
-	font-weight: bold;
-	margin-bottom: 4px;
-	padding: 0px 6px;
-	border-radius: 14px;
-	color: black;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #efefef ), to( rgb( 212, 211, 211 )));
-}
-
-.popup-can-apply_remove_btn .popup-can-apply_remove__label.cart-item__price.popup-can-apply_remove__label__coupon
-{
-	z-index: 5;
-	transform: rotateZ( -45deg ) translateX( 15px ) translateY( 90px );
-	padding-left: 5px;
-	padding-right: 20px;
-	font-size: 20px;
-	background-color: #00000000;
-}
-
 .popup-can-apply_remove_btn .popup-can-apply_remove__selected
 {
 	vertical-align: center;
@@ -219,6 +188,41 @@
 .popup-can-apply_remove_btn .RadioBox
 {
 	visibility: collapse;
+}
+
+.cart-item__price
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 4px;
+	padding: 0px 6px;
+	border-radius: 14px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #efefef ), to( rgb( 212, 211, 211 )));
+}
+
+.cart-item__price .inline-coin-icon
+{
+	height: 14px;
+	width: 14px;
+	vertical-align: top;
+	transform: translateY(-3px);
+	color: black;
+	wash-color: black;
+}
+
+.popup-can-apply_remove_btn .cart-item__price,.tooltip-souvenir-receipt .cart-item__price,.cart-item__price.popup-capability__souvenir-discount__cost
+{
+	color: black;
+}
+
+.cart-item__price.popup-can-apply_remove__label__coupon
+{
+	z-index: 5;
+	transform: rotateZ( -45deg ) translateX( 15px ) translateY( 90px );
+	padding-left: 5px;
+	padding-right: 20px;
+	font-size: 20px;
+	background-color: #00000000;
 }
 
 .popup-capability__apply-sticker-hints,.popup-capability__apply-keychain-hints

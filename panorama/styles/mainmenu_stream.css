@@ -300,6 +300,12 @@
 	width: fit-children;
 }
 
+.news-panel-streamfeed__navbar__btns .IconButton Image.LogoDouyuTV
+{
+	height: 24px;
+	width: height-percentage( 110% );
+}
+
 .news-panel-streamfeed__navbar__btns .IconButton Image.WideLogoKickTV
 {
 	margin: 0px 4px;

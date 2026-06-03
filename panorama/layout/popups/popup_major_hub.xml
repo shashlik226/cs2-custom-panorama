@@ -108,7 +108,7 @@
 						<ItemImage id="id-pass-upsell-image-coin" class="major-hub-pass-upsell__image-coin" />
 					</Panel>
 					<TextButton id="id-pass-upsell-btn" class="major-hub-rounded-btn" text="#op_pass_upsell" />
-					<Label class="stratum-regular-condensed major-hub-pass-upsell__text" text="#major_hub_pass_desc" />
+					<Label class="stratum-regular-condensed major-hub-pass-upsell__text" text="#major_hub_pass_desc_2" />
 				</Panel>
 				<Panel id="id-major-challenges" class="major-hub-challenges-container" />
 			</Panel>

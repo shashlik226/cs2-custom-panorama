@@ -35,7 +35,7 @@
 							</Panel>
 						</Panel>
 						<Panel id="NavBarWatchExternalExtraButtons" class="news-panel-streamfeed__navbar__btns">
-							<Button id="NavBarWatchExternalK" class="IconButton ExternalStreamButton" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XK&apos; );">
+							<Button id="NavBarWatchExternalK" class="IconButton ExternalStreamButton visible-if-not-perfectworld" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XK&apos; );">
 								<Image class="WideLogoKickTV" src="s2r://panorama/images/browser/streamkicktv.vsvg" texturewidth="-1" textureheight="16" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="right" />
 							</Button>
 							<Button id="NavBarWatchExternalG" class="IconButton ExternalStreamButton" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XG&apos; );">
@@ -55,6 +55,9 @@
 							</Button>
 							<Button id="NavBarWatchExternalB" class="IconButton ExternalStreamButton TextFullbright visible-if-perfectworld" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XB&apos; );">
 								<Label html="true" text="#CSGO_Watch_External_Bilibili" />
+							</Button>
+							<Button id="NavBarWatchExternalD" class="IconButton ExternalStreamButton visible-if-perfectworld" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XD&apos; );">
+								<Image class="LogoDouyuTV" src="s2r://panorama/images/browser/douyu.vsvg" texturewidth="-1" textureheight="24" />
 							</Button>
 							<Button id="NavBarWatchExternalY" class="IconButton ExternalStreamButton TextFullbright visible-if-not-perfectworld" onactivate="EmbeddedStreamAPI.OpenStreamInExternalBrowser( &apos;XY&apos; );">
 								<Label html="true" text="#CSGO_Watch_External_YouTube" />
