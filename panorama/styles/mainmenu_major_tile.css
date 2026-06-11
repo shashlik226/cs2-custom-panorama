@@ -59,17 +59,38 @@
 	transition-timing-function: ease-in-out;
 }
 
-.mainmenu-major-tile .mainmenu-major-tile__title
-{
-	color: white;
-	margin: 12px;
-	vertical-align: top;
-}
-
 .mainmenu-major-tile .mainmenu-major-tile__btn
 {
+	flow-children: down;
+	margin-top: 8px;
 	width: 100%;
 	height: 100%;
+}
+
+.mainmenu-major-tile .mainmenu-major-tile__btn .mainmenu-major-tile__promo
+{
+	width: 175px;
+	horizontal-align: center;
+	img-shadow: 0px 2px 12px 8.0 #0000008c;
+}
+
+.mainmenu-major-tile .mainmenu-major-tile__btn .mainmenu-major-tile__promo_desc
+{
+	margin-top: 4px;
+	border-radius: 20px;
+	horizontal-align: center;
+	text-align: center;
+	transition-property: brightness, background-color;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.mainmenu-major-tile .mainmenu-major-tile__btn Label
+{
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	font-family: Stratum2 medium condensed, "Arial Unicode MS";
 }
 
 .mainmenu-major-tile .mainmenu-major-tile__image
@@ -121,11 +142,24 @@
 	font-size: 24px;
 	color: rgb(63, 48, 27);
 	font-weight: black;
-	text-align: right;
+	text-align: center;
 	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-	max-height: 26px;
+	border-radius: 14px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #efefef ), to( rgb( 212, 211, 211 )));
+	max-height: 22px;
 	horizontal-align: right;
-	margin-right: 24px;
+	padding: 0px 6px;
+	transform: translateX( -65px );
+}
+
+.has-reduction.mainmenu-major-tile .mainmenu-major-tile__new-items Label .inline-coin-icon
+{
+	height: 18px;
+	width: 18px;
+	vertical-align: bottom;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	wash-color: black;
 }
 
 .has-reduction.mainmenu-major-tile .mainmenu-major-tile__new-items ItemImage
@@ -162,5 +196,91 @@
 .mainmenu-major-tile .mainmenu-major-tile__new-items ItemImage#id-open-major-item-image-2
 {
 	margin-left: 48px;
+}
+
+.mainmenu-major-tile Carousel
+{
+	vertical-align: bottom;
+	margin-bottom:30px;
+	width: 100%;
+}
+
+.mainmenu-major-tile .mainmenu-major-item
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	transition-property: brightness, transform, opacity;
+	transition-duration: .2s, .5s, .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.mainmenu-major-tile .mainmenu-major-item ItemImage
+{
+	width: 220px;
+	horizontal-align: center;
+	padding: 8px;
+	img-shadow: 2px 4px 10px 8 rgba(0, 0, 0, 0.712);
+	transition-property: img-shadow;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+}
+
+.mainmenu-major-tile .mainmenu-major-item Label
+{
+	border-radius: 14px;
+	height: 20px;
+	white-space: nowrap;
+	color: black;
+	padding: 0px 6px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #efefef ), to( rgb( 212, 211, 211 )));
+	vertical-align: center;
+}
+
+.mainmenu-major-tile .mainmenu-major-item .mainmenu-major-tile__view-item
+{
+	vertical-align: center;
+	visibility: collapse;
+}
+
+.mainmenu-major-tile .mainmenu-major-item .mainmenu-major-tile__view-item Image
+{
+	margin: 2px;
+	height: 18px;
+}
+
+.mainmenu-major-tile .mainmenu-major-item.Focused
+{
+	opacity: 1.0;
+	transform: translatex(0px);
+	z-index: 3;
+}
+
+.mainmenu-major-tile .mainmenu-major-item.Focused .mainmenu-major-tile__view-item
+{
+	visibility: visible;
+}
+
+.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus1,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus2,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus3,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus4,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus5,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus6,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus7,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus8,.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus9
+{
+	opacity:0;
+	transform: translatex( -64px ) scale3d(.8, .8, 1);
+}
+
+.mainmenu-major-tile .mainmenu-major-item.RightOfFocus1,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus2,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus3,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus4,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus5,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus6,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus7,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus8,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus9
+{
+	opacity: 0;
+	transform: translatex( 64px ) scale3d(.8, .8, 1);
+}
+
+.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus1,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus1
+{
+	opacity:.8;
+	brightness: .3;
+	z-index: 1;
+}
+
+.mainmenu-major-tile .mainmenu-major-item.LeftOfFocus1 ItemImage,.mainmenu-major-tile .mainmenu-major-item.RightOfFocus1 ItemImage
+{
+	img-shadow: none;
 }
 

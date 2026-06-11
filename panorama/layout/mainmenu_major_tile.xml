@@ -2,7 +2,10 @@
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
+		<include src="s2r://panorama/styles/mainmenu_mini_store.vcss_c" />
 		<include src="s2r://panorama/styles/mainmenu_major_tile.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_major_hub.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_major_store.vcss_c" />
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/licenseutil.vjs_c" />
@@ -17,19 +20,29 @@
 				<Label id="id-xpshop-pass-activate-btn" class="xpshop__tracks_upsell-btn confirm-btn activate-pass-btn" text="{s:action-text}" />
 			</Panel>
 		</snippet>
+		<snippet name="major-shop-item">
+			<Panel class="mainmenu-major-item" hittest="false">
+				<ItemImage id="id-item-image" class="xpshop-active-pass__bg" scaling="stretch-to-fit-x-preserve-aspect" textureheight="-1" texturewidth="240" hittest="false" />
+				<Panel class="left-right-flow vertical-align-bottom horizontal-center bottom-margin">
+					<Label class="stratum-medium-condensed dark-icon" html="true" text="#major_store_price" hittest="false" />
+					<Button id="id-item-inspect-btn" class="mainmenu-major-tile__view-item IconButton">
+						<Image textureheight="18" texturewidth="18" src="s2r://panorama/images/icons/ui/zoom_in.vsvg" />
+					</Button>
+				</Panel>
+			</Panel>
+		</snippet>
 	</snippets>
 	<Panel class="mainmenu-major-tile">
-		<Label class="stratum-medium-condensed mainmenu-major-tile__title" text="{s:hub-title-bar-caption}" />
-		<Button id="id-btn-open-major-hub" class="mainmenu-major-tile__btn" hittest="true">
-			<Image id="id-img-open-major-hub" class="mainmenu-major-tile__image" />
-		</Button>
-		<Panel id="id-items-banner" class="mainmenu-major-tile__new-items">
-			<Panel class="full-height">
-				<ItemImage id="id-open-major-item-image-0" scaling="stretch-to-fit-preserve-aspect" class="" />
-				<ItemImage id="id-open-major-item-image-1" scaling="stretch-to-fit-preserve-aspect" class="" />
-				<ItemImage id="id-open-major-item-image-2" scaling="stretch-to-fit-preserve-aspect" class="" />
+		<Button id="id-img-open-major-hub" class="mainmenu-major-tile__btn" hittest="true">
+			<Panel class="horizontal-center top-bottom-flow">
+				<Image id="id-major-promo-image" class="mainmenu-major-tile__promo" scaling="stretch-to-fit-x-preserve-aspect" />
+				<Label class="mainmenu-major-tile__promo_desc" text="#mainmenu_major_hub_visit" />
 			</Panel>
-			<Label class="stratum-medium-condensed" text="{s:items-text}" />
+		</Button>
+		<Carousel id="id-major-mini-store-carousel" panels-visible="3" autoscroll-delay="10s" hittest="false" />
+		<Panel class="mini-store__carousel-blocker" hittest="true" onactivate="">
+			<Panel class="mini-store-separator" />
 		</Panel>
+		<CarouselNav carouselid="id-major-mini-store-carousel" class="mini-store__carousel-nav" incrementsound="inventory_new_item_scroll" hittest="true" onactivate="" />
 	</Panel>
 </root>

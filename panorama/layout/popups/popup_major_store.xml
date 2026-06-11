@@ -87,13 +87,23 @@
 							<Label text="+" />
 						</Button>
 					</Panel>
+					<TooltipPanel class="major-store__high-low" tooltip="#major_store_seven_day_tooltip">
+						<Label class="stratum-regular-condensed major-store__item-price" text="{d:weeklyLow}" />
+						<Image class="major-store__high-low__icon low" textureheight="14" texturewidth="-1" src="s2r://panorama/images/icons/ui/high_mark.vsvg" hittest="false" />
+						<Panel class="vertical-center">
+							<Panel class="major-store__high-low__bar" />
+							<Panel id="id-store-item-price-pos" class="major-store__high-low__position" />
+						</Panel>
+						<Image class="major-store__high-low__icon" textureheight="14" texturewidth="-1" src="s2r://panorama/images/icons/ui/high_mark.vsvg" hittest="false" />
+						<Label class="stratum-regular-condensed major-store__item-price" text="{d:weeklyHigh}" />
+					</TooltipPanel>
 					<TooltipPanel id="id-store-item-hot-trend" tooltip="#major_store_hot_trend" class="major-store__item-trend-hot">
 						<Image textureheight="32" texturewidth="-1" src="s2r://panorama/images/icons/ui/hot_trend.vsvg" hittest="false" />
 					</TooltipPanel>
 					<TooltipPanel tooltip="#major_store_bookmark_tooltip" class="major-store__item-tile__bookmark-container">
 						<ToggleButton id="id-store-item-bookmark" class="major-store__item-tile__bookmark">
-							<Image textureheight="24px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
-							<Image textureheight="24px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
+							<Image textureheight="20px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+							<Image textureheight="20px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
 						</ToggleButton>
 					</TooltipPanel>
 				</Panel>
@@ -250,6 +260,7 @@
 									<Label class="DropDownMenu" id="default" text="#major_store_sort" />
 									<Label class="DropDownMenu" id="price-high-low" text="#major_store_sort_highlow" />
 									<Label class="DropDownMenu" id="price-low-high" text="#major_store_sort_lowhigh" />
+									<Label class="DropDownMenu" id="weekly-high-low" text="#major_store_sort_weekly_decending" />
 									<Label class="DropDownMenu" id="popularity-high-low" text="#major_store_sort_popular_decending" />
 									<Label class="DropDownMenu" id="popularity-low-high" text="#major_store_sort_popular_ascending" />
 									<Label class="DropDownMenu" id="name" text="#major_store_sort_alphabetical" />
@@ -304,8 +315,8 @@
 			</Panel>
 			<Panel class="popup-major-store__bottom-bar">
 				<Panel class="left-right-flow horizontal-align-right vertical-center">
-					<TextButton id="id-popup-major-store-back-btn" class="PopupButton popup-major-store__close-btn" text="#Back" />
-					<TextButton id="" class="PopupButton popup-major-store__close-btn" text="#Store_Close" onactivate="PopupMajorStore.ClosePopup();" />
+					<TextButton id="id-popup-major-store-back-btn" class="PopupButton popup-major-store__close-btn" text="#UI_Back_Footer" />
+					<TextButton id="id-popup-major-store-close-btn" class="PopupButton popup-major-store__close-btn" text="#Store_Close" onactivate="PopupMajorStore.ClosePopup();" />
 				</Panel>
 			</Panel>
 		</CSGOBlurTarget>

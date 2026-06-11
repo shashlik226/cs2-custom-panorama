@@ -3403,7 +3403,7 @@ EdgeScrollBar.Vertical #MaxButton
 	border-radius: 50%;
 }
 
-.mini-store-container .PaginationArrow
+.mini-store-container .PaginationArrow,.mainmenu-major-tile .PaginationArrow
 {
 	background-image: url("s2r://panorama/images/icons/ui/arrowhead.vsvg");
 	background-repeat: no-repeat;
@@ -3411,21 +3411,31 @@ EdgeScrollBar.Vertical #MaxButton
 	width: 12px;
 	height: 12px;
 	vertical-align: middle;
-	margin-left: 48px;
+	margin-left: 50px;
 	transform: rotateZ( -90deg );
 	border-radius: 0px;
 }
 
-.mini-store-container .PaginationArrow:disabled
+.mini-store-container .PaginationArrow:disabled,.mainmenu-major-tile .PaginationArrow:disabled
 {
 	wash-color: rgb(0, 0, 0);
 	opacity: .5;
 }
 
-.mini-store-container .PaginationArrow.Right
+.mini-store-container .PaginationArrow.Right,.mainmenu-major-tile .PaginationArrow.Right
 {
-	margin-right: 54px;
+	margin-right: 56px;
 	transform: rotateZ( 90deg );
+}
+
+.mini-store-container.mainmenu-major-tile .PaginationArrow,.mainmenu-major-tile.mainmenu-major-tile .PaginationArrow
+{
+	margin-left: 10px;
+}
+
+.mini-store-container.mainmenu-major-tile .PaginationArrow.Right,.mainmenu-major-tile.mainmenu-major-tile .PaginationArrow.Right
+{
+	margin-right: 14px;
 }
 
 @keyframes 'OpacityPulse'

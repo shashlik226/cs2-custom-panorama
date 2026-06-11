@@ -1003,7 +1003,7 @@ TextEntry Label
 .major-search-results-panel .major-store__results-tile .major-store__item-tile__bookmark-container
 {
 	horizontal-align: right;
-	padding: 4px 4px 12px 12px;
+	padding: 4px 4px 12px 8px;
 	z-index: 5;
 }
 
@@ -1016,6 +1016,7 @@ TextEntry Label
 .major-search-results-panel .major-store__results-tile Label
 {
 	font-size: 14px;
+	max-width: 150px;
 }
 
 .major-search-results-panel .major-store__results-tile:hover
@@ -1555,8 +1556,9 @@ TextEntry Label
 {
 	color: black;
 	font-size: 18px;
+	white-space: nowrap;
 	text-align: center;
-	max-width: 52px;
+	max-width: 64px;
 	text-overflow: shrink;
 }
 
@@ -1696,6 +1698,50 @@ TextEntry Label
 	z-index: 5;
 }
 
+.major-store__item-tile .major-store__high-low
+{
+	flow-children: right;
+	horizontal-align: center;
+	margin-top: 8px;
+	z-index: 8;
+	background-color: rgba(147, 147, 147, 0.2);
+	padding: 1px 6px;
+	border-radius: 4px;
+}
+
+.major-store__item-tile .major-store__high-low .major-store__high-low__icon
+{
+	wash-color: rgb(255, 196, 0);
+	vertical-align: center;
+}
+
+.major-store__item-tile .major-store__high-low .major-store__high-low__icon.low
+{
+	transform: rotateZ(180deg);
+	wash-color: rgb(31, 204, 109);
+}
+
+.major-store__item-tile .major-store__high-low Label
+{
+	font-size: 16px;
+}
+
+.major-store__item-tile .major-store__high-low .major-store__high-low__bar
+{
+	width: 52px;
+	height: 2px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( rgb(31, 204, 109) ), to( rgb(255, 196, 0)));
+	vertical-align: center;
+}
+
+.major-store__item-tile .major-store__high-low .major-store__high-low__position
+{
+	height: 6px;
+	width: 3px;
+	transform-origin: 50% 50%;
+	background-color: white;
+}
+
 .major-store__item-tile .major-store__item-tile__cart-btns
 {
 	flow-children: right;
@@ -1783,15 +1829,15 @@ TextEntry Label
 	color: black;
 }
 
-.banner-bookmark .major-store__item-tile
-{
-	margin-right: 6px;
-}
-
 .small .major-store__item-tile
 {
 	width: 162px;
 	height: 170px;
+}
+
+.small .major-store__item-tile .major-store__high-low
+{
+	visibility: collapse;
 }
 
 .small .major-store__item-tile.hidden .major-store__item-tile__image-container
@@ -1886,7 +1932,7 @@ TextEntry Label
 .small .major-store__item-tile .major-store__cart-btn,.small .major-store__item-tile .major-store__item-tile__in-cart
 {
 	ui-scale: 80%;
-	background-color: rgba(0, 0, 0, 0.774);
+	background-color: rgba(0, 0, 0, 0.80);
 }
 
 .small .major-store__item-tile .major-store__item-trend-hot,.small .major-store__item-tile .major-store__item-trend-cold
@@ -1899,10 +1945,75 @@ TextEntry Label
 	margin-bottom: 32px;
 }
 
+.banner-bookmark .small .major-store__item-tile
+{
+	margin-right: 6px;
+}
+
+.banner-bookmark .small .major-store__item-tile .major-store__high-low
+{
+	visibility: visible;
+}
+
+.banner-bookmark .major-store__item-tile
+{
+	margin-right: 6px;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__high-low
+{
+	visibility: visible;
+	opacity: 0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 28px;
+	background-color: rgba(0, 0, 0, 0.80);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__high-low Label
+{
+	font-size: 12px;
+	font-family: Stratum2 Light, "Arial Unicode MS";
+}
+
+.banner-bookmark .major-store__item-tile .major-store__item-tile__cart-btns
+{
+	margin: 3px 0xp;
+}
+
+.banner-bookmark .major-store__item-tile:hover .major-store__high-low
+{
+	opacity: 1;
+}
+
+.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-hot,.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-cold
+{
+	margin-bottom: 48px;
+}
+
 .major-store__item-tile.popular-tile
 {
 	width: 210px;
 	margin-left: 42px;
+}
+
+.major-store__item-tile.popular-tile .major-store__high-low
+{
+	opacity: 0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 27px;
+	background-color: rgba(0, 0, 0, 0.80);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.major-store__item-tile.popular-tile .major-store__high-low Label
+{
+	font-size: 12px;
+	font-family: Stratum2 Light, "Arial Unicode MS";
 }
 
 .major-store__item-tile.popular-tile .major-store__item-tile__top
@@ -1971,6 +2082,11 @@ TextEntry Label
 .major-store__item-tile.popular-tile:hover .major-store__item-tile__model
 {
 	transform: scale3d(1.05, 1.05, 1);
+}
+
+.major-store__item-tile.popular-tile:hover .major-store__high-low
+{
+	opacity: 1;
 }
 
 .major-store__item-tile.popular-tile .major-store__item-trend-hot,.major-store__item-tile.popular-tile .major-store__item-trend-cold
