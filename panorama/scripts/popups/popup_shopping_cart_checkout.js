@@ -200,10 +200,7 @@ var PopUpShoppingCartCheckout;
         elProgressSection.SetHasClass('hide', bHide);
         if (bHide)
             return;
-        const bEnabled = !oSettings.isInventoryFull &&
-            getCart(oSettings.cp).getTotalPrice() > 0 &&
-            oSettings.nPurchaseTokens <= 0 &&
-            (oSettings.nInactiveTokens <= 0 || oSettings.cp.Data().redeemableBalance >= getCart(oSettings.cp).getTotalPrice());
+        const bEnabled = true;
         const elBtn = elProgressSection.FindChildInLayoutFile('id-cart-use-tokens-btn');
         const strCheckoutSuffix = oSettings.cp.GetAttributeString('checkoutsuffix', '') || '';
         const strButtonText = $.Localize('#major_store_checkout_use_tokens_btn' + strCheckoutSuffix);

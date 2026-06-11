@@ -166,6 +166,7 @@ var ContextMenuGetSouvenir;
     ;
     function _SetPreviewBtn(elMatch, rawMapName, umid) {
         let previewBtn = elMatch.FindChildInLayoutFile('id-preview-souvenir-btn');
+        let previewBtn2 = elMatch.FindChildInLayoutFile('id-preview-souvenir-btn2');
         StoreAPI.VolatileShopSubscribe(g_ActiveTournamentInfo.itemid_dynamic_stickers);
         previewBtn.SetPanelEvent('onactivate', () => {
             const defidxStickerItem = InventoryAPI.GetItemDefinitionIndexFromDefinitionName('sticker');
@@ -178,6 +179,43 @@ var ContextMenuGetSouvenir;
             $.DispatchEvent('ContextMenuEvent', '');
             $.DispatchEvent('ShowSelectItemForCapabilityPopup', umid, '', 'craft_souvenir');
         });
+        previewBtn2.SetPanelEvent('onactivate', () => {
+            const elPanel = UiToolkitAPI.ShowCustomLayoutPopup('popup-inspect-17293822569102704647', 'file://{resources}/layout/popups/popup_capability_can_keychain.xml');
+            let oSettings = {
+                item_id: '17293822569102704647',
+                tool_id: '',
+                umid_souvenir: umid,
+                work_type: 'craft_souvenir'
+            };
+            elPanel.Data().oSettings = oSettings;
+        });
+        const craftSouvenirFauxTool = 'craft_souvenir:' + umid;
+        const tempCreatedItem = InventoryAPI.CreateTempCombinedItemWithTool('17293822569102704647', craftSouvenirFauxTool);
+        previewBtn2.text = "Cost: "+_ComputeTotalSouvenirCost(tempCreatedItem).discountPrice;
+    }
+    function _ComputeTotalSouvenirCost(itemIdSouvenir) {
+        const tempCreatedItem = itemIdSouvenir;
+        let nTotalCostInCredits = 0;
+        {
+            const defidxStickerItem = InventoryAPI.GetItemDefinitionIndexFromDefinitionName('sticker');
+            for (let i = 0; i < 6; ++i) {
+                const idStickerKit = InventoryAPI.GetItemAttributeValue(tempCreatedItem, '{uint32}sticker slot ' + i + ' id');
+                if (!idStickerKit)
+                    continue;
+                const idFauxSticker = InventoryAPI.GetFauxItemIDFromDefAndPaintIndex(defidxStickerItem, idStickerKit);
+                const unCostInCredits = MissionsAPI.GetSeasonalOperationFauxCreditsCost(g_ActiveTournamentInfo.credits_id, idFauxSticker);
+                if (unCostInCredits)
+                    nTotalCostInCredits += unCostInCredits;
+                else
+                    nTotalCostInCredits += g_ActiveTournamentInfo.souvenir_cost;
+            }
+        }
+        const discountAmount = InventoryAPI.GetItemSouvenirDiscountPercent(tempCreatedItem);
+        const discountCredits = Math.trunc(nTotalCostInCredits * discountAmount / 100);
+        let discountPrice = nTotalCostInCredits;
+        if (discountCredits < nTotalCostInCredits)
+            discountPrice -= discountCredits;
+        return { discountPrice: discountPrice, originalPrice: nTotalCostInCredits, discountAmount: discountAmount };
     }
     var _ItemCustomizationNotification = function (numericType, type, itemid) {
         _ResetTimeouthandle();

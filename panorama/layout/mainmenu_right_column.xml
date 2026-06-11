@@ -10,7 +10,7 @@
 	</scripts>
 	<Panel class="mainmenu-right-column">
 		<Frame id="id-mainmenu-stream-panel" src="s2r://panorama/layout/mainmenu_stream.vxml_c" />
-		<Panel id="fakevanityentrys" hittest="true">
+		<Panel id="fakevanityentrys" hittest="true" style="visibility: collapse;">
 			<Label text="Weapon"/>
 			<TextEntry id="fakevanity_weapon" style="margin-bottom: 5px;" placeholder="WeaponID" />
 			<Label text="GloveID"/>

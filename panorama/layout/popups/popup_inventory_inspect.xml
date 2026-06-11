@@ -23,7 +23,7 @@
 		<include src="s2r://panorama/scripts/popups/popup_inventory_inspect.vjs_c" />
 	</scripts>
 	<PopupCustomLayout class="PopupPanel Capability Hidden" useglobalcontext="true" popupbackground="blur" popupfullscreenopaque="true" oncancel="InventoryInspect.ClosePopup();" onload="InventoryInspect.Init()">
-		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" useglobalcontext="true" oncontextmenu="UiToolkitAPI.ShowSimpleContextMenu('','',[{label:'close',jsCallback:()=>{UiToolkitAPI.CloseAllVisiblePopups()}}])">
+		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" useglobalcontext="true">
 			<Panel class="full-width full-height top-bottom-flow vertical-center">
 				<Panel id="PopUpInspectFullScreenHostContainer" class="full-width full-height">
 					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml_c" />

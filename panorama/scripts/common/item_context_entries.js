@@ -31,11 +31,7 @@ var ItemContextEntries;
             populateFilter: ['lootlist', 'loadout', 'loadout_slot_t', 'loadout_slot_ct', 'tradeup_items', 'tradeup_ingredients'],
             bActionIsRentalAware: true,
             AvailableForItem: (id) => {
-                if (InventoryAPI.DoesItemMatchDefinitionByName(id, "Remove Keychain Tool"))
-                    return true;
-                if (InventoryAPI.DoesItemMatchDefinitionByName(id, "sticker_display_case"))
-                    return true;
-                return ItemInfo.IsPreviewable(id);
+                return true;
             },
             OnSelected: (id, contextmenuparam) => {
                 $.DispatchEvent('ContextMenuEvent', '');
