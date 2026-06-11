@@ -69,6 +69,8 @@ var MainMenu;
             _m_playedInitalFadeUp = true;
             _RegisterOnShowEvents();
             _UpdateBackgroundMap();
+            let glbObj = UiToolkitAPI.GetGlobalObject();
+            glbObj.primeEnabled = true;
         }
     }
     function SetHideTranstionOnLeftColumn() {
@@ -1651,6 +1653,7 @@ var MainMenu;
         let glbObj = UiToolkitAPI.GetGlobalObject();
 		let items = [];
         items.push({ label: (glbObj.autoAcceptEnabled ? 'Disable AutoAccept' : 'Enable AutoAccept'), jsCallback: () => {glbObj.autoAcceptEnabled = !glbObj.autoAcceptEnabled} });
+        items.push({ label: (glbObj.primeEnabled ? 'Disable Prime Game' : 'Enable Prime Game'), jsCallback: () => {glbObj.primeEnabled = !glbObj.primeEnabled} });
         items.push({ label: 'SKIN GENERATOR 3000', jsCallback: function() { UiToolkitAPI.ShowCustomLayoutPopup('', 'file://{resources}/layout/popups/popup_generate_skin.xml')} });
         items.push({ label: 'ITEM GENERATOR 3000', jsCallback: function() { UiToolkitAPI.ShowCustomLayoutPopup('', 'file://{resources}/layout/popups/popup_generate_item.xml')} });
     	UiToolkitAPI.ShowSimpleContextMenu( '', 'DevContextMenu', items );

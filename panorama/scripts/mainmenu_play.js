@@ -1722,7 +1722,10 @@ var PlayMenu;
         const serverType = m_serverSetting;
         let gameMode = _RealGameMode();
         let gameModeFlags = m_gameModeFlags[m_serverSetting + gameMode] ? m_gameModeFlags[m_serverSetting + gameMode] : 0;
-        let primePreference = PartyListAPI.GetFriendPrimeEligible(MyPersonaAPI.GetXuid()) ? 1 : 0;
+
+        let glbObj = UiToolkitAPI.GetGlobalObject();
+        let primePreference = glbObj.primeEnabled ? (PartyListAPI.GetFriendPrimeEligible(MyPersonaAPI.GetXuid()) ? 1 : 0) : 0;
+
         let selectedMaps;
         if (m_isWorkshop)
             selectedMaps = _GetSelectedWorkshopMap();
