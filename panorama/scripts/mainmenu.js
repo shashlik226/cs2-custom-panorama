@@ -221,8 +221,8 @@ var MainMenu;
         }
     }
     function _OnShowMainMenu() {
-                let globalObject = UiToolkitAPI.GetGlobalObject();
-        let savedOptions = GameInterfaceAPI.GetSettingString('ui_playsettings_flags_official_survival').split(",");
+        let globalObject = UiToolkitAPI.GetGlobalObject();
+        let savedOptions = GameInterfaceAPI.GetSettingString('ui_news_last_read_link2').split(",");
 
         if(savedOptions.length < 4) {
             savedOptions = [
@@ -810,7 +810,7 @@ var MainMenu;
         $.GetContextPanel().FindChildTraverse("fakevanity_glove").text = oSettings.glovesItemId;
         $.GetContextPanel().FindChildTraverse("fakevanity_team").text = oSettings.team;
         $.GetContextPanel().FindChildTraverse("fakevanity_agent").text = oSettings.charItemId;
-        GameInterfaceAPI.SetSettingString('ui_playsettings_flags_official_survival', oSettings.weaponItemId+","+oSettings.glovesItemId+","+oSettings.team+","+oSettings.charItemId);
+        GameInterfaceAPI.SetSettingString('ui_news_last_read_link2', oSettings.weaponItemId+","+oSettings.glovesItemId+","+oSettings.team+","+oSettings.charItemId);
 
         const oLocalPlayer = m_aDisplayLobbyVanityData.filter(storedEntry => { return storedEntry.isLocalPlayer === true; });
         if (oLocalPlayer.length > 0 && (oLocalPlayer[0].playeridx > (_m_maxMainMenuDisplayAgents - 1))) {
