@@ -24,3 +24,16 @@
 	width: 256px;
 }
 
+#fakevanityentrys
+{
+	padding: 8px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.685);
+	flow-children: down;
+ 	vertical-align: bottom;
+}
+
+#fakevanityentrys Label
+{
+	font-weight: bold;
+}

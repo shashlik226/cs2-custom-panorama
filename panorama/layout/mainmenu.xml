@@ -3,6 +3,7 @@
 	<styles>
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
 		<include src="s2r://panorama/styles/mainmenu.vcss_c" />
+		<include src="s2r://panorama/styles/scoreboard.vcss_c" />
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/promoted_settings.vjs_c" />
@@ -161,7 +162,7 @@
 							<Label class="pausemenu-navbar__btn__label-small stratum-regular-condensed" text="#tooltip_navbar_exit_game_menu" />
 						</Button>
 					</Panel>
-					<CSGOScoreboard id="Scoreboard" hittest="true" hittestchildren="true" />
+					<CSGOScoreboardContainer id="Scoreboard" hittest="true" hittestchildren="true" class="menu-scoreboard" />
 					<Frame id="id-pausemenu-mission-panel" src="s2r://panorama/layout/mission_tile_pausemenu.vxml_c" />
 				</CSGOBlurTarget>
 			</Panel>

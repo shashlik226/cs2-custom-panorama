@@ -11,6 +11,7 @@
 		<include src="s2r://panorama/scripts/common/eventutil.vjs_c" />
 		<include src="s2r://panorama/scripts/inspect.vjs_c" />
 		<include src="s2r://panorama/scripts/popups/popup_acknowledge_item.vjs_c" />
+		<include src="s2r://panorama/scripts/common/unique_random_number.vjs_c" />
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
 		<include src="s2r://panorama/scripts/common/add_major_tokens_anim.vjs_c" />
 		<include src="s2r://panorama/scripts/popups/popup_major_store.vjs_c" />
@@ -26,9 +27,9 @@
 			<Panel class="major-search-results__text-btn">
 				<Panel class="left-right-flow">
 					<Image class="vertical-center right-margin-4" textureheight="14" texturewidth="-1" src="s2r://panorama/images/icons/ui/search.vsvg" />
-					<Label text="#major_store_search_see_all" />
+					<Label id="id-results-btn-label" class="major-search-results__text-btn__label" text="#major_store_search_see_all" />
 				</Panel>
-				<Label class="horizontal-align-right" text="{d:results-count}" />
+				<Label class="major-search-results__text-btn__count" text="{d:results-count}" />
 			</Panel>
 		</snippet>
 		<snippet name="active-filter-button">
@@ -72,9 +73,18 @@
 					<Image id="id-store-item-rarity" textureheight="64px" class="major-store__item-tile__rarity" />
 					<Image id="id-store-item-team-logo" class="major-store__item__team-logo" textureheight="48px" scaling="stretch-to-fit-preserve-aspect" texturewidth="-1" />
 				</Panel>
-				<Panel class="major-store__item-tile__image-container" hittest="false">
+				<Panel id="id-store-item-image_container" class="major-store__item-tile__image-container" hittest="false">
+					<Panel class="full-width full-height">
+						<Image id="id-store-item-team-bg-1" class="major-store__item__team-logo team-bg-1" textureheight="200px" scaling="stretch-to-fit-preserve-aspect" texturewidth="-1" />
+						<Image id="id-store-item-team-bg-2" class="major-store__item__team-logo team-bg-2" textureheight="200px" scaling="stretch-to-fit-preserve-aspect" texturewidth="-1" />
+					</Panel>
 					<ItemImage id="id-store-item-image" scaling="stretch-to-fit-preserve-aspect" hittest="false" />
-					<MapItemPreviewPanel id="id-store-item-model" class="major-store__item-tile__model" map="ui/xpshop_item" initial_entity="item" mouse_rotate="false" require-composition-layer="true" transparent-background="true" />
+					<Image id="id-store-item-team-1" class="major-store__item__team-logo team-1" textureheight="98px" scaling="stretch-to-fit-preserve-aspect" texturewidth="-1" />
+					<Image id="id-store-item-team-2" class="major-store__item__team-logo team-2" textureheight="98px" scaling="stretch-to-fit-preserve-aspect" texturewidth="-1" />
+					<Panel id="id-store-item-movie-container" class="major_store__item_movie-container">
+						<Movie id="id-store-item-movie" class="major_store__item_movie" controls="none" repeat="true" autoplay="onload" hittest="false" disableaudio="true" />
+					</Panel>
+					<Label html="true" class="stratum-bold-italic major-store__item-keychain-title" hittest="false" text="{s:title}" />
 					<Button id="id-inspect-sticker" class="major-store__item-tile__btn" />
 					<Panel class="major-store__item-tile__cart-btns">
 						<Button id="id-store-item-remove-from-cart-btn" class="major-store__cart-btn">
@@ -106,6 +116,8 @@
 							<Image textureheight="20px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
 						</ToggleButton>
 					</TooltipPanel>
+					<Image id="id-store-item-trophy" class="major-store__item-tile__trophy" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/econ/status_icons/trophy_cs2_champions_png.vtex" hittest="false" />
+					<Label id="id-store-item-stage" html="true" class="stratum-regular major-store__item-stage" hittest="false" text="{s:stage}" />
 				</Panel>
 			</Panel>
 		</snippet>
@@ -142,10 +154,18 @@
 				</Button>
 				<TooltipPanel tooltip="#major_store_bookmark_tooltip" class="major-store__item-tile__bookmark-container">
 					<ToggleButton id="id-store-item-bookmark" class="major-store__item-tile__bookmark">
-						<Image textureheight="22px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
-						<Image textureheight="22px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
+						<Image textureheight="20px" class="major-store__item-tile__bookmark-empty" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_empty.vsvg" />
+						<Image textureheight="20px" class="major-store__item-tile__bookmark-filled" scaling="stretch-to-fit-preserve-aspect" src="s2r://panorama/images/icons/ui/favorite_star_filled.vsvg" />
 					</ToggleButton>
 				</TooltipPanel>
+			</Panel>
+		</snippet>
+		<snippet name="keychain-section">
+			<Panel class="popup-major-store__stage" hittest="true">
+				<Panel class="full-width bottom-margin-16">
+					<Label class="popup-major-store__stage__header stratum-light-condensed" text="{s:stage-title}" />
+				</Panel>
+				<Panel id="id-keychains-container" class="popup-major-store__stage__keychains" />
 			</Panel>
 		</snippet>
 	</snippets>
@@ -196,27 +216,44 @@
 						<Label class="stratum-medium" text="#major_store_banner_hint" />
 					</Panel>
 					<Panel id="id-major-store-banners-bookmarks" class="popup-major-store__banner carousel" hittest="false">
-						<Panel class="full-width bottom-margin-16">
+						<Panel class="full-width margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_bookmark" />
 							<Button id="id-major-store-see-all-bookmarked-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
 								<Label text="#store_nav_more" class="stratum-medium" />
 							</Button>
 						</Panel>
 						<Carousel id="id-major-store-banner-bookmarked" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
+						<CarouselNav carouselid="id-major-store-banner-bookmarked" class="popup-major-store__popular__nav" hittest="true" />
 					</Panel>
-					<CarouselNav carouselid="id-major-store-banner-bookmarked" class="popup-major-store__popular__nav" hittest="true" />
+					<Panel id="id-banner-champions" class="popup-major-store__banner carousel" hittest="false">
+						<Panel class="full-width margin-16">
+							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_champions" />
+						</Panel>
+						<Carousel id="id-major-store-banner-champions" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
+						<CarouselNav id="id-carousel-nav-champions" carouselid="id-major-store-banner-champions" class="popup-major-store__popular__nav" hittest="true" />
+					</Panel>
+					<Panel id="id-banner-keychains" class="popup-major-store__banner carousel" hittest="false">
+						<Panel class="full-width margin-16">
+							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_keychains" />
+							<Button id="id-major-store-see-all-keychains-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
+								<Label text="#store_nav_more" class="stratum-medium" />
+							</Button>
+						</Panel>
+						<Carousel id="id-major-store-banner-keychains" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
+						<CarouselNav id="id-carousel-nav-keychains" carouselid="id-major-store-banner-keychains" class="popup-major-store__popular__nav" hittest="true" />
+					</Panel>
 					<Panel class="popup-major-store__banner carousel" hittest="false">
-						<Panel class="full-width bottom-margin-16">
+						<Panel class="full-width margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_popular" />
 							<Button id="id-major-store-see-all-popular-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
 								<Label text="#store_nav_more" class="stratum-medium" />
 							</Button>
 						</Panel>
 						<Carousel id="id-major-store-banner-popular" class="popup-major-store__banner__popular" allow-focus-changes-on-scroll="true" incrementsound="inventory_new_item_scroll" hittest="false" />
+						<CarouselNav carouselid="id-major-store-banner-popular" class="popup-major-store__popular__nav" hittest="true" />
 					</Panel>
-					<CarouselNav carouselid="id-major-store-banner-popular" class="popup-major-store__popular__nav" hittest="true" />
 					<Panel class="popup-major-store__banner" hittest="true">
-						<Panel class="full-width bottom-margin-16">
+						<Panel class="full-width margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_find" />
 							<Button id="id-major-store-see-all-teams-btn" class="popup-major-store__filters-active-btn vertical-center horizontal-align-right">
 								<Label text="#store_nav_more" class="stratum-medium" />
@@ -225,7 +262,7 @@
 						<Panel id="id-major-store-banner-teams" class="popup-major-store__banner__teams" />
 					</Panel>
 					<Panel class="popup-major-store__banner" hittest="true">
-						<Panel class="bottom-margin-16">
+						<Panel class="margin-16">
 							<Label class="popup-major-store__banner__header stratum-light-condensed" text="#major_store_banner_org" />
 						</Panel>
 						<Panel id="id-major-store-banner-org-stickers" class="popup-major-store__banner__org" />
@@ -257,7 +294,6 @@
 								</RadioButton>
 								<Label text="#major_store_count_items" class="stratum-regular popup-major-store__content__count" />
 								<DropDown class="content-navbar__tabs__dropdown horizontal-align-right" id="id-major-store-sort-dropdown" menuclass="DropDownMenu Width-250">
-									<Label class="DropDownMenu" id="default" text="#major_store_sort" />
 									<Label class="DropDownMenu" id="price-high-low" text="#major_store_sort_highlow" />
 									<Label class="DropDownMenu" id="price-low-high" text="#major_store_sort_lowhigh" />
 									<Label class="DropDownMenu" id="weekly-high-low" text="#major_store_sort_weekly_decending" />
@@ -269,6 +305,7 @@
 						</Panel>
 					</Panel>
 				</Panel>
+				<Panel id="id-major-store-keychains" class="popup-major-store__content top-bottom-flow vscroll bottom-padding-x-large hidden" />
 				<Panel id="id-major-store-team-view" class="popup-major-store__content hidden" hittest="false">
 					<Panel class="popup-major-store__content__page">
 						<Panel class="popup-major-store__content__navbar">
@@ -304,12 +341,7 @@
 								<Label class="stratum-light-condensed popup-major-store__team-title" text="#major_store_team_stickers" />
 							</Panel>
 						</Panel>
-						<Panel id="id-major-store-single-tiles" class="horizontal-center left-right-flow full-height top-margin-8">
-							<Frame id="sticker-single-0" snippet="store-tile" />
-							<Frame id="sticker-single-1" snippet="store-tile" />
-							<Frame id="sticker-single-2" snippet="store-tile" />
-							<Frame id="sticker-single-3" snippet="store-tile" />
-						</Panel>
+						<Panel id="id-major-store-single-tiles" class="horizontal-center full-height top-margin-8 left-right-flow-wrap" />
 					</Panel>
 				</Panel>
 			</Panel>
@@ -331,8 +363,13 @@
 				</Panel>
 				<Panel class="major-filter-panel__content">
 					<Panel class="major-filter-panel__content__section">
-						<Label text="#major_store_filter_section_type" class="stratum-medium major-filter-section-title" />
 						<Panel class="left-right-flow horizontal-center">
+							<Frame id="id-major-store-filter-keychains" class="btn-toggle-slider top-margin-16 bottom-margin-16" src="s2r://panorama/layout/slider_toggle.vxml_c" />
+						</Panel>
+					</Panel>
+					<Panel class="major-filter-panel__content__section">
+						<Label text="#major_store_filter_section_type" class="stratum-medium major-filter-section-title" />
+						<Panel class="major-filter-panel__rarity">
 							<ToggleButton id="id-major-store-filter-team" class="major-filter-panel__toggle" filter-button="true">
 								<Image id="id-filter-icon-blur" class="blur" textureheight="36" texturewidth="-1" src="s2r://panorama/images/icons/ui/filter_team.vsvg" />
 								<Image id="id-filter-icon" textureheight="36" texturewidth="-1" src="s2r://panorama/images/icons/ui/filter_team.vsvg" />
@@ -346,7 +383,7 @@
 					<Panel class="major-filter-panel__content__section">
 						<Label text="#major_store_filter_section_rarity" class="stratum-medium major-filter-section-title" />
 						<Panel id="id-major-store-filter-rarities" class="major-filter-panel__rarity">
-							<ToggleButton id="id-major-store-filter-rarity-3" class="major-filter-panel__toggle" filter-button="true">
+							<ToggleButton id="id-major-store-filter-rarity-3" class="major-filter-panel__toggle" filter-button="true" data-type="">
 								<Image id="id-filter-icon-blur" class="blur" textureheight="36" texturewidth="-1" />
 								<Image id="id-filter-icon" textureheight="36" texturewidth="-1" />
 							</ToggleButton>
@@ -374,7 +411,7 @@
 		<Panel id="id-major-fullscreen-text-search" class="major-fullscreen-overlay hidden" hittest="false">
 			<Button id="id-major-fullscreen-text-search-btn" class="major-fullscreen-overlay-button" />
 			<Panel id="id-major-store-search-results" class="major-search-results-panel">
-				<Panel id="id-search-list" class="major-search-results__list" />
+				<Panel id="id-search-list" class="major-search-results__container" />
 			</Panel>
 		</Panel>
 		<Frame id="id-major-store-add-tokens" src="s2r://panorama/layout/common/add_major_tokens_anim.vxml_c" />

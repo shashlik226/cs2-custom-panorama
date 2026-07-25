@@ -81,7 +81,7 @@
 			<Panel acceptsinput="false" class="AvatarLargeSnippet">
 				<Panel class="AvatarL_BG colorize-teammate-color" />
 				<Frame id="PostRoundDamageReport" snippet="snippet-post-round-damage-report" />
-				<Label class="AvatarL__name" text="{g:player_name:player_slot}" />
+				<Label class="AvatarL__name" html="true" text="{g:player_name:player_slot}" />
 				<Panel id="Visible" class="AavatarVisibleContainer">
 					<Panel id="AvatarL__ImageBG" class="avatarl__imagebg">
 						<CSGOAvatarImage id="AvatarImage" class="Avatar__CommonMargin AvatarL__Internal" />

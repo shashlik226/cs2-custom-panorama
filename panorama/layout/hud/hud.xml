@@ -74,7 +74,7 @@
 		<CSGOEndOfMatch id="EndOfMatch" />
 		<CSGOTeamIntroMenu id="TeamIntroMenu" />
 		<CSGOTeamSelectMenu id="TeamSelectMenu" />
-		<CSGOScoreboard id="Scoreboard" hittest="true" hittestchildren="true" />
+		<CSGOScoreboardContainer id="Scoreboard" hittest="true" hittestchildren="true" />
 		<CSGOHudChat id="HudChat" />
 		<CSGOHudVote id="HudVote" />
 		<Panel id="ItemPreviewDebugManager" hittest="false" />

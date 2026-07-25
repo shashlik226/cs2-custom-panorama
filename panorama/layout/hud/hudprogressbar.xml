@@ -16,7 +16,7 @@
 					<Panel class="hud-progress-bar-circle-border-inner" />
 				</Panel>
 				<Panel class="hud-progress-bar-info">
-					<Label id="ActionLabel" class="hud-progress-bar-info-title stratum-bold-mono" />
+					<Label id="ActionLabel" class="hud-progress-bar-info-title stratum-bold-mono" html="true" />
 					<Label text="{t:d:duration}.{s:milliseconds} " class="hud-progress-bar-info-countdown-text stratum-bold-mono" />
 				</Panel>
 			</Panel>

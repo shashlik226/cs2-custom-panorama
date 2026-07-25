@@ -3,11 +3,14 @@
 	<styles>
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
 		<include src="s2r://panorama/styles/mainmenu_xpshop_tile.vcss_c" />
+		<include src="s2r://panorama/styles/mainmenu_major_tile.vcss_c" />
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/licenseutil.vjs_c" />
 		<include src="s2r://panorama/scripts/common/prime_button_action.vjs_c" />
 		<include src="s2r://panorama/scripts/popups/popup_acknowledge_item.vjs_c" />
+		<include src="s2r://panorama/scripts/common/icon.vjs_c" />
+		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
 		<include src="s2r://panorama/scripts/xpshop_track.vjs_c" />
 		<include src="s2r://panorama/scripts/xpshop.vjs_c" />
 		<include src="s2r://panorama/scripts/mainmenu_xpshop_tile.vjs_c" />
@@ -25,34 +28,19 @@
 				<Panel id="id-mainmenu-xpshop-track-progress" class="mainmenu-xpshop-track__progess" />
 			</Panel>
 		</snippet>
+		<snippet name="mainmenu-xpshop-itemtile">
+			<Panel class="mainmenu-xpshop-itemtile" hittest="false">
+				<Image id="id-item-set-image" class="mainmenu-xpshop-itemtile__set-image" textureheight="180" texturewidth="-1" />
+				<ItemImage id="id-item-image" class="mainmenu-xpshop-itemtile-image" scaling="stretch-to-fit-x-preserve-aspect" textureheight="-1" texturewidth="240" hittest="false" />
+				<Label class="xpshop__item-tile__new-tag" html="true" text="#Store_Price_New" hittest="false" />
+			</Panel>
+		</snippet>
 	</snippets>
 	<Panel class="mainmenu-xpshop-tile">
-		<ParticleScenePanel id="" class="mainmenu-xpshop-particle" hittest="false" startActive="true" particleName="particles/ui/xpshop/xpshop_panel_right_glow.vpcf" cameraOrigin="0 300 0" lookAt="0 0 0" fov="40" />
-		<Panel id="id-mainmenu-xpshop-collage" class="mainmenu-xpshop-collage" force-no-composition-layer="true">
-			<Panel class="full-width left-right-flow overflow-noclip">
-				<ItemImage id="collage-item-0" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-1" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-2" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-3" class="mainmenu-xpshop-collage__image" />
-			</Panel>
-			<Panel class="full-width left-right-flow overflow-noclip">
-				<ItemImage id="collage-item-4" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-5" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-6" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-7" class="mainmenu-xpshop-collage__image" />
-			</Panel>
-			<Panel class="full-width left-right-flow overflow-noclip">
-				<ItemImage id="collage-item-8" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-9" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-10" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-11" class="mainmenu-xpshop-collage__image" />
-			</Panel>
-			<Panel class="full-width left-right-flow overflow-noclip">
-				<ItemImage id="collage-item-12" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-13" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-14" class="mainmenu-xpshop-collage__image" />
-				<ItemImage id="collage-item-15" class="mainmenu-xpshop-collage__image" />
-			</Panel>
+		<ParticleScenePanel id="" class="mainmenu-xpshop-particle" hittest="false" startActive="true" particleName="particles/ui/xpshop/xpshop_panel_right_glow.vpcf" cameraOrigin="0 250 0" lookAt="0 0 0" fov="40" />
+		<Carousel id="id-mainmenu-xpshop-carousel" class="mainmenu-xpshop-carousel" panels-visible="3" autoscroll-delay="5s" />
+		<Panel class="mini-store__carousel-blocker" hittest="true" onactivate="">
+			<Panel class="mini-store-separator" />
 		</Panel>
 		<Panel class="mainmenu-xphop-tile__title-container">
 			<Label id="id-new-item-tag" class="xpshop__item-tile__new-tag stratum-medium-italic hide" text="#xpshop_new_items:f" />
@@ -64,7 +52,7 @@
 		<Panel id="id-upsell" class="mainmenu-xpshop-upsell" hittest="false" hittestchildren="false">
 			<ItemImage id="id-upsell-pass-image" class="mainmenu-xpshop-upsell__image" />
 			<Label class="mainmenu-xpshop-upsell__label" text="#xpshop_upsell_mainmenu_1" />
-			<Label class="mainmenu-xpshop-upsell__label line-2" text="#xpshop_upsell_mainmenu_2_v2" />
+			<Label class="mainmenu-xpshop-upsell__label line-2" text="#xpshop_upsell_mainmenu_2_v3" />
 			<Label class="mainmenu-xpshop-upsell__label line-3" text="#xpshop_upsell_mainmenu_3" />
 		</Panel>
 		<Panel class="mainmenu-xpshop-info-bar" hittest="false" hittestchildren="false">

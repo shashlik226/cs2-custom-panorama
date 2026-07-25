@@ -1982,7 +1982,7 @@
 	margin-bottom: 30px;
 	flow-children: down;
 	background-color: window-background-color;
-	width: 250px;
+	width: 320px;
 	opacity: 0;
 	transform-origin: 0% 100%;
 	transform: translateY(40px);
@@ -2073,6 +2073,7 @@
 {
 	flow-children: down;
 	width: 100%;
+	overflow: clip scroll;
 }
 
 .popup-lootlist .popup-lootlist__list:last-child,.popup-offers-settings .popup-lootlist__list:last-child
@@ -2080,11 +2081,16 @@
 	margin-bottom: 8px;
 }
 
+.popup-lootlist .popup-lootlist__list VerticalScrollBar,.popup-offers-settings .popup-lootlist__list VerticalScrollBar
+{
+	width: 4px;
+}
+
 .popup-lootlist .popup-lootlist__list .popup-lootlist__list__section,.popup-offers-settings .popup-lootlist__list .popup-lootlist__list__section
 {
 	background-color: rgba(0, 0, 0, 0.315);
 	margin: 4px 8px;
-	width: 100%;
+	width: 306px;
 }
 
 .popup-lootlist .popup-lootlist__list .popup-lootlist__list__section_items,.popup-offers-settings .popup-lootlist__list .popup-lootlist__list__section_items

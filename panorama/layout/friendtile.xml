@@ -4,9 +4,7 @@
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
 		<include src="s2r://panorama/styles/friendtile.vcss_c" />
 	</styles>
-	<scripts>
-		<include src="s2r://panorama/scripts/honor_icon.vjs_c" />
-	</scripts>
+	<scripts />
 	<Panel class="friendtile hidden" acceptsfocus="true" useglobalcontext="true">
 		<Panel id="JsFriendTileStatusBg" class="friendtile-status-bg" />
 		<Button id="JsFriendTileBtn" class="friendtile-contents">
@@ -22,8 +20,8 @@
 			</Panel>
 			<Panel class="friendtile__status">
 				<Panel class="left-right-flow full-width">
-					<Frame id="jsHonorIcon" class="right-margin-4" src="s2r://panorama/layout/honor_icon.vxml_c" />
-					<Label id="JsFriendName" class="friendtile__text__title" text="" />
+					<CSGOHonorIcon id="jsHonorIcon" class="right-margin-4" do_fx="true" />
+					<Label id="JsFriendName" class="friendtile__text__title" text="" html="true" />
 				</Panel>
 				<Label id="JsFriendStatus" class="friendtile__text__status stratum-light" text="" />
 			</Panel>

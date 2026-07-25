@@ -16,7 +16,7 @@
 		</Button>
 		<Label text="#leaderboard_namelock_click_submit" class="PopupMessage" html="true" />
 		<Panel class="namelock-profilename PopupButton button">
-			<Label id="TextEntry" class="" text="{s:profile-name}" onactivate="LeaderboardNameLock.OpenProfile()" />
+			<Label id="TextEntry" class="" text="{s:profile-name}" onactivate="LeaderboardNameLock.OpenProfile()" html="true" />
 		</Panel>
 		<Label id="id-error_text" class="PopupMessage" text="" />
 		<Panel id="validation-result" class="full-width top-bottom-flow validation-results-container" />

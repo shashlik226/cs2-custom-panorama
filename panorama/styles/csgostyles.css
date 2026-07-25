@@ -3737,6 +3737,11 @@ EdgeScrollBar.Vertical #MaxButton
 	padding-bottom: 32px;
 }
 
+.bottom-padding-x-large
+{
+	padding-bottom: 64px;
+}
+
 .top-padding
 {
 	padding-top: 8px;
@@ -3765,6 +3770,11 @@ EdgeScrollBar.Vertical #MaxButton
 .padding-8
 {
 	padding: 8px;
+}
+
+.padding-4
+{
+	padding: 4px;
 }
 
 .padding-16
@@ -3909,6 +3919,11 @@ EdgeScrollBar.Vertical #MaxButton
 .margin-8
 {
 	margin: 8px;
+}
+
+.margin-4
+{
+	margin: 4px;
 }
 
 .margin-32
@@ -4100,5 +4115,13 @@ Label .InlineGlyph
 	width: 16px;
 	height: 16px;
 	vertical-align: center;
+}
+
+CSGOScoreboardContainer
+{
+	border: 0;
+	margin: 0;
+	vertical-align: center;
+	horizontal-align: center;
 }
 

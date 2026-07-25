@@ -17,7 +17,7 @@
 						<Image id="avatarteamlogo" src="s2r://panorama/images/tournaments/teams/nologo.vsvg" class="TeamIcon" texturewidth="35" textureheight="35" />
 					</Panel>
 					<Panel class="sb-row__cell sb-row__cell--name">
-						<Label id="name__label" />
+						<Label id="name__label" html="true" />
 					</Panel>
 				</Panel>
 			</Panel>
@@ -163,7 +163,7 @@
 			<Panel id="id-mi-player-stats" class="mi-player-stats mi-player-stats__collapse">
 				<Panel class="mi-horizontal-separator" />
 				<Panel class="left-right-flow mi-round-stats__title__container">
-					<Label id="id-mi-player-stats-title" class="sb-meta__label mi-round-stats__title" text="#MatchInfo_RoundDataTitle" />
+					<Label id="id-mi-player-stats-title" class="sb-meta__label mi-round-stats__title" text="#MatchInfo_RoundDataTitle" html="true" />
 					<Button id="id-mi-watch-highlights" class="IconButton hidden" style="tooltip-position: top;">
 						<Image src="s2r://panorama/images/icons/ui/film.vsvg" />
 					</Button>

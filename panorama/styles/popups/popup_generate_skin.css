@@ -1,53 +1,95 @@
-/* Prettified by Source 2 Viewer 14.1.0.0 - https://valveresourceformat.github.io */
-
-.Options
-{
-	flow-children: down;
-	horizontal-align: center;
-	vertical-align: center;
-	margin: 12px;
+.Content {
+    width: 500px;
+    height: fit-children;
+    flow-children: down;
+    horizontal-align: center;
+    vertical-align: center;
 }
 
-.Options DropDown
-{
-	width: 300px;
-	margin-bottom: 4px;
+.Options {
+    flow-children: down;
+    horizontal-align: center;
+    vertical-align: center;
+    width: 450px;
+    margin: 12px;
 }
 
-.Options TextEntry
-{
-	width: 300px;
-	margin-bottom: 4px;
+.Group {
+    width: 100%;
+    height: fit-children;
+    horizontal-align: right;
+    flow-children: right;
 }
 
-MapItemPreviewPanel
-{
-	width: 500px;
-	height: 250px;
+.Group .Stickers {
+    horizontal-align: center;
+    flow-children: right;
 }
 
-.Option
-{
-	flow-children: right;
+.Stickers.hidden {
+    visibility: collapse;
 }
 
-.Option Label
-{
-	width: 75px;
-	margin-right: 8px;
+.Group .DropDownName {
+    margin-right: 8px;
 }
 
-.Content
-{
-	width: 500px;
-	height: fit-children;
-	flow-children: down;
-	horizontal-align: center;
-	vertical-align: center;
+.Group ItemImage {
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+
+    transition-property: brightness,  background-color;
+	transition-duration: .20s;
+	transition-timing-function: ease-in-out;
 }
 
-.hidden
-{
-	visibility: collapse;
+.Group ItemImage:hover {
+    brightness: 1.5;
+    background-color: rgba(255, 255, 255, 0.02);
+
+    transition-property: brightness,  background-color;
+	transition-duration: .20s;
+	transition-timing-function: ease-in-out;
 }
 
+.Options TextEntry,
+.Options CSGOSettingsSlider,
+.Options DropDown {
+    width: 300px;
+    margin-bottom: 4px;
+    horizontal-align: right;
+}
+
+MapItemPreviewPanel {
+    width: 450px;
+    height: 250px;
+}
+
+ItemImage {
+    width: 500px;
+    height: 250px;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+#id-popup-items {
+    max-height: 800px;
+}
+
+.PopupPanel.popup-items-list
+{
+    max-width: 900px;
+}
+
+#itemsFilter {
+    width: 100%;
+    margin: 12px;
+}
+
+.FindPaintButton
+{
+    margin-right: 8px;
+}

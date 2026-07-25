@@ -51,7 +51,7 @@
 					</Panel>
 				</Panel>
 				<Frame class="vertical-align-center" src="s2r://panorama/layout/rating_emblem.vxml_c" />
-				<Label class="premier-pickban__map-avatars__label stratum-regular-tf" text="{s:teammate_name}" />
+				<Label class="premier-pickban__map-avatars__label stratum-regular-tf" text="{s:teammate_name}" html="true" />
 			</Panel>
 		</snippet>
 		<snippet name="small-avatar-opponent">

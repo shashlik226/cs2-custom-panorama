@@ -54,7 +54,7 @@
 							</Panel>
 						</Panel>
 						<Panel class="eom-rank__bar__xptrailicon-container">
-							<Frame id="jsHonorIcon" src="s2r://panorama/layout/honor_icon.vxml_c" />
+							<CSGOHonorIcon id="jsHonorIcon" force_type="xptrail" do_fx="true" />
 						</Panel>
 						<Panel id="id-eom-rank-bar-white" class="eom-rank__bar--white" />
 					</Panel>

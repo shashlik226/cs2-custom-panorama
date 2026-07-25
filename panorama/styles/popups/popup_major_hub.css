@@ -426,11 +426,20 @@
 .major-hub-store .major-hub-store__items-section .major-hub-store__banner .major-hub-store__banner__text .major-hub-store__banner__title
 {
 	font-size: 32px;
+	text-shadow: 0px 0px 12px 3 rgba(0, 0, 0, 0.5);
 }
 
 .major-hub-store .major-hub-store__items-section .major-hub-store__banner .major-hub-store__banner__text .major-hub-store__banner__desc
 {
-	font-size: 14px;
+	font-size: 13px;
+	text-shadow: 0px 0px 12px 2 rgba(0, 0, 0, 0.5);
+}
+
+.major-hub-store .major-hub-store__items-section .major-hub-store__banner .major-hub-store__banner__text .major-hub-store__banner__desc-new
+{
+	font-size: 20px;
+	text-shadow: 0px 0px 12px 2 rgba(0, 0, 0, 0.5);
+	color: rgb(226, 219, 176);
 }
 
 .major-hub-store.graffiti-panel-visible .major-hub-store__items-section

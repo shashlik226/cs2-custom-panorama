@@ -1509,9 +1509,10 @@ Label.sb-row__cell--mvps__count
 	margin-bottom: 5px;
 }
 
-#MainMenu .sb-main
+.menu-scoreboard
 {
-	y:-18px;
+	flow-children: down;
+	y: -18px;
 }
 
 .sb-coop-mission-info
@@ -1631,5 +1632,10 @@ Label.sb-row__cell--mvps__count
 .oddrow
 {
 	background-color: rgba(1, 49, 65, 0.5);
+}
+
+CSGOScoreboard
+{
+	world-blur: hudWorldBlur;
 }
 

@@ -165,6 +165,78 @@ CSGOHudHealthAmmoCenter.HUD--no-player
 	background-color: rgba(0,0,0,0);
 }
 
+#ExpectedBombHealthBar.BombPlantedPulse__Slow .ProgressBarMiddle
+{
+	animation-duration: 0.8s;
+}
+
+#ExpectedBombHealthBar.BombPlantedPulse__Medium .ProgressBarMiddle
+{
+	animation-duration: 0.5s;
+}
+
+#ExpectedBombHealthBar.BombPlantedPulse__Fast .ProgressBarMiddle
+{
+	animation-duration: 0.3s;
+}
+
+#ExpectedBombHealthBar
+{
+	transition-property: opacity, transform;
+	transition-duration: 0.3s;
+	transform: scale3d( 1, 4, 1);
+	opacity: 0;
+}
+
+#ExpectedBombHealthBar .ProgressBarLeft,#ExpectedBombHealthBar .ProgressBarMiddle,#ExpectedBombHealthBar .ProgressBarRight
+{
+	background-color:white;
+	transition-duration: 1s;
+}
+
+#ExpectedBombHealthBar.expected-bomb-damage-active
+{
+	background-color:rgba(0, 0, 0, 0);
+	opacity: 1;
+	transform: scale3d( 1, 1, 1);
+}
+
+#ExpectedBombHealthBar.expected-bomb-damage-active .ProgressBarLeft
+{
+	background-color: rgba(0, 255, 0, 0.603);
+}
+
+#ExpectedBombHealthBar.expected-bomb-damage-active .ProgressBarMiddle
+{
+	animation-name: ExpectedBombDamage;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+#ExpectedBombHealthBar.expected-bomb-damage-active .ProgressBarRight
+{
+	background-color: rgba(0,0,0,0);
+}
+
+@keyframes 'ExpectedBombDamage'
+{
+	0%
+	{
+		background-color: #ff8000a0;
+	}
+	
+	50%
+	{
+		background-color: #ff0000ff;
+	}
+	
+	100%
+	{
+		background-color: #ff8000a0;
+	}
+	
+}
+
 .hud-HA--on-damage .hud-HA-bar--health .ProgressBarLeft,.hud-HA--critical .hud-HA-bar--health .ProgressBarLeft
 {
 	background-color: red;
@@ -1481,25 +1553,21 @@ Label.hud-HA__kills__count
 	text-overflow: ellipsis;
 	max-width: 10px;
 	font-size: 13px;
-	height: 13px;
 }
 
 .weapon-name
 {
 	font-size: 18px;
-	height: 18px;
 }
 
 .weapon-kit-name
 {
 	font-size: 15px;
-	height: 17px;
 }
 
 .weapon-name-custom
 {
 	font-size: 13px;
-	height: 13px;
 	text-overflow: ellipsis;
 }
 

@@ -1,4 +1,3 @@
-<!-- xml reconstructed by Source 2 Viewer 14.1.0.0 - https://valveresourceformat.github.io -->
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/gamestyles.vcss_c" />
@@ -8,80 +7,35 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
-		<include src="s2r://panorama/scripts/popups/popup_generator.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_generate_skin.vjs_c" />
 	</scripts>
-	<Panel class="PopupPanel Hidden" popupbackground="dim" defaultfocus="TextEntry">
-		<Label class="PopupTitle" text="SKIN GENERATOR 3000" />
-		<Panel class="Content">
+	<Panel class="PopupPanel Hidden" popupbackground="dim" defaultfocus="Weapon" onload="PopupGenerateSkins.Init()">
+    	<Label class="PopupTitle" text="SKIN GENERATOR 3000 v2" />
+
+		<Panel id="Content" class="Content">
 			<Panel id="Options" class="Options">
-				<DropDown class="PopupButton White" id="itemIdx" menuclass="DropDownMenu" oninputsubmit="PopupGenerator.UpdateWeaponSkinPreview()">
-					<Label text="#SFUI_WPNHUD_Glock18" id="weapon_glock" value="4" />
-					<Label text="#SFUI_WPNHUD_hkp2000" id="weapon_hkp2000" value="32" />
-					<Label text="#SFUI_WPNHUD_usp_silencer" id="weapon_usp_silencer" value="61" />
-					<Label text="#SFUI_WPNHUD_elite" id="weapon_elite" value="2" />
-					<Label text="#SFUI_WPNHUD_p250" id="weapon_p250" value="36" />
-					<Label text="#SFUI_WPNHUD_tec9" id="weapon_tec9" value="30" />
-					<Label text="#SFUI_WPNHUD_fiveseven" id="weapon_fiveseven" value="3" />
-					<Label text="#SFUI_WPNHUD_CZ75" id="weapon_cz75a" value="63" />
-					<Label text="#SFUI_WPNHUD_deagle" id="weapon_deagle" value="1" />
-					<Label text="#SFUI_WPNHUD_revolver" id="weapon_revolver" value="64" />
-					<Label text="#SFUI_WPNHUD_ak47" id="weapon_ak47" value="7" />
-					<Label text="#SFUI_WPNHUD_m4a1" id="weapon_m4a1" value="16" />
-					<Label text="#SFUI_WPNHUD_m4a1_silencer" id="weapon_m4a1_silencer" value="60" />
-					<Label text="#SFUI_WPNHUD_galilar" id="weapon_galilar" value="13" />
-					<Label text="#SFUI_WPNHUD_famas" id="weapon_famas" value="10" />
-					<Label text="#SFUI_WPNHUD_ssg08" id="weapon_ssg08" value="40" />
-					<Label text="#SFUI_WPNHUD_sg556" id="weapon_sg556" value="39" />
-					<Label text="#SFUI_WPNHUD_aug" id="weapon_aug" value="8" />
-					<Label text="#SFUI_WPNHUD_awp" id="weapon_awp" value="9" />
-					<Label text="#SFUI_WPNHUD_g3sg1" id="weapon_g3sg1" value="11" />
-					<Label text="#SFUI_WPNHUD_scar20" id="weapon_scar20" value="38" />
-					<Label text="#SFUI_WPNHUD_mac10" id="weapon_mac10" value="17" />
-					<Label text="#SFUI_WPNHUD_mp9" id="weapon_mp9" value="34" />
-					<Label text="#SFUI_WPNHUD_mp7" id="weapon_mp7" value="33" />
-					<Label text="#SFUI_WPNHUD_mp5sd" id="weapon_mp5sd" value="23" />
-					<Label text="#SFUI_WPNHUD_ump45" id="weapon_ump45" value="24" />
-					<Label text="#SFUI_WPNHUD_p90" id="weapon_p90" value="19" />
-					<Label text="#SFUI_WPNHUD_bizon" id="weapon_bizon" value="26" />
-					<Label text="#SFUI_WPNHUD_nova" id="weapon_nova" value="35" />
-					<Label text="#SFUI_WPNHUD_xm1014" id="weapon_xm1014" value="25" />
-					<Label text="#SFUI_WPNHUD_sawedoff" id="weapon_sawedoff" value="29" />
-					<Label text="#SFUI_WPNHUD_mag7" id="weapon_mag7" value="27" />
-					<Label text="#SFUI_WPNHUD_m249" id="weapon_m249" value="14" />
-					<Label text="#SFUI_WPNHUD_negev" id="weapon_negev" value="28" />
-					<Label text="#SFUI_WPNHUD_c4" id="weapon_c4" value="49" />
-					<Label text="#SFUI_WPNHUD_KnifeBayonet" id="weapon_bayonet" value="500" />
-					<Label text="#SFUI_WPNHUD_KnifeFlip" id="weapon_knife_flip" value="505" />
-					<Label text="#SFUI_WPNHUD_KnifeGut" id="weapon_knife_gut" value="506" />
-					<Label text="#SFUI_WPNHUD_KnifeKaram" id="weapon_knife_karambit" value="507" />
-					<Label text="#SFUI_WPNHUD_KnifeM9" id="weapon_knife_m9_bayonet" value="508" />
-					<Label text="#SFUI_WPNHUD_KnifeTactical" id="weapon_knife_tactical" value="509" />
-					<Label text="#SFUI_WPNHUD_Knife_Butterfly" id="weapon_knife_butterfly" value="515" />
-					<Label text="#SFUI_WPNHUD_knife_falchion_advanced" id="weapon_knife_falchion" value="512" />
-					<Label text="#SFUI_WPNHUD_knife_push" id="weapon_knife_push" value="516" />
-					<Label text="#SFUI_WPNHUD_knife_survival_bowie" id="weapon_knife_survival_bowie" value="514" />
-					<Label text="#SFUI_WPNHUD_knife_stiletto" id="weapon_knife_stiletto" value="522" />
-					<Label text="#SFUI_WPNHUD_knife_ursus" id="weapon_knife_ursus" value="519" />
-					<Label text="#SFUI_WPNHUD_knife_widowmaker" id="weapon_knife_widowmaker" value="523" />
-					<Label text="#SFUI_WPNHUD_knife_gypsy_jackknife" id="weapon_knife_gypsy_jackknife" value="520" />
-					<Label text="#SFUI_WPNHUD_knife_outdoor" id="weapon_knife_outdoor" value="521" />
-					<Label text="#SFUI_WPNHUD_knife_cord" id="weapon_knife_cord" value="517" />
-					<Label text="#SFUI_WPNHUD_knife_canis" id="weapon_knife_canis" value="518" />
-					<Label text="#SFUI_WPNHUD_KnifeCSS" id="weapon_knife_css" value="503" />
-					<Label text="#SFUI_WPNHUD_knife_skeleton" id="weapon_knife_skeleton" value="525" />
-					<Label text="#SFUI_WPNHUD_knife_kukri" id="weapon_knife_kukri" value="526" />
-				</DropDown>
-				<Panel class="Option">
-					<Label text="Skin ID:" />
-					<TextEntry maxchars="5" textmode="numeric" id="skinIdx" ontextentrychange="PopupGenerator.UpdateWeaponSkinPreview()" ontextentrysubmit="PopupGenerator.UpdateWeaponSkinPreview()" />
+				<Panel class="Group">
+					<Label class="DropDownName" text="Weapon:" />
+    				<DropDown class="PopupButton White" id="Weapon" menuclass="DropDownMenu Width-250" >
+					</DropDown>
+				</Panel>
+				<Panel class="Group">
+					<Label class="DropDownName" text="Paint:" />
+					<DropDown class="PopupButton White" id="Paint" menuclass="DropDownMenu Width-250" >
+						<Label text="Custom" id="showfromfield" value="showfromfield"/>
+					</DropDown>
+				</Panel>
+				<Panel id="PaintFieldGroup" class="Group">
+					<Label class="DropDownName" text="Paint ID:" />
+    				<TextEntry maxchars="4" textmode="numeric" id="PaintField" text="2" ontextentrychange="PopupGenerateSkins.UpdateWeaponPreview()"/>
 				</Panel>
 			</Panel>
 			<MapItemPreviewPanel id="ItemPreview" camera="camera_weapon_0" require-composition-layer="true" transparent-background="true" disable-depth-of-field="false" player="false" map="ui/xpshop_item" initial_entity="item" panzoom_enabled="true" mouse_rotate="true" rotation_limit_x="360" rotation_limit_y="360" pin-fov="vertical" hittest="true" />
 		</Panel>
 		<Panel class="PopupButtonRow">
-			<TextButton class="PopupButton" text="Inspect" onactivate="PopupGenerator.InspectItem(true)" />
-			<TextButton class="PopupButton" text="Copy ItemID" onactivate="PopupGenerator.CopyActiveItemID(true)" />
-			<TextButton class="PopupButton" text="#UI_Cancel" onactivate="$.DispatchEvent( &apos;UIPopupButtonClicked&apos;, &apos;&apos; );" />
+			<TextButton class="PopupButton" text="COPY ITEMID" onactivate="PopupGenerateSkins.CopyItemID()" />
+			<TextButton class="PopupButton" text="#UI_Inspect" onactivate="PopupGenerateSkins.Inspect()" />
+			<TextButton class="PopupButton" text="#UI_Cancel" onactivate="$.DispatchEvent( 'UIPopupButtonClicked', '' );" />
 		</Panel>
-	</Panel>
+  	</Panel>
 </root>

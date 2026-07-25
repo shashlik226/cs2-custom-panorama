@@ -49,7 +49,7 @@
 		</snippet>
 		<snippet name="system-message">
 			<Panel class="chat-message chat-message-system">
-				<Label id="id-chat-message-label" class="chat-message__body stratum-regular" text="" />
+				<Label id="id-chat-message-label" class="chat-message__body stratum-regular" text="" html="true" />
 			</Panel>
 		</snippet>
 		<snippet name="system-success-message">

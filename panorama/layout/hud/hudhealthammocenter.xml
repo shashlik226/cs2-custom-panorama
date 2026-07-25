@@ -19,10 +19,10 @@
 				<Panel id="TeamLogo" class="HudSpecplayerBG__TeamLogo additive" />
 			</Panel>
 			<Panel class="HudSpecplayer__player-name-contianer additive">
-				<Label class="HudSpecplayer__player-clan hud-colorize-wash additive stratum-bold" text="{s:spec_player_clan}" />
+				<Label class="HudSpecplayer__player-clan hud-colorize-wash additive stratum-bold" text="{g:player_name:bc:spec_playerslot}" />
 				<Panel class="left-right-flow">
-					<Frame id="jsHonorIcon" class="vertical-center" src="s2r://panorama/layout/honor_icon.vxml_c" />
-					<Label class="HudSpecplayer__player-name hud-colorize-wash additive stratum-bold" text="{s:spec_player_name}" />
+					<CSGOHonorIcon id="jsHonorIcon" class="vertical-center" do_fx="true" />
+					<Label class="HudSpecplayer__player-name hud-colorize-wash additive stratum-bold" text="{g:player_name:on:cn:spec_playerslot}" html="true" />
 				</Panel>
 				<Panel id="jsHudSpecplayer__Bg__adr_container" class="HudSpecAdr-container additive">
 					<Label class="HudSpecAdr__text--title hud-colorize-wash stratum-bold" text="#SFUI_SpecStat_type_adr" />
@@ -116,6 +116,7 @@
 				<Panel class="hud-HA__stroke left hud-colorize-wash" />
 				<Panel class="hud-HA-main-container">
 					<ProgressBar id="HealthBar" class="hud-HA-bar HUD--health--on-damage--listener" />
+					<ProgressBarWithMiddle id="ExpectedBombHealthBar" class="hud-HA-bar" />
 					<Panel id="hud-HA-main" class="hud-HA-main">
 						<Panel class="hud-HA-armor HUD--has-armor--on-pickup--listener">
 							<Panel class="hud-HA-icon-outline-container">

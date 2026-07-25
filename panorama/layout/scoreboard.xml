@@ -10,7 +10,6 @@
 		<include src="s2r://panorama/scripts/mock_adapter.vjs_c" />
 		<include src="s2r://panorama/scripts/rating_emblem.vjs_c" />
 		<include src="s2r://panorama/scripts/match_stakes.vjs_c" />
-		<include src="s2r://panorama/scripts/honor_icon.vjs_c" />
 		<include src="s2r://panorama/scripts/context_menus/context_menu_playercard.vjs_c" />
 		<include src="s2r://panorama/scripts/scoreboard.vjs_c" />
 	</scripts>
@@ -464,7 +463,7 @@
 		</snippet>
 		<snippet name="stat--NAME-W-COMMENDS">
 			<Panel data-stat="name">
-				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:html:player_slot}" />
+				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:player_slot}" />
 				<Panel id="id-sb-name__nameicons" class="spectator-hidden">
 					<Frame id="jsRatingEmblem" api="gamestate" src="s2r://panorama/layout/rating_emblem.vxml_c" />
 					<Image id="id-sb-name__commendations__leader" class="hidden sb-team-tint" src="s2r://panorama/images/icons/ui/leader.vsvg" />
@@ -476,8 +475,8 @@
 		</snippet>
 		<snippet name="stat--NAME-PREMIER">
 			<Panel data-stat="name">
-				<Frame id="jsHonorIcon" class="" src="s2r://panorama/layout/honor_icon.vxml_c" />
-				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:html:player_slot}" />
+				<CSGOHonorIcon id="jsHonorIcon" class="" do_fx="true" />
+				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:player_slot}" />
 				<Panel id="id-sb-name__nameicons" class="spectator-hidden">
 					<Frame id="jsRatingEmblem" src="s2r://panorama/layout/rating_emblem.vxml_c" />
 				</Panel>
@@ -485,8 +484,8 @@
 		</snippet>
 		<snippet name="stat--NAME">
 			<Panel data-stat="name">
-				<Frame id="jsHonorIcon" class="" src="s2r://panorama/layout/honor_icon.vxml_c" />
-				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:html:player_slot}" />
+				<CSGOHonorIcon id="jsHonorIcon" class="" do_fx="true" />
+				<Label id="name" html="true" class="sb-team-tint stratum-medium" text="{g:player_name:player_slot}" />
 				<Panel id="id-sb-name__nameicons" class="spectator-hidden">
 					<Frame id="jsRatingEmblem" src="s2r://panorama/layout/rating_emblem.vxml_c" />
 				</Panel>

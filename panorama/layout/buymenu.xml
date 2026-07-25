@@ -5,7 +5,6 @@
 		<include src="s2r://panorama/styles/buymenu.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/buymenu.vjs_c" />
 		<include src="s2r://panorama/scripts/common/characteranims.vjs_c" />
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
 		<include src="s2r://panorama/scripts/mock_adapter.vjs_c" />

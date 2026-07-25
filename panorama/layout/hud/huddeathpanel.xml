@@ -28,8 +28,8 @@
 								<Panel class="top-bottom-flow vertical-center" style="width: fill-parent-flow( 1.0 );">
 									<Panel class="full-width">
 										<Panel class="left-right-flow left-margin">
-											<Frame id="jsHonorIcon" class="vertical-center" src="s2r://panorama/layout/honor_icon.vxml_c" />
-											<Label class="DeathPanel__Name stratum-bold" html="true" text="{s:killer_name}" />
+											<CSGOHonorIcon id="jsHonorIcon" class="vertical-center" do_fx="true" />
+											<Label class="DeathPanel__Name stratum-bold" html="true" text="{g:player_name:bc:on:cn:killer_playerslot}" />
 										</Panel>
 										<Image class="DeathPanel__DominationIcon DeathPanel__DominationIcon--Nemesis" src="s2r://panorama/images/hud/deathpanel/icon-dominated_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
 										<Image class="DeathPanel__DominationIcon DeathPanel__DominationIcon--Revenge" src="s2r://panorama/images/hud/deathpanel/icon-domination-break_png.vtex" scaling="stretch-to-fit-preserve-aspect" />

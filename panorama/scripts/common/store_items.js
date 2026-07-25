@@ -11,8 +11,7 @@ var StoreItems;
         prime: [],
         market: [],
         key: [],
-        store: [],
-        allitems: []
+        store: []
     };
     function MakeStoreItemList() {
         let count = StoreAPI.GetBannerEntryCount();
@@ -25,8 +24,7 @@ var StoreItems;
             prime: [],
             market: [],
             key: [],
-            store: [],
-            allitems: []
+            store: []
         };
         let isPerfectWorld = (MyPersonaAPI.GetLauncherType() === "perfectworld");
         let strBannerEntryCustomFormatString;
@@ -64,15 +62,6 @@ var StoreItems;
                 m_oItemsByCategory.store.push({ id: FauxItemId });
             }
         }
-        for (let i = 0; i < 30000; i++) {
-			var itemId = InventoryAPI.GetFauxItemIDFromDefAndPaintIndex( i, 0 );
-			var itemName = InventoryAPI.GetItemName(itemId);
-
-			if(itemName == '' || itemName == undefined || !itemName)
-				continue;
-			
-			m_oItemsByCategory.allitems.push({ id: itemId });
-		}
         GetTournamentItems();
     }
     StoreItems.MakeStoreItemList = MakeStoreItemList;

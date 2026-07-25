@@ -10,7 +10,6 @@
 		<include src="s2r://panorama/scripts/leaderboard.vjs_c" />
 		<include src="s2r://panorama/scripts/rating_emblem.vjs_c" />
 		<include src="s2r://panorama/scripts/common/teamcolor.vjs_c" />
-		<include src="s2r://panorama/scripts/honor_icon.vjs_c" />
 	</scripts>
 	<snippets>
 		<snippet name="leaderboard-entry">
@@ -23,8 +22,8 @@
 				</Panel>
 				<Panel class="leaderboard__list__column name">
 					<CSGOAvatarImage id="leaderboard-entry-avatar" class="leaderboard__name-entry__avatar" />
-					<Frame id="jsHonorIcon" class="" src="s2r://panorama/layout/honor_icon.vxml_c" />
-					<Label text="{s:player-name}" class="stratum-regular leaderboard_cell" />
+					<CSGOHonorIcon id="jsHonorIcon" class="" do_fx="true" />
+					<Label text="{s:player-name}" class="stratum-regular leaderboard_cell" html="true" />
 				</Panel>
 				<Panel class="leaderboard__list__column wins">
 					<Label text="{s:player-wins}" class="stratum-regular leaderboard_cell" />

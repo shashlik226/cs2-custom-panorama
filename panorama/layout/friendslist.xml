@@ -34,8 +34,8 @@
 				<Button id="PartyMemberBtn" class="friendtile-contents">
 					<Panel class="friendtile__status">
 						<Panel class="name-container">
-							<Frame id="jsHonorIcon" src="s2r://panorama/layout/honor_icon.vxml_c" />
-							<Label id="JsFriendName" class="friendtile__text__title" text="" />
+							<CSGOHonorIcon id="jsHonorIcon" do_fx="true" />
+							<Label id="JsFriendName" class="friendtile__text__title" text="" html="true" />
 						</Panel>
 						<Panel class="left-right-flow top-padding">
 							<Image id="PartyRank" class="right-padding" textureheight="16" texturewidth="-1" src="s2r://panorama/images/icons/skillgroups/skillgroup10.vsvg" />

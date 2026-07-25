@@ -568,27 +568,17 @@ TextEntry Label
 	margin-right: 8px;
 }
 
-.popup-major-store__banners-container #id-major-store-banners-bookmarks
-{
-	opacity: 0;
-	height: 0px;
-	transition-property: opacity, height;
-	transition-duration: .25s;
-	transition-timing-function: ease-in-out;
-}
-
-.popup-major-store__banners-container #id-major-store-banners-bookmarks.show
-{
-	opacity: 1;
-	height: 200px;
-	visibility: visible;
-}
-
 .popup-major-store__banners-container .popup-major-store__banner
 {
 	transition-property: y;
 	transition-duration: .25s;
 	transition-timing-function: ease-in-out;
+	background-color: rgba(43, 77, 56, 0.6);
+	background-image: url("s2r://panorama/images/backgrounds/bluedots_large_png.vtex");
+	background-size: backgroundDotsSize;
+	background-img-opacity: .01;
+	padding: 0px;
+	border-radius: 6px;
 	margin: 12px 0px;
 	width: 100%;
 	max-width: major-store-max-width;
@@ -611,6 +601,7 @@ TextEntry Label
 	flow-children: right;
 	width: major-store-max-width;
 	horizontal-align: center;
+	padding: 0px 8px;
 }
 
 .popup-major-store__banners-container .popup-major-store__banner .popup-major-store__banner__popular_page
@@ -726,6 +717,98 @@ TextEntry Label
 	transform: translatey(-20px );
 }
 
+.popup-major-store__banners-container #id-major-store-banners-bookmarks
+{
+	opacity: 0;
+	height: 0px;
+	padding-bottom: 8px;
+	padding-right: 0px;
+	transition-property: opacity, height;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+}
+
+.popup-major-store__banners-container #id-major-store-banners-bookmarks .popup-major-store__banner__popular
+{
+	flow-children: right;
+	width: major-store-max-width;
+	horizontal-align: center;
+	padding: 0px;
+}
+
+.popup-major-store__banners-container #id-major-store-banners-bookmarks.show
+{
+	opacity: 1;
+	height: fit-children;
+	visibility: visible;
+}
+
+.popup-major-store__banners-container #id-major-store-banner-champions
+{
+	height: 170px;
+	padding: 0px;
+}
+
+.popup-major-store__banners-container #id-banner-champions
+{
+	background-color: gradient( linear, 10% 0%, 98% 100%, from( #7c5d09cc ), to( rgba(43, 77, 56, 0.6)));
+	background-image: url("s2r://panorama/images/backgrounds/bluedots_large_png.vtex");
+	background-size: backgroundDotsSize;
+	background-img-opacity: .02;
+}
+
+.popup-major-store__banners-container #id-banner-keychains
+{
+	background-color: gradient( linear, 10% 0%, 98% 100%, from( #18505aea ), to( rgba(43, 77, 56, 0.6)));
+	background-image: url("s2r://panorama/images/backgrounds/bluedots_large_png.vtex");
+	background-size: backgroundDotsSize;
+	background-img-opacity: .02;
+}
+
+.popup-major-store__banner__particle
+{
+	ignore-parent-flow: true;
+	width: 100%;
+	height: 100%;
+	opacity: .1;
+	visibility: collapse;
+	transform: scale3d(2.2,2.2 ,1) translateY( 50%) translateX( 50%);
+}
+
+.popup-major-store__stage
+{
+	transition-property: y;
+	transition-duration: .25s;
+	transition-timing-function: ease-in-out;
+	background-color: rgba(43, 77, 56, 0.6);
+	background-image: url("s2r://panorama/images/backgrounds/bluedots_large_png.vtex");
+	background-size: backgroundDotsSize;
+	background-img-opacity: .01;
+	border-radius: 6px;
+	margin: 12px 0px;
+	width: 100%;
+	max-width: major-store-max-width;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+.popup-major-store__stage .popup-major-store__stage__header
+{
+	letter-spacing: 1.5px;
+	margin-left: 16px;
+	margin-top: 16px;
+	font-size: 28px;
+	vertical-align: top;
+	color: white;
+	text-transform: uppercase;
+}
+
+.popup-major-store__stage .popup-major-store__stage__keychains
+{
+	flow-children: right-wrap;
+	horizontal-align: center;
+}
+
 .major-fullscreen-overlay-button,.major-fullscreen-overlay
 {
 	width: 100%;
@@ -833,7 +916,7 @@ TextEntry Label
 	transition-timing-function: ease-in-out;
 }
 
-.major-filter-panel .major-filter-panel__toggle:selected
+.major-filter-panel .major-filter-panel__toggle:selected:not(:disabled)
 {
 	opacity: 1;
 	brightness: 1;
@@ -844,15 +927,31 @@ TextEntry Label
 	transition-timing-function: ease-in-out;
 }
 
-.major-filter-panel .major-filter-panel__toggle:selected Image
+.major-filter-panel .major-filter-panel__toggle:selected:not(:disabled) Image
 {
 	transform: scale3d( 1, 1, 1 ) translateY( 0% );
 }
 
-.major-filter-panel .major-filter-panel__toggle:selected Image.blur
+.major-filter-panel .major-filter-panel__toggle:selected:not(:disabled) Image.blur
 {
 	opacity: 1;
 	transform: scale3d( 6, 6, 0 ) translateY( -20% );
+}
+
+.major-filter-panel .major-filter-panel__toggle.keychains
+{
+	border: 0px solid rgba(128, 128, 128, 0.0);
+}
+
+.major-filter-panel .major-filter-panel__toggle.keychains .TickBox
+{
+	visibility: visible;
+}
+
+.major-filter-panel .major-filter-panel__toggle.keychains:selected
+{
+	border: 0px solid rgba(128, 128, 128, 0.0);
+	box-shadow: none;
 }
 
 .major-filter-panel .major-filter-panel__toggle Image
@@ -935,7 +1034,7 @@ TextEntry Label
 
 .major-search-results-panel
 {
-	width: 300px;
+	width: fit-children;
 	background-color: major-store-filter-bg-color-major-26;
 	z-index: 2;
 	opacity: 1;
@@ -943,6 +1042,7 @@ TextEntry Label
 	horizontal-align: center;
 	margin-top: 72px;
 	transition-property: opacity, transform;
+	transition-delay: .10s;
 	transition-duration: 0.10s;
 	transition-timing-function: ease-in-out;
 }
@@ -955,32 +1055,69 @@ TextEntry Label
 	transition-timing-function: ease-in-out;
 }
 
+.major-search-results-panel VerticalScrollBar
+{
+	margin: 0px;
+}
+
+.major-search-results-panel .major-search-results__container
+{
+	flow-children: right;
+	margin: 16px;
+}
+
+.major-search-results-panel .major-search-results__section
+{
+	flow-children: down;
+	max-height: 420px;
+	width: 288px;
+}
+
+.major-search-results-panel .major-search-results__section__separator
+{
+	margin: 0px 24px;
+	width: 1px;
+	background-color: rgba(255, 255, 255, 0.13);
+	height: 100%;
+}
+
 .major-search-results-panel .major-search-results__list
 {
 	flow-children: down;
-	max-height: 380px;
-	padding: 8px 24px 8px 12px;
 	overflow: clip scroll;
+	width: 100%;
+	padding: 16px 0px;
 }
 
 .major-search-results-panel .major-search-results__text-btn
 {
-	margin-bottom: 8px;
 	padding: 8px;
-	width: 100%;
+	flow-children: right;
 	border-radius: 3px;
 	border: 1px solid rgba(255, 255, 255, 0.199);
+	vertical-align: bottom;
 	transition-property: brightness;
 	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 }
 
-.major-search-results-panel .major-search-results__text-btn Label
+.major-search-results-panel .major-search-results__text-btn .major-search-results__text-btn__label
 {
 	font-family: Stratum2, 'Arial Unicode MS';
 	font-weight: medium;
 	font-size: 16px;
 	vertical-align: center;
+	color: white;
+}
+
+.major-search-results-panel .major-search-results__text-btn .major-search-results__text-btn__count
+{
+	font-family: Stratum2, 'Arial Unicode MS';
+	font-weight: light;
+	font-size: 16px;
+	vertical-align: center;
+	horizontal-align: right;
+	margin-left: 8px;
 }
 
 .major-search-results-panel .major-search-results__text-btn:hover
@@ -992,8 +1129,7 @@ TextEntry Label
 .major-search-results-panel .major-store__results-tile
 {
 	flow-children: right;
-	margin: 8px 0px;
-	width: 270px;
+	width: 280px;
 	border-radius: 4px;
 	transition-property: background-color;
 	transition-duration: 0.20s;
@@ -1004,18 +1140,21 @@ TextEntry Label
 {
 	horizontal-align: right;
 	padding: 4px 4px 12px 8px;
+	width: 32px;
+	height: 32px;
 	z-index: 5;
 }
 
 .major-search-results-panel .major-store__results-tile ItemImage
 {
 	height: 64px;
-	padding: 4px;
+	padding: 0px;
+	vertical-align: center;
 }
 
 .major-search-results-panel .major-store__results-tile Label
 {
-	font-size: 14px;
+	font-size: 16px;
 	max-width: 150px;
 }
 
@@ -1556,6 +1695,7 @@ TextEntry Label
 {
 	color: black;
 	font-size: 18px;
+	height: 21px;
 	white-space: nowrap;
 	text-align: center;
 	max-width: 64px;
@@ -1565,9 +1705,10 @@ TextEntry Label
 .major-store__item-tile .major-store__item-tile__top .major-store__item-price-container .major-store__item-price Image
 {
 	wash-color: black;
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 100%;
 	opacity: .9;
+	vertical-align: top;
 }
 
 .major-store__item-tile .major-store__item-tile__top .major-store__item-price-container .major-store__item-price-loading
@@ -1611,6 +1752,37 @@ TextEntry Label
 	horizontal-align: left;
 	margin: 0px 0px 8px 8px;
 	z-index: 3;
+}
+
+.major-store__item-tile .major-store__item-tile__trophy
+{
+	z-index: 2;
+	width: 128px;
+	vertical-align: center;
+	horizontal-align: center;
+	visibility: collapse;
+	img-shadow: 1px 1px 20px 3 rgba(0, 0, 0, 0.63) alpha-only;
+}
+
+.is-final.major-store__item-tile .major-store__item-tile__trophy
+{
+	visibility: visible;
+}
+
+.major-store__item-tile .major-store__item-stage
+{
+	vertical-align: top;
+	horizontal-align: center;
+	font-size: 14px;
+	margin-top: 68%;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 12px 2.0 #000000b4;
+	color: gradient( linear, 0% 100%, 0% 0%, from( rgb(119, 125, 141) ), to( rgb(255, 255, 255)));
+	padding: 4px 8px;
+	z-index: 3;
+	visibility: collapse;
 }
 
 .major-store__item-tile .major-store__item-tile__image-container
@@ -1829,174 +2001,21 @@ TextEntry Label
 	color: black;
 }
 
-.small .major-store__item-tile
-{
-	width: 162px;
-	height: 170px;
-}
-
-.small .major-store__item-tile .major-store__high-low
+.major-store__item-tile .major-store__item-keychain-title,.major-store__item-tile .team-1,.major-store__item-tile .team-2,.major-store__item-tile .team-bg-1,.major-store__item-tile .team-bg-2
 {
 	visibility: collapse;
-}
-
-.small .major-store__item-tile.hidden .major-store__item-tile__image-container
-{
-	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 18px;
-	background-image: none;
-}
-
-.small .major-store__item-tile.hidden .major-store__item-tile__top,.small .major-store__item-tile.hidden .major-store__item__rarity-bar,.small .major-store__item-tile.hidden .major-store__item-price-container,.small .major-store__item-tile.hidden .store-item__price-change,.small .major-store__item-tile.hidden .major-store__item-tile__bookmark,.small .major-store__item-tile.hidden .major-store__item-trend-hot,.small .major-store__item-tile.hidden .major-store__item-tile__in-cart,.small .major-store__item-tile.hidden ItemImage
-{
-	visibility: collapse;
-}
-
-.small .major-store__item-tile.hidden:hover .major-store__item-tile__image-container
-{
-	background-color: rgba(0, 0, 0, 0.14);
-	border-radius: 18px;
-	background-image: none;
-}
-
-.small .major-store__item-tile.hidden:hover .major-store__item-tile__top,.small .major-store__item-tile.hidden:hover .major-store__item__rarity-bar,.small .major-store__item-tile.hidden:hover .major-store__item-price-container,.small .major-store__item-tile.hidden:hover .store-item__price-change,.small .major-store__item-tile.hidden:hover .major-store__item-tile__bookmark,.small .major-store__item-tile.hidden:hover .major-store__item-trend-hot,.small .major-store__item-tile.hidden:hover ItemImage
-{
-	visibility: collapse;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top
-{
-	background-image: none;
-	background-color: none;
-	background-img-opacity: 0;
-	box-shadow: none;
-	height: fit-children;
-	height: 40px;
-	ignore-parent-flow: true;
-	z-index: 1;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top .major-store__item-title,.small .major-store__item-tile .major-store__item-tile__top .major-store__item__autograph,.small .major-store__item-tile .major-store__item-tile__top .major-store__item__team-logo,.small .major-store__item-tile .major-store__item-tile__top .major-store__item-tile__rarity
-{
-	visibility: collapse;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top .major-store__item__rarity-bar
-{
-	visibility: visible;
-	height: 4px;
-	width: 100%;
-	background-color: white;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top .major-store__item-price-container
-{
-	vertical-align: center;
-	horizontal-align: left;
-	margin-left: 8px;
-	margin-top: 8px;
-	margin-bottom: 0px;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top .store-item__price-change
-{
-	vertical-align: center;
-	text-align: left;
-	flow-children: right;
-	margin:14px 0px 8px 55px;
-	padding: 4px 6px 4px 24px;
-}
-
-.small .major-store__item-tile .major-store__item-tile__top .store-item__price-change Label
-{
-	font-size: 12px;
-}
-
-.small .major-store__item-tile .major-store__item-tile__model
-{
-	width: 90%;
-	height: 90%;
-	margin-right: 0px;
-	transform: scale3d(1, 1, 1);
-	transition-property: opacity, transform;
-	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
-}
-
-.small .major-store__item-tile .major-store__item-tile__bookmark
-{
-	padding: 10px 2px 8px 8px;
-	width: 28px;
-}
-
-.small .major-store__item-tile .major-store__cart-btn,.small .major-store__item-tile .major-store__item-tile__in-cart
-{
-	ui-scale: 80%;
-	background-color: rgba(0, 0, 0, 0.80);
-}
-
-.small .major-store__item-tile .major-store__item-trend-hot,.small .major-store__item-tile .major-store__item-trend-cold
-{
-	transform: scale3d(.8, .8 , 1);
-}
-
-.small .major-store__item-tile:hover .major-store__item-trend-hot,.small .major-store__item-tile:hover .major-store__item-trend-cold
-{
-	margin-bottom: 32px;
-}
-
-.banner-bookmark .small .major-store__item-tile
-{
-	margin-right: 6px;
-}
-
-.banner-bookmark .small .major-store__item-tile .major-store__high-low
-{
-	visibility: visible;
-}
-
-.banner-bookmark .major-store__item-tile
-{
-	margin-right: 6px;
-}
-
-.banner-bookmark .major-store__item-tile .major-store__high-low
-{
-	visibility: visible;
-	opacity: 0;
-	vertical-align: bottom;
-	horizontal-align: center;
-	margin-bottom: 28px;
-	background-color: rgba(0, 0, 0, 0.80);
-	padding: 2px 6px;
-	border-radius: 4px;
-}
-
-.banner-bookmark .major-store__item-tile .major-store__high-low Label
-{
-	font-size: 12px;
-	font-family: Stratum2 Light, "Arial Unicode MS";
-}
-
-.banner-bookmark .major-store__item-tile .major-store__item-tile__cart-btns
-{
-	margin: 3px 0xp;
-}
-
-.banner-bookmark .major-store__item-tile:hover .major-store__high-low
-{
-	opacity: 1;
-}
-
-.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-hot,.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-cold
-{
-	margin-bottom: 48px;
 }
 
 .major-store__item-tile.popular-tile
 {
 	width: 210px;
 	margin-left: 42px;
+}
+
+.major-store__item-tile.popular-tile.keychain
+{
+	width: 256px;
+	height: 200px;
 }
 
 .major-store__item-tile.popular-tile .major-store__high-low
@@ -2014,6 +2033,11 @@ TextEntry Label
 {
 	font-size: 12px;
 	font-family: Stratum2 Light, "Arial Unicode MS";
+}
+
+.major-store__item-tile.popular-tile .major-store__item-keychain-title
+{
+	visibility: collapse;
 }
 
 .major-store__item-tile.popular-tile .major-store__item-tile__top
@@ -2096,13 +2120,538 @@ TextEntry Label
 
 .major-store__item-tile.popular-tile .major-store__item-tile__cart-btns
 {
+	margin-bottom: 28px;
 	margin: 2px 0px;
 }
 
-.major-store__item-tile.popular-tile .major-store__cart-btn,.major-store__item-tile.popular-tile .major-store__item-tile__in-cart
+.major-store__item-tile.popular-tile .major-store__item-tile__cart-btns .major-store__cart-btn,.major-store__item-tile.popular-tile .major-store__item-tile__cart-btns .major-store__item-tile__in-cart
 {
 	ui-scale: 80%;
-	background-color: rgba(0, 0, 0, 0.774);
+}
+
+.major-store__item-tile.keychain .major-store__item__rarity-bar,.major-store__item-tile.keychain .major-store__item-tile__rarity,.major-store__item-tile.keychain .major-store__item-title,.major-store__item-tile.keychain .major-store__item-trend-hot,.major-store__item-tile.keychain .major-store__item-trend-cold
+{
+	visibility: collapse;
+}
+
+.major-store__item-tile.keychain .major-store__item-tile__image-container
+{
+	background-image: none;
+	background-color: rgba(255, 255, 255, 0.021);
+	height: 320px;
+}
+
+.major-store__item-tile.keychain .major-store__item-tile__top
+{
+	background-image: none;
+	background-color: none;
+	box-shadow: none;
+	ignore-parent-flow: true;
+	z-index: 1;
+}
+
+.major-26 .major-store__item-tile.keychain .major-store__item-tile__top
+{
+	background-image: none;
+	background-color: none;
+}
+
+.major-store__item-tile.keychain .major-store__item-keychain-title
+{
+	visibility: visible;
+	color:rgba(255, 255, 255, 0.779);
+	text-transform: uppercase;
+	-s2-mix-blend-mode: additive;
+	font-size: 16px;
+	margin-top: 75%;
+	vertical-align: top;
+	horizontal-align: center;
+	text-align: center;
+	width: 240px;
+	height: 36px;
+	z-index: 2;
+}
+
+.major-store__item-tile.keychain ItemImage
+{
+	img-shadow: 0px 0px 32px 8 rgba(0, 0, 0, 0.75) alpha-only;
+	width: 256px;
+	margin-top: 50px;
+	horizontal-align: center;
+	vertical-align: center;
+	z-index: 1;
+	brightness: .3;
+	opacity: .8;
+	transition-property: opacity;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo
+{
+	vertical-align: center;
+	img-shadow: 0px 0px 12px 4 rgba(0, 0, 0, 0.562) alpha-only;
+	visibility: collapse;
+	z-index: 2;
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo.team-1
+{
+	visibility: visible;
+	margin-left: 28px;
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo.team-2
+{
+	visibility: visible;
+	margin-right: 28px;
+	horizontal-align: right;
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo.team-bg-1,.major-store__item-tile.keychain .major-store__item__team-logo.team-bg-2
+{
+	img-shadow:none;
+	width: 100%;
+	height: 100%;
+	blur: gaussian(12, 12, 100);
+	brightness: .2;
+	saturation: .9;
+	transform: scale3d( 2, 2, 0);
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo.team-bg-1
+{
+	opacity-mask: url("s2r://panorama/images/masks/diagonal-left.vsvg");
+}
+
+.major-store__item-tile.keychain .major-store__item__team-logo.team-bg-2
+{
+	opacity-mask: url("s2r://panorama/images/masks/diagonal-right.vsvg");
+}
+
+.major-store__item-tile.keychain .major_store__item_movie-container
+{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: collapse;
+	pre-transform-scale2d: 1,0;
+	z-index: 3;
+	background-color: major-hub-btn-dark-color-major-26;
+	transition-property: pre-transform-scale2d, opacity;
+	transition-duration: 0.25s, 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+.major-store__item-tile.keychain .major_store__item_movie-container.play
+{
+	opacity: 1;
+	visibility: visible;
+	pre-transform-scale2d: 1,1;
+}
+
+.major-store__item-tile.keychain .major_store__item_movie-container .major_store__item_movie
+{
+	width: 95%;
+	height: width-percentage(56%);
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: 60px;
+}
+
+.major-store__item-tile.keychain .major-store__high-low
+{
+	margin-top: 72px;
+}
+
+.major-store__item-tile.keychain .major-store__item-stage
+{
+	visibility: visible;
+}
+
+.major-store__item-tile.keychain.keychain-banner
+{
+	width: 260px;
+	height: 202px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-tile__top
+{
+	height: 42px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-tile__image-container
+{
+	background-color: none;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-stage
+{
+	margin-top: 65%;
+}
+
+.major-store__item-tile.keychain.keychain-banner .store-item__price-change
+{
+	margin: 0px 0px 8px 145px;
+}
+
+.major-store__item-tile.keychain.keychain-banner ItemImage
+{
+	width: 200px;
+	margin-top: 0px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .team-1,.major-store__item-tile.keychain.keychain-banner .team-2
+{
+	height: 80px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__high-low
+{
+	visibility: visible;
+	opacity: 0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 30px;
+	background-color: rgba(0, 0, 0, 0.80);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__high-low Label
+{
+	font-size: 12px;
+	font-family: Stratum2 Light, "Arial Unicode MS";
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-tile__cart-btns
+{
+	margin-bottom: 4px;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-tile__cart-btns .major-store__cart-btn,.major-store__item-tile.keychain.keychain-banner .major-store__item-tile__cart-btns .major-store__item-tile__in-cart
+{
+	ui-scale: 80%;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major-store__item-keychain-title
+{
+	z-index: 3;
+}
+
+.major-store__item-tile.keychain.keychain-banner .major_store__item_movie
+{
+	margin-top: 8px;
+	vertical-align: top;
+}
+
+.major-store__item-tile.keychain:hover .major-store__high-low
+{
+	opacity: 1;
+}
+
+.major-store__item-tile.keychain:hover .major-store__item-title
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile
+{
+	width: 162px;
+	height: 170px;
+}
+
+.small .major-store__item-tile .major-store__high-low,.small .major-store__item-tile .major-store__item-keychain-title,.small .major-store__item-tile .major-store__item-stage
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile ItemImage
+{
+	margin-top: 0px;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top
+{
+	background-image: none;
+	background-color: none;
+	background-img-opacity: 0;
+	box-shadow: none;
+	height: fit-children;
+	height: 40px;
+	ignore-parent-flow: true;
+	z-index: 1;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top .major-store__item-title,.small .major-store__item-tile .major-store__item-tile__top .major-store__item__autograph,.small .major-store__item-tile .major-store__item-tile__top .major-store__item__team-logo,.small .major-store__item-tile .major-store__item-tile__top .major-store__item-tile__rarity
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top .major-store__item__rarity-bar
+{
+	visibility: visible;
+	height: 4px;
+	width: 100%;
+	background-color: white;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top .major-store__item-price-container
+{
+	vertical-align: center;
+	horizontal-align: left;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top .store-item__price-change
+{
+	vertical-align: center;
+	text-align: left;
+	flow-children: right;
+	margin:12px 0px 6px 55px;
+	padding: 4px 6px 4px 24px;
+}
+
+.small .major-store__item-tile .major-store__item-tile__top .store-item__price-change Label
+{
+	font-size: 12px;
+}
+
+.small .major-store__item-tile.hidden .major-store__item-tile__image-container
+{
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 18px;
+	background-image: none;
+}
+
+.small .major-store__item-tile.hidden .major-store__item-tile__top,.small .major-store__item-tile.hidden .major-store__item__rarity-bar,.small .major-store__item-tile.hidden .major-store__item-price-container,.small .major-store__item-tile.hidden .store-item__price-change,.small .major-store__item-tile.hidden .major-store__item-tile__bookmark,.small .major-store__item-tile.hidden .major-store__item-trend-hot,.small .major-store__item-tile.hidden .major-store__item-tile__in-cart,.small .major-store__item-tile.hidden .major-store__item__team-logo,.small .major-store__item-tile.hidden .major-store__item-title,.small .major-store__item-tile.hidden .major-store__item-keychain-title,.small .major-store__item-tile.hidden ItemImage
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile.hidden:hover .major-store__item-tile__image-container
+{
+	background-color: rgba(0, 0, 0, 0.14);
+	border-radius: 18px;
+	background-image: none;
+}
+
+.small .major-store__item-tile.hidden:hover .major-store__item-tile__top,.small .major-store__item-tile.hidden:hover .major-store__item__rarity-bar,.small .major-store__item-tile.hidden:hover .major-store__item-price-container,.small .major-store__item-tile.hidden:hover .store-item__price-change,.small .major-store__item-tile.hidden:hover .major-store__item-tile__bookmark,.small .major-store__item-tile.hidden:hover .major-store__item-trend-hot,.small .major-store__item-tile.hidden:hover .major-store__item__team-logo,.small .major-store__item-tile.hidden:hover .major-store__item-title,.small .major-store__item-tile.hidden:hover ItemImage
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile.hidden .major-store__high-low
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile.keychain
+{
+	margin: 0px;
+	background-color: none;
+}
+
+.small .major-store__item-tile.keychain .major-store__item__rarity-bar,.small .major-store__item-tile.keychain .major-store__item-tile__rarity
+{
+	visibility: collapse;
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo
+{
+	vertical-align: center;
+	img-shadow: 0px 0px 12px 4 rgba(0, 0, 0, 0.562) alpha-only;
+	z-index: 3;
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo.team-1
+{
+	margin-left: 20px;
+	width: 40px;
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo.team-2
+{
+	horizontal-align: right;
+	margin-right: 20px;
+	width: 40px;
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo.team-bg-1,.small .major-store__item-tile.keychain .major-store__item__team-logo.team-bg-2
+{
+	img-shadow:none;
+	width: 100%;
+	height: 100%;
+	blur: gaussian(12, 12, 100);
+	brightness: .2;
+	saturation: .9;
+	transform: scale3d( 2, 2, 0);
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo.team-bg-1
+{
+	opacity-mask: url("s2r://panorama/images/masks/diagonal-left.vsvg");
+}
+
+.small .major-store__item-tile.keychain .major-store__item__team-logo.team-bg-2
+{
+	opacity-mask: url("s2r://panorama/images/masks/diagonal-right.vsvg");
+}
+
+.small .major-store__item-tile.keychain .major-store__item-keychain-title
+{
+	visibility: visible;
+	text-align: center;
+	horizontal-align: center;
+	vertical-align: top;
+	z-index: 4;
+	font-size: 12px;
+	color: white;
+}
+
+.small .major-store__item-tile.keychain .major_store__item_movie
+{
+	margin-top: 8px;
+	vertical-align: top;
+}
+
+.small .major-store__item-tile.keychain ItemImage
+{
+	brightness: .5;
+	opacity: .6;
+}
+
+.small .major-store__item-tile.keychain .major-store__high-low
+{
+	visibility: visible;
+	opacity: 0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 30px;
+	background-color: rgba(0, 0, 0, 0.80);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.small .major-store__item-tile.keychain .major-store__high-low Label
+{
+	font-size: 12px;
+	font-family: Stratum2 Light, "Arial Unicode MS";
+}
+
+.small .major-store__item-tile.keychain .major-store__item-tile__cart-btns
+{
+	margin-bottom: 4px;
+}
+
+.small .major-store__item-tile.keychain .major-store__item-tile__cart-btns .major-store__cart-btn,.small .major-store__item-tile.keychain .major-store__item-tile__cart-btns .major-store__item-tile__in-cart
+{
+	ui-scale: 80%;
+}
+
+.small .major-store__item-tile .major-store__item-tile__model
+{
+	width: 90%;
+	height: 90%;
+	margin-right: 0px;
+	transform: scale3d(1, 1, 1);
+	transition-property: opacity, transform;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+.small .major-store__item-tile .major-store__item-tile__bookmark
+{
+	padding: 10px 2px 8px 8px;
+	width: 28px;
+}
+
+.small .major-store__item-tile .major-store__cart-btn,.small .major-store__item-tile .major-store__item-tile__in-cart
+{
+	ui-scale: 80%;
+	background-color: rgba(0, 0, 0, 0.80);
+}
+
+.small .major-store__item-tile .major-store__item-trend-hot,.small .major-store__item-tile .major-store__item-trend-cold
+{
+	transform: scale3d(.8, .8 , 1);
+}
+
+.small .major-store__item-tile:hover .major-store__item-trend-hot,.small .major-store__item-tile:hover .major-store__item-trend-cold
+{
+	margin-bottom: 32px;
+}
+
+.banner-bookmark .small .major-store__item-tile
+{
+	margin-right: 6px;
+}
+
+.banner-bookmark .small .major-store__item-tile .major-store__high-low
+{
+	visibility: visible;
+}
+
+.banner-bookmark .major-store__item-tile
+{
+	margin-right: 6px;
+}
+
+.keychain.banner-bookmark .major-store__item-tile
+{
+	width: 256px;
+	height: 200px;
+}
+
+.small.banner-bookmark .major-store__item-tile .major-store__item__rarity-bar
+{
+	visibility: collapse;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__high-low
+{
+	visibility: visible;
+	opacity: 0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 28px;
+	background-color: rgba(0, 0, 0, 0.80);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__high-low Label
+{
+	font-size: 12px;
+	font-family: Stratum2 Light, "Arial Unicode MS";
+}
+
+.banner-bookmark .major-store__item-tile .major-store__item-tile__cart-btns
+{
+	margin: 3px 0xp;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__item-trend-hot,.banner-bookmark .major-store__item-tile .major-store__item-trend-cold
+{
+	margin-bottom: 2px;
+}
+
+.banner-bookmark .major-store__item-tile .major-store__item-tile__image-container
+{
+	background-image: none;
+	background-color: none;
+}
+
+.banner-bookmark .major-store__item-tile:hover .major-store__high-low
+{
+	opacity: 1;
+}
+
+.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-hot,.banner-bookmark .major-store__item-tile:hover .major-store__item-trend-cold
+{
+	margin-bottom: 48px;
 }
 
 .major-store__item-tile:hover:not(.major-store__item-tile.hidden)
@@ -2126,6 +2675,24 @@ TextEntry Label
 .major-store__item-tile:hover:not(.major-store__item-tile.hidden) ItemImage
 {
 	opacity: 0;
+}
+
+.keychain.major-store__item-tile:hover:not(.major-store__item-tile.hidden) ItemImage
+{
+	opacity: 1;
+}
+
+.keychain.major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__item-keychain-title
+{
+	opacity: 0;
+}
+
+.keychain.major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__item-tile__model
+{
+	opacity: 0;
+	transform: scale3d(1, 1, 1);
+	visibility: collapse;
+	contrast: 1;
 }
 
 .major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__cart-btn,.major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__item-tile__in-cart,.major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__item-tile__btn,.major-store__item-tile:hover:not(.major-store__item-tile.hidden) .major-store__item-tile__bookmark

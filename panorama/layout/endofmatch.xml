@@ -40,7 +40,7 @@
 			<Panel>
 				<CSGOEndOfMatchCharactersPanel id="id-eom-characters-root" class="" />
 				<Panel id="id-eom-chat-container" />
-				<Panel id="id-eom-scoreboard-container" class="horizontal-center eom-scoreboard" />
+				<CSGOScoreboardContainer id="id-eom-scoreboard-container" class="horizontal-center eom-scoreboard" />
 				<Panel id="EomCancelReason1" class="eom-cancelled vaclive">
 					<Label id="matchCancelledTitle" class="stratum-bold-italic" text="#SFUI_match_cancelled" />
 					<Label id="matchCancelledDesc" class="stratum-bold" text="#SFUI_match_abort_match_vac_live" />
@@ -57,7 +57,7 @@
 		</snippet>
 		<snippet name="snippet-eom-lower--survival">
 			<Panel>
-				<Panel id="id-eom-scoreboard-container" class="horizontal-center eom-scoreboard" />
+				<CSGOScoreboardContainer id="id-eom-scoreboard-container" class="horizontal-center eom-scoreboard" />
 				<Panel id="id-eom-chat-container" />
 			</Panel>
 		</snippet>

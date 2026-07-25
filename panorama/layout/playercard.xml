@@ -10,7 +10,6 @@
 		<include src="s2r://panorama/scripts/common/teamcolor.vjs_c" />
 		<include src="s2r://panorama/scripts/common/sessionutil.vjs_c" />
 		<include src="s2r://panorama/scripts/avatar.vjs_c" />
-		<include src="s2r://panorama/scripts/honor_icon.vjs_c" />
 		<include src="s2r://panorama/scripts/playercard.vjs_c" />
 	</scripts>
 	<snippets>
@@ -46,8 +45,8 @@
 					<Panel id="JsPlayerCardTop" class="player-card-row">
 						<Panel id="JsPlayerCardName" class="player-card-row__name">
 							<Panel class="full-width left-right-flow">
-								<Frame id="jsHonorIcon" class="vertical-center" src="s2r://panorama/layout/honor_icon.vxml_c" />
-								<Label id="JsPlayerName" class="player-card__text stratum-regular-condensed" text="" />
+								<CSGOHonorIcon id="jsHonorIcon" class="vertical-center" do_fx="true" />
+								<Label id="JsPlayerName" class="player-card__text stratum-regular-condensed" text="{g:player_name:cn:oc:x:xuid}" html="true" />
 							</Panel>
 							<Panel id="FlairCarouselAndControls" class="playercard-flair-carousel-container">
 								<Carousel id="FlairCarousel" class="playercard-flair-carousel" panels-visible="1" hittest="false" />

@@ -4,9 +4,7 @@
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
 		<include src="s2r://panorama/styles/honor_icon.vcss_c" />
 	</styles>
-	<scripts>
-		<include src="s2r://panorama/scripts/honor_icon.vjs_c" />
-	</scripts>
+	<scripts />
 	<Panel class="honor-icon-root" useglobalcontext="true">
 		<TooltipPanel tooltip="#honor_icon_tooltip" class="honor-icon">
 			<Panel class="honor-icon-background" />

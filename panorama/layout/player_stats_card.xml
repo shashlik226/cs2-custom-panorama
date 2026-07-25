@@ -95,8 +95,8 @@
 					</Panel>
 					<Panel class="card__main__lower">
 						<Panel class="card__player-name sliding-panel">
-							<Frame id="jsHonorIcon" src="s2r://panorama/layout/honor_icon.vxml_c" />
-							<Label class="stratum-bold" text="{g:player_name:playerslot}" />
+							<CSGOHonorIcon id="jsHonorIcon" do_fx="true" />
+							<Label class="stratum-bold" html="true" text="{g:player_name:playerslot}" />
 						</Panel>
 						<Panel class="divider" />
 						<Panel class="card__accolade-container sliding-panel">

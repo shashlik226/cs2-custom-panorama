@@ -11,8 +11,8 @@
 	background-size: 500% 250%;
 	background-position: 0% 0%;
 	background-repeat: no-repeat;
-	background-img-opacity: 1 ;
-	perspective: 500px;
+	background-img-opacity: .5;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #317714 ), to( #14252e ) );
 }
 
 .mainmenu-xpshop-tile.hidden
@@ -29,6 +29,7 @@
 {
 	width: 100%;
 	height: 100%;
+	z-index: 4;
 }
 
 .mainmenu-xpshop-tile .mainmenu-xpshop-tile__image
@@ -80,31 +81,10 @@
 	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, from( #000000 ), to( #00000000 ) );
 }
 
-.mainmenu-xpshop-particle
-{
-	height: 100%;
-	width: 100%;
-	opacity: .1;
-	transform: translatez( 9px ) scaleX(-1);
-}
-
 .mainmenu-xphop-tile__title-container
 {
 	flow-children: down;
-	z-index: 30;
-}
-
-.mainmenu-xphop-tile__title-container .xpshop__item-tile__new-tag
-{
-	padding: 2px 8px 2px 10px;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( rgb(177, 69, 204)), to( rgb(145, 10, 179)) );
-	color: white;
-	font-weight: medium;
-	vertical-align: top;
-	box-shadow: fill #000000af 0px 1px 6px 0px;
-	border-bottom-right-radius: 6px;
-	font-size: 16px;
-	transform: translatez( 0px ) ;
+	z-index: 3;
 }
 
 .mainmenu-xphop-tile__title-container .mainmenu-xphop-tile__title
@@ -120,7 +100,7 @@
 	vertical-align: bottom;
 	width: 100%;
 	height: 100%;
-	background-color: gradient( linear, 100% 0%, 0% 0%, from( rgba(0, 0, 0, 0), to(rgba(0, 0, 0, 0.781) ) );
+	z-index: 4;
 }
 
 .mainmenu-xpshop-info-bar .mainmenu-xpshop-balance
@@ -196,7 +176,7 @@
 	flow-children: down;
 	vertical-align: bottom;
 	padding: 12px 12px 0px 12px;
-	z-index: 2;
+	z-index: 3;
 }
 
 .mainmenu-xpshop-upsell .mainmenu-xpshop-upsell__label
@@ -234,106 +214,106 @@
 	img-shadow: 2px 3px 12px 2 black;
 }
 
-.mainmenu-xpshop-collage
+.mainmenu-xpshop-particle
 {
-	width: 140%;
 	height: 100%;
-	flow-children: down;
-	overflow: noclip;
-	perspective-origin: 50% 50%;
-	opacity-mask: url("s2r://panorama/images/masks/top-bottom-fade-2_png.vtex");
-	horizontal-align: center;
-	vertical-align: center;
-	animation-name: background-anim;
-	animation-duration: 15s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	width: 100%;
+	opacity: 1;
+	transform: translatez( 9px ) scaleX(-1);
+	wash-color: rgb(169, 240, 169);
+	z-index: 1;
 }
 
-.mainmenu-xpshop-collage .mainmenu-xpshop-collage__image
+.mainmenu-xpshop-carousel
 {
-	width: height-percentage( 125% );
-	height: 64px;
-	padding: 8px;
-	margin: 2px;
-	background-color: #244b5cf0;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	img-shadow: 2px 3px 10px 2 black;
-	overflow: noclip;
-	transition-property: brightness, transform;
-	transition-duration: .25s;
+	horizontal-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+.mainmenu-xpshop-itemtile
+{
+	width: 100%;
+	transition-property: opacity, transform, blur;
+	transition-duration: .5s;
 	transition-timing-function: ease-in-out;
 }
 
-.mainmenu-xpshop-collage .mainmenu-xpshop-collage__image.update-tile
+.mainmenu-xpshop-itemtile .mainmenu-xpshop-itemtile-image
 {
-	animation-name: update-tile;
-	animation-duration: 2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
+	height: 164px;
+	horizontal-align: center;
+	margin-top: 10px;
+	img-shadow: 0px 4px 12px rgba(0, 0, 0, 0.70) alpha-only;
 }
 
-@keyframes 'background-anim'
+.mainmenu-xpshop-itemtile .mainmenu-xpshop-itemtile-image__blur
 {
-	0%
-	{
-		transform: rotateX(4deg) rotateY(0deg) translateX( 10px ) translatey( -5px );
-	}
-	
-	25%
-	{
-		transform: rotateX( 0deg ) rotateY(-10deg) translateX( 14px ) ;
-	}
-	
-	50%
-	{
-		transform: rotateX(-15deg) rotateY( 0deg ) translateX( 14px ) translatey( 0px );
-	}
-	
-	75%
-	{
-		transform: rotateX( 0deg ) rotateY( -10deg ) translateX( 14px ) ;
-	}
-	
-	100%
-	{
-		transform: rotateX( 4deg ) rotateY( 0deg ) translateX( 10px ) translatey( -5px );
-	}
-	
+	blur: mipmapgaussian( 1, 1, 2);
+	pre-transform-scale2d: 4, 3.76;
+	transform: translateY( -60px ) translatex( -40px );
+	width: 100%;
+	margin-bottom: 100px;
+	opacity: .0;
+	brightness: .2;
 }
 
-@keyframes 'update-tile'
+.mainmenu-xpshop-itemtile .xpshop__item-tile__new-tag
 {
-	0%
-	{
-		transform: translateZ( 0px );
-		opacity: 1;
-		brightness: 1;
-	}
-	
-	10%
-	{
-		transform: translateZ( 30px );
-		brightness: 1.5;
-	}
-	
-	50%
-	{
-		transform: translateZ( -100px );
-		opacity: 0;
-	}
-	
-	75%
-	{
-		brightness: 1;
-	}
-	
-	100%
-	{
-		transform: translateZ( 0px );
-		opacity: 1;
-	}
-	
+	padding: 2px 8px 2px 10px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( rgb(193, 90, 219)), to( rgb(161, 17, 197)) );
+	color: white;
+	font-weight: medium;
+	transform: rotateZ(-90deg) translateX(-18px) translateY(86px);
+	vertical-align: top;
+	horizontal-align: left;
+	box-shadow: fill #0000003a 0px 1px 6px 0px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-size: 16px;
+	z-index: 5;
+	visibility: collapse;
+}
+
+.new.mainmenu-xpshop-itemtile .xpshop__item-tile__new-tag
+{
+	visibility: visible;
+}
+
+.mainmenu-xpshop-itemtile .mainmenu-xpshop-itemtile__set-image
+{
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: 8px;
+	opacity: .25;
+	brightness: .5;
+	opacity-mask: url("s2r://panorama/images/masks/top-bottom-fade_png.vtex");
+}
+
+.mainmenu-xpshop-itemtile.Focused
+{
+	opacity: 1.0;
+	transform: translatex(0px);
+	z-index: 3;
+}
+
+.mainmenu-xpshop-itemtile.Focused .mainmenu-major-tile__view-item
+{
+	visibility: visible;
+}
+
+.mainmenu-xpshop-itemtile.LeftOfFocus1,.mainmenu-xpshop-itemtile.LeftOfFocus2,.mainmenu-xpshop-itemtile.LeftOfFocus3,.mainmenu-xpshop-itemtile.LeftOfFocus4,.mainmenu-xpshop-itemtile.LeftOfFocus5,.mainmenu-xpshop-itemtile.LeftOfFocus6,.mainmenu-xpshop-itemtile.LeftOfFocus7,.mainmenu-xpshop-itemtile.LeftOfFocus8,.mainmenu-xpshop-itemtile.LeftOfFocus9,.mainmenu-xpshop-itemtile.LeftOfFocus10,.mainmenu-xpshop-itemtile.LeftOfFocus11,.mainmenu-xpshop-itemtile.LeftOfFocus12
+{
+	opacity:0;
+	transform: translatex( -140px ) scale3d(1.1, 1.1, 1);
+	img-shadow: none;
+}
+
+.mainmenu-xpshop-itemtile.RightOfFocus1,.mainmenu-xpshop-itemtile.RightOfFocus2,.mainmenu-xpshop-itemtile.RightOfFocus3,.mainmenu-xpshop-itemtile.RightOfFocus4,.mainmenu-xpshop-itemtile.RightOfFocus5,.mainmenu-xpshop-itemtile.RightOfFocus6,.mainmenu-xpshop-itemtile.RightOfFocus7,.mainmenu-xpshop-itemtile.RightOfFocus8,.mainmenu-xpshop-itemtile.RightOfFocus9,.mainmenu-xpshop-itemtile.RightOfFocus10,.mainmenu-xpshop-itemtile.RightOfFocus11,.mainmenu-xpshop-itemtile.RightOfFocus12
+{
+	opacity: 0;
+	transform: translatex( 140px ) scale3d(1.1, 1.1, 1);
+	img-shadow: none;
 }
 
 .mainmenu-xpshop-track

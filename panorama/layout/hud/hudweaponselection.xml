@@ -24,7 +24,7 @@
 				</Panel>
 				<Panel class="weapon-selection-item-name">
 					<Label class="weapon-selection-item-name-text stratum-medium" text="#Panorama_WeaponSelection_WeaponName" />
-					<Label class="weapon-selection-item-name-text-owned stratum-medium" text="#Panorama_WeaponSelection_OwnedName" />
+					<Label class="weapon-selection-item-name-text-owned stratum-medium" text="#Panorama_WeaponSelection_OwnedName" html="true" />
 				</Panel>
 			</Panel>
 		</snippet>
@@ -39,7 +39,7 @@
 				</Panel>
 				<Panel class="weapon-selection-item-name">
 					<Label class="weapon-selection-item-name-text stratum-medium" text="#Panorama_WeaponSelection_WeaponName" />
-					<Label class="weapon-selection-item-name-text-owned" text="#Panorama_WeaponSelection_OwnedName" />
+					<Label class="weapon-selection-item-name-text-owned" text="#Panorama_WeaponSelection_OwnedName" html="true" />
 				</Panel>
 			</Panel>
 		</snippet>

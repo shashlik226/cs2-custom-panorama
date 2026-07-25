@@ -34,9 +34,15 @@
 	</snippets>
 	<Panel class="mainmenu-major-tile">
 		<Button id="id-img-open-major-hub" class="mainmenu-major-tile__btn" hittest="true">
-			<Panel class="horizontal-center top-bottom-flow">
+			<Panel class="horizontal-center top-bottom-flow full-width">
 				<Image id="id-major-promo-image" class="mainmenu-major-tile__promo" scaling="stretch-to-fit-x-preserve-aspect" />
-				<Label class="mainmenu-major-tile__promo_desc" text="#mainmenu_major_hub_visit" />
+				<Panel class="full-width">
+					<Panel class="mainmenu-major-tile__item__images">
+						<Image class="mainmenu-major-tile__item" scaling="stretch-to-fit-x-preserve-aspect" src="s2r://panorama/images/econ/stickers/cologne2026/sig_niko_champion_holo_png.vtex" />
+						<Image class="mainmenu-major-tile__item_2" scaling="stretch-to-fit-x-preserve-aspect" src="s2r://panorama/images/econ/keychains/cologne2026/kc_cologne2026_png.vtex" />
+						<Label class="mainmenu-major-tile__promo_desc" text="#mainmenu_major_hub_new_items" />
+					</Panel>
+				</Panel>
 			</Panel>
 		</Button>
 		<Carousel id="id-major-mini-store-carousel" panels-visible="3" autoscroll-delay="10s" hittest="false" />

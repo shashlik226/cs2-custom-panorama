@@ -152,7 +152,7 @@
 							<CSGOAvatarImage id="JsDirectChallengeAvatar" class="directchallenge-status__header__avatar" />
 							<Panel class="directchallenge-status__header__text">
 								<Label id="" class="directchallenge-status__header__codesourcelabel horizontal-align-left vertical-align-top" text="{s:code-source-label}" />
-								<Label id="JsDirectChallengeKeySource" class="directchallenge-status__header__codesource horizontal-align-left vertical-align-top" text="{s:code-source}" />
+								<Label id="JsDirectChallengeKeySource" class="directchallenge-status__header__codesource horizontal-align-left vertical-align-top" text="{s:code-source}" html="true" />
 								<Label id="JsDirectChallengeKey" class="directchallenge-status__header__queuecode horizontal-align-left vertical-align-top" text="{s:queue-code}" />
 							</Panel>
 							<Button id="CopyChallengeKey" class="IconButton" onactivate="$.DispatchEvent( &apos;DirectChallenge_CopyKey&apos; )" onmouseout="UiToolkitAPI.HideTextTooltip()">
@@ -222,11 +222,11 @@
 							<Label text="#play_setting_offline" />
 							<Panel id="GameModeAlert" class="navbar-btn__notification-dot hidden" />
 						</RadioButton>
-						<RadioButton id="PlayWorkshop" group="playtype" data-type="workshop" class="content-navbar__tabs__btn visible-if-not-perfectworld" onactivate="PlayMenu.OnPressWorkshop();">
+						<RadioButton id="PlayWorkshop" group="playtype" data-type="workshop" class="content-navbar__tabs__btn" onactivate="PlayMenu.OnPressWorkshop();">
 							<Label text="#play_setting_workshop" />
 							<Panel id="GameModeAlert" class="navbar-btn__notification-dot hidden" />
 						</RadioButton>
-						<Button id="PlayCommunity" class="mainmenu-top-navbar__radio-iconbtn visible-if-not-perfectworld" data-type="workshop" onactivate="PlayMenu.OnPressServerBrowser();" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;PlayCommunity&apos;, &apos;#play_setting_community&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
+						<Button id="PlayCommunity" class="mainmenu-top-navbar__radio-iconbtn" data-type="workshop" onactivate="PlayMenu.OnPressServerBrowser();" onmouseover="UiToolkitAPI.ShowTextTooltip( &apos;PlayCommunity&apos;, &apos;#play_setting_community&apos; );" onmouseout="UiToolkitAPI.HideTextTooltip();">
 							<Image class="mainmenu-top-navbar__radio-btn__icon" src="s2r://panorama/images/icons/ui/community_servers.vsvg" />
 						</Button>
 					</Panel>

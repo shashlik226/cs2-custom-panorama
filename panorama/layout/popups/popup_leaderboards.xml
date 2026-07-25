@@ -17,7 +17,7 @@
 				</Panel>
 				<Panel class="popup-leaderboard__list__column name">
 					<CSGOAvatarImage id="popup-leaderboard-entry-avatar" class="popup-leaderboard__name-entry__avatar" />
-					<Label text="{s:player-name}" class="stratum-regular-condensed popup-leaderboard__list__column__title" />
+					<Label text="{s:player-name}" class="stratum-regular-condensed popup-leaderboard__list__column__title" html="true" />
 				</Panel>
 				<Panel class="popup-leaderboard__list__column score">
 					<Label text="{s:player-score}" class="stratum-regular-condensed popup-leaderboard__list__column__title" />
