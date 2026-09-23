@@ -93,8 +93,8 @@
 		</snippet>
 	</snippets>
 	<Panel class="full-width full-height">
-		<Frame id="id-predictions-timer" src="s2r://panorama/layout/tournaments/predictions_timer.vxml_c" />
-		<Frame id="id-predictions-apply-btn" class="vertical-align-bottom horizontal-align-right" src="s2r://panorama/layout/tournaments/predictions_apply_btn.vxml_c" />
+		<Frame id="id-predictions-timer" src="s2r://panorama/layout/tournaments/predictions_timer.vxml" />
+		<Frame id="id-predictions-apply-btn" class="vertical-align-bottom horizontal-align-right" src="s2r://panorama/layout/tournaments/predictions_apply_btn.vxml" />
 		<Panel class="full-width full-height left-right-flow horizontal-center">
 			<Panel class="group-stage-teams-container">
 				<Panel id="id-drag-teams" class="group-stage-teams__howto">

@@ -16,7 +16,7 @@
 		<snippet name="AvatarChoiceEntry">
 			<Button class="PopupButton horizontal-align-left full-width">
 				<CSGOAvatarImage id="AvatarImage" class="avatar-image__icon" defaultsrc="s2r://panorama/images/icons/ui/player.vsvg" />
-				<Label id="Name" />
+				<Label id="Name" html="true" />
 			</Button>
 		</snippet>
 	</snippets>

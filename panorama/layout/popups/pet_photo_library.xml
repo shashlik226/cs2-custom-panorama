@@ -1,0 +1,15 @@
+<!-- xml reconstructed by Source 2 Viewer 14.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/gamestyles.vcss_c" />
+		<include src="s2r://panorama/styles/popups/pet_photo_library.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/popups/pet_photo_tag.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/pet_photo_library.vjs_c" />
+	</scripts>
+	<Panel class="photo-library__body">
+		<JSDelayLoadList id="id-photo-library-list" class="photo-library__list" itemwidth="200px" itemheight="96px" />
+		<Label id="id-photo-library-empty" class="photo-library__empty" visible="false" html="true" text="" />
+	</Panel>
+</root>

@@ -8,9 +8,9 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/eventutil.vjs_c" />
-		<include src="s2r://panorama/scripts/mainmenu_watch_eventsched.vjs_c" />
+		<include src="s2r://panorama/scripts/mainmenu_watch_eventsched.vjs" />
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
-		<include src="s2r://panorama/scripts/watch_events_debug.vjs_c" />
+		<include src="s2r://panorama/scripts/watch_events_debug.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="snippet_eventsched__capsule">

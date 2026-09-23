@@ -20,9 +20,9 @@
 			<Panel class="full-width full-height">
 				<Panel class="popup-stattrackswap-item-models">
 					<Panel class="popup-stattrackswap-two-models">
-						<Frame id="StatTrackSwapItemModel0" class="StatTrackSwapItemModel" src="s2r://panorama/layout/inspect.vxml_c" />
+						<Frame id="StatTrackSwapItemModel0" class="StatTrackSwapItemModel" src="s2r://panorama/layout/inspect.vxml" />
 						<Panel class="StatTrackSwapNumberVerticalSpacer" />
-						<Frame id="StatTrackSwapItemModel1" class="StatTrackSwapItemModel" src="s2r://panorama/layout/inspect.vxml_c" />
+						<Frame id="StatTrackSwapItemModel1" class="StatTrackSwapItemModel" src="s2r://panorama/layout/inspect.vxml" />
 					</Panel>
 					<Panel class="popup-inspect-border" hittest="false" />
 					<Panel class="popup-stattrackswap-two-models">

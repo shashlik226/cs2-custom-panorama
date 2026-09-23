@@ -35,12 +35,12 @@
 		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" hittest="true">
 			<Panel class="full-width full-height">
 				<Panel id="CanStickerItemModelParent" class="popup-inspect-modelpanel">
-					<Frame id="CanApplyItemModel" class="" src="s2r://panorama/layout/inspect.vxml_c" />
+					<Frame id="CanApplyItemModel" class="" src="s2r://panorama/layout/inspect.vxml" />
 				</Panel>
 				<Panel class="popup-inspect-border" hittest="false" />
-				<Frame id="PopUpCanApplyHeader" class="hidden" src="s2r://panorama/layout/popups/popup_can_apply_header.vxml_c" />
-				<Frame id="PopUpCanApplyPickSlot" class="hidden" src="s2r://panorama/layout/popups/popup_can_apply_pick_slot.vxml_c" />
-				<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml_c" />
+				<Frame id="PopUpCanApplyHeader" class="hidden" src="s2r://panorama/layout/popups/popup_can_apply_header.vxml" />
+				<Frame id="PopUpCanApplyPickSlot" class="hidden" src="s2r://panorama/layout/popups/popup_can_apply_pick_slot.vxml" />
+				<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml" />
 			</Panel>
 		</Panel>
 		<Panel id="CanStickerSpinner" class="popup-capability__spinner Spinner hidden" />

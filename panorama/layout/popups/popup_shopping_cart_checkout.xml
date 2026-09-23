@@ -59,7 +59,7 @@
 	</snippets>
 	<PopupCustomLayout class="PopupPanel popup-shopping-cart-checkout Hidden" useglobalcontext="true" registerforreadyevents="true" popupbackground="dim" popupfullscreenopaque="false" onload="PopUpShoppingCartCheckout.Init();" oncancel="PopUpShoppingCartCheckout.ClosePopup();">
 		<CSGOBlurTarget class="cart-checkout__container-bg" blurrects="id-cart-lister id-cart-summary" />
-		<Frame id="id-cart-add-tokens" src="s2r://panorama/layout/common/add_major_tokens_anim.vxml_c" />
+		<Frame id="id-cart-add-tokens" src="s2r://panorama/layout/common/add_major_tokens_anim.vxml" />
 		<Panel class="cart-checkout__container">
 			<Panel class="left-right-flow horizontal-align-right bottom-margin-12">
 				<TooltipPanel id="id-major-store-refresh" tooltip="#major_store_refesh_tooltip" class="popup-major-store__top-bar__refresh">

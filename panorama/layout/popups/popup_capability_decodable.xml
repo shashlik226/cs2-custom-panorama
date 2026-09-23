@@ -103,10 +103,10 @@
 		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" hittest="true">
 			<Panel id="PopUpInspectFullScreenHostContainer" class="full-width full-height">
 				<CSGOBlurTarget blurrects="DecodableLootlistContainer" class="full-height full-width popup-decodable-blur-target" force-no-composition-layer="true">
-					<Frame id="PopUpInspectModelOrImage" hitest="false" src="s2r://panorama/layout/inspect.vxml_c" />
+					<Frame id="PopUpInspectModelOrImage" hitest="false" src="s2r://panorama/layout/inspect.vxml" />
 				</CSGOBlurTarget>
 				<Panel class="popup-inspect-border" hittest="false" />
-				<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml_c" />
+				<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml" />
 				<Panel id="XrayItemsPanel" class="popup-xray-container hidden" hittest="false">
 					<Panel class="popup-xray">
 						<Frame id="PopUpXrayBgSquares" hittest="false" hittestchildren="false" snippet="XraySquares" />
@@ -114,8 +114,8 @@
 							<Panel id="PopUpXrayStatusDot" class="popup-xray__status__dot" />
 							<Label id="PopUpXrayStatusLabel" class="fontSize-sm text-uppercase stratum-font vertical-center fontWeight-Medium" text="" />
 						</Panel>
-						<Frame id="PopUpXrayModelOrImageReveal" hitest="false" src="s2r://panorama/layout/inspect.vxml_c" />
-						<Frame id="PopUpXrayModelOrImage" class="" hitest="false" src="s2r://panorama/layout/inspect.vxml_c" />
+						<Frame id="PopUpXrayModelOrImageReveal" hitest="false" src="s2r://panorama/layout/inspect.vxml" />
+						<Frame id="PopUpXrayModelOrImage" class="" hitest="false" src="s2r://panorama/layout/inspect.vxml" />
 						<Panel id="PopUpXrayModelOrImageRevealLine" class="popup-xray-container__line-container">
 							<Panel class="popup-xray-container__line" />
 							<Panel class="popup-xray-container__gradient" />
@@ -128,7 +128,7 @@
 						<Label class="popup-xray-actions__label" text="#popup_xray_reveal_warning" />
 					</Panel>
 					<Panel id="XrayItemsActionPanelItemName" class="popup-xray-actions hidden">
-						<Frame id="PopUpInspectHeader" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_header.vxml_c" />
+						<Frame id="PopUpInspectHeader" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_header.vxml" />
 					</Panel>
 				</Panel>
 				<Panel id="DecodableLootlistContainer" class="popup-decodable-lootlist-container hidden">
@@ -159,9 +159,9 @@
 					<Label id="DecodableCountdownLabel" text="5" class="popup-decodable-countdown-text mono-spaced-font-bold" />
 				</Panel>
 				<Panel class="bottom-top-flow vertical-align-bottom full-width horizontal-center">
-					<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml_c" />
-					<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml_c" />
-					<Frame id="PopUpInspectRentalBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_rental-bar.vxml_c" />
+					<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml" />
+					<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml" />
+					<Frame id="PopUpInspectRentalBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_rental-bar.vxml" />
 					<Label id="InspectItemDesc" html="true" htmlescapednewlines="true" class="popup-inspect__desc" text="{s:item_description}" />
 				</Panel>
 			</Panel>

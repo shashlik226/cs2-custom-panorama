@@ -14,9 +14,9 @@
 		<include src="s2r://panorama/scripts/avatar.vjs_c" />
 		<include src="s2r://panorama/scripts/digitpanel.vjs_c" />
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
-		<include src="s2r://panorama/scripts/stats/playerstats_matchlister.vjs_c" />
-		<include src="s2r://panorama/scripts/stats/playerstats.vjs_c" />
-		<include src="s2r://panorama/scripts/stats/fakestats.vjs_c" />
+		<include src="s2r://panorama/scripts/stats/playerstats_matchlister.vjs" />
+		<include src="s2r://panorama/scripts/stats/playerstats.vjs" />
+		<include src="s2r://panorama/scripts/stats/fakestats.vjs" />
 	</scripts>
 	<Panel class="mainmenu-content__container" acceptsinput="true" acceptsfocus="true" hittest="false" useglobalcontext="true">
 		<Panel id="statspage" class="top-bottom-flow full-width full-height" hittest="false">
@@ -64,11 +64,11 @@
 				<Panel class="full-width full-height top-bottom-flow stats_width horizontal-center">
 					<Panel class="playerstats__row--top left-right-flow rotatein" introorder="1">
 						<Panel class="top-bottom-flow playerstats__topleft">
-							<Frame id="PlayerStatsRecordFrame" src="s2r://panorama/layout/stats/playerstats_record.vxml_c" class="horizontal-align-left" />
+							<Frame id="PlayerStatsRecordFrame" src="s2r://panorama/layout/stats/playerstats_record.vxml" class="horizontal-align-left" />
 							<CSGOStatsProgressGraph id="id-playerstats__linegraph" class="playerstats__linegraph-container" days="14" gamemode="8" />
 						</Panel>
 						<Panel class="playerstats__topright full-height">
-							<Frame id="PlayerStatsMatchHistory" src="s2r://panorama/layout/stats/playerstats_matchlister.vxml_c" class="playerstats__matchlister-container" />
+							<Frame id="PlayerStatsMatchHistory" src="s2r://panorama/layout/stats/playerstats_matchlister.vxml" class="playerstats__matchlister-container" />
 						</Panel>
 					</Panel>
 					<Panel class="playerstats__row--bottom rotatein full-width full-height" introorder="2">

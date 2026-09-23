@@ -19,10 +19,10 @@
 				<Panel id="TeamLogo" class="HudSpecplayerBG__TeamLogo additive" />
 			</Panel>
 			<Panel class="HudSpecplayer__player-name-contianer additive">
-				<Label class="HudSpecplayer__player-clan hud-colorize-wash additive stratum-bold" text="{g:player_name:bc:spec_playerslot}" />
+				<Label class="HudSpecplayer__player-clan hud-colorize-wash additive stratum-bold" text="{g:player_name:bot:spec_playerslot}" html="true" />
 				<Panel class="left-right-flow">
 					<CSGOHonorIcon id="jsHonorIcon" class="vertical-center" do_fx="true" />
-					<Label class="HudSpecplayer__player-name hud-colorize-wash additive stratum-bold" text="{g:player_name:on:cn:spec_playerslot}" html="true" />
+					<Label class="HudSpecplayer__player-name hud-colorize-wash additive stratum-bold" text="{g:player_name:pupp:name:spec_playerslot}" html="true" />
 				</Panel>
 				<Panel id="jsHudSpecplayer__Bg__adr_container" class="HudSpecAdr-container additive">
 					<Label class="HudSpecAdr__text--title hud-colorize-wash stratum-bold" text="#SFUI_SpecStat_type_adr" />

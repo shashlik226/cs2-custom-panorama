@@ -108,7 +108,7 @@
 						<Frame snippet="loading" />
 						<Panel class="full-width full-height vertical-center not-loaded">
 							<Panel class="left-right-flow vertical-center horizontal-center margin-16">
-								<Frame id="id-premier-rating" class="not-loaded" src="s2r://panorama/layout/rating_emblem.vxml_c" />
+								<Frame id="id-premier-rating" class="not-loaded" src="s2r://panorama/layout/rating_emblem.vxml" />
 								<Frame id="id-global-stat-week" class="not-loaded" snippet="stat-container-text-only" />
 							</Panel>
 						</Panel>

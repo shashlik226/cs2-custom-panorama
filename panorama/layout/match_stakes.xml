@@ -27,7 +27,7 @@
 					<Label class="delta" text="#team-intro-stakes-win" />
 					<Label class="desc" text="#team-intro-stakes-win-title" />
 				</Panel>
-				<Frame class="matchstakes-emblem" src="s2r://panorama/layout/rating_emblem.vxml_c" />
+				<Frame class="matchstakes-emblem" src="s2r://panorama/layout/rating_emblem.vxml" />
 				<Panel id="jsMatchStakesLoss" class="matchstakes loss">
 					<Label class="desc" text="#team-intro-stakes-loss-title" />
 					<Label class="delta" text="#team-intro-stakes-loss" />

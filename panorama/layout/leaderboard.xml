@@ -18,12 +18,12 @@
 					<Label id="jsPlayerRank" text="" class="stratum-regular leaderboard_cell rank" />
 				</Panel>
 				<Panel class="leaderboard__list__column rating">
-					<Frame id="jsRatingEmblem" src="s2r://panorama/layout/rating_emblem.vxml_c" />
+					<Frame id="jsRatingEmblem" src="s2r://panorama/layout/rating_emblem.vxml" />
 				</Panel>
 				<Panel class="leaderboard__list__column name">
 					<CSGOAvatarImage id="leaderboard-entry-avatar" class="leaderboard__name-entry__avatar" />
 					<CSGOHonorIcon id="jsHonorIcon" class="" do_fx="true" />
-					<Label text="{s:player-name}" class="stratum-regular leaderboard_cell" html="true" />
+					<Label id="jsPlayerName" text="" class="stratum-regular leaderboard_cell" html="true" />
 				</Panel>
 				<Panel class="leaderboard__list__column wins">
 					<Label text="{s:player-wins}" class="stratum-regular leaderboard_cell" />

@@ -7,7 +7,7 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/commonutil.vjs_c" />
-		<include src="s2r://panorama/scripts/context_menus/context_menu_watchnotice_match_streams.vjs_c" />
+		<include src="s2r://panorama/scripts/context_menus/context_menu_watchnotice_match_streams.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="snippet-cm-watchnotice-stream">

@@ -5,7 +5,7 @@
 		<include src="s2r://panorama/styles/tooltips/tooltip_custom_test.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/tooltips/tooltip_custom_test.vjs_c" />
+		<include src="s2r://panorama/scripts/tooltips/tooltip_custom_test.vjs" />
 	</scripts>
 	<Panel class="TestContents" ontooltiploaded="setupTooltip()">
 		<Label unlocalized="true" text="Hello" />

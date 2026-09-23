@@ -29,7 +29,7 @@
 			<Image id="TeamIntroIcon" class="team-intro-icon" />
 			<Label id="TeamIntroHalfLabel" class="team-intro-half-label" />
 			<Label id="TeamIntroTeamLabel" class="team-intro-team-label" />
-			<Frame id="MatchStakes" src="s2r://panorama/layout/match_stakes.vxml_c" useglobalcontext="true" />
+			<Frame id="MatchStakes" src="s2r://panorama/layout/match_stakes.vxml" useglobalcontext="true" />
 		</Panel>
 		<Panel id="TeamIntroFade" class="full-width full-height team-intro-fade hidden" />
 	</CSGOTeamIntroMenu>

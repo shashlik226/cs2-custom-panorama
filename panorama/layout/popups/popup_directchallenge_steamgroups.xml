@@ -7,7 +7,7 @@
 		<include src="s2r://panorama/styles/popups/popup_directchallenge_steamgroups.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_directchallenge_steamgroups.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_directchallenge_steamgroups.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="snippet-clan-item">

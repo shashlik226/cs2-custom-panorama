@@ -7,7 +7,7 @@
 		<include src="s2r://panorama/styles/stats/playerstats_mapsgraph.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/stats/playerstats_mapsgraph.vjs_c" />
+		<include src="s2r://panorama/scripts/stats/playerstats_mapsgraph.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="MapSpiderGraphScore">

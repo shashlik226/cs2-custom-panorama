@@ -7,7 +7,7 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
-		<include src="s2r://panorama/scripts/context_menus/context_menu_rewards.vjs_c" />
+		<include src="s2r://panorama/scripts/context_menus/context_menu_rewards.vjs" />
 	</scripts>
 	<Panel onload="ContextMenuRewards.Init()" class="ContextMenuItem" acceptsinput="true" acceptsfocus="true">
 		<Panel class="Rewards">

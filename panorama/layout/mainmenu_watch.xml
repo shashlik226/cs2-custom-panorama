@@ -73,7 +73,7 @@
 					<Panel id="JsTournaments" class="WatchMenu WatchMenu--Hide subsection-content__background-color">
 						<Panel id="JsTournamentList" class="horizontal-center top-bottom-flow full-width full-height" />
 					</Panel>
-					<Frame id="JsEvents" src="s2r://panorama/layout/mainmenu_watch_eventsched.vxml_c" class="WatchMenu WatchMenu--Hide" />
+					<Frame id="JsEvents" src="s2r://panorama/layout/mainmenu_watch_eventsched.vxml" class="WatchMenu WatchMenu--Hide" />
 					<Panel id="JsDownloaded" class="WatchMenu WatchMenu--Hide" />
 				</Panel>
 			</Panel>

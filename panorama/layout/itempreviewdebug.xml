@@ -5,7 +5,7 @@
 		<include src="s2r://panorama/styles/itempreview.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/itempreviewdebug.vjs_c" />
+		<include src="s2r://panorama/scripts/itempreviewdebug.vjs" />
 	</scripts>
 	<ItemPreviewDebug oncanel="DeletePanel( this )">
 		<Panel id="ItemPreviewDebugPanel" class="debug-background">

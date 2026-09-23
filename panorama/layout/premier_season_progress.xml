@@ -30,7 +30,7 @@
 		</Label>
 		<Panel class="premier-season-progress-block">
 			<Panel class="left-right-flow horizontal-center top-margin-16">
-				<Frame id="js-highest-rating" src="s2r://panorama/layout/rating_emblem.vxml_c" />
+				<Frame id="js-highest-rating" src="s2r://panorama/layout/rating_emblem.vxml" />
 				<Label class="premier-season-progress-rank-label stratum-medium-italic" text="#season_progress_high_rank" />
 			</Panel>
 			<Panel id="id-premier-bar-container" class="premier-season-progress-bar-container">

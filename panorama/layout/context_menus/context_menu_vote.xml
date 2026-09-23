@@ -6,7 +6,7 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/icon.vjs_c" />
-		<include src="s2r://panorama/scripts/context_menus/context_menu_vote.vjs_c" />
+		<include src="s2r://panorama/scripts/context_menus/context_menu_vote.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="VoteOption">

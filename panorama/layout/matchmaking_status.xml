@@ -7,7 +7,7 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
-		<include src="s2r://panorama/scripts/operation/operation_util.vjs_c" />
+		<include src="s2r://panorama/scripts/operation/operation_util.vjs" />
 		<include src="s2r://panorama/scripts/matchmaking_status.vjs_c" />
 	</scripts>
 	<Panel class="top-bottom-flow full-width hidden" useglobalcontext="true">

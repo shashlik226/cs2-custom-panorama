@@ -6,7 +6,7 @@
 		<include src="s2r://panorama/styles/popups/popup_confirm_picks.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_confirm_picks.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_confirm_picks.vjs" />
 	</scripts>
 	<PopupCustomLayout class="PopupPanel Hidden" useglobalcontext="true" popupbackground="dim" onload="PopupConfirmPickemPicks.Init();" oncancel="PopupConfirmPickemPicks.Close()">
 		<Label class="PopupTitle" text="#pickem_confirm_picks" />

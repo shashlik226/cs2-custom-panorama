@@ -9,7 +9,7 @@
 		<include src="s2r://panorama/scripts/common/dateutil.vjs_c" />
 		<include src="s2r://panorama/scripts/avatar.vjs_c" />
 		<include src="s2r://panorama/scripts/common/icon.vjs_c" />
-		<include src="s2r://panorama/scripts/stats/playerstats_matchlister.vjs_c" />
+		<include src="s2r://panorama/scripts/stats/playerstats_matchlister.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="snippet-match">

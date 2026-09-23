@@ -8,6 +8,7 @@
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
 		<include src="s2r://panorama/scripts/common/tint_spray_icon.vjs_c" />
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
+		<include src="s2r://panorama/scripts/common/sessionutil.vjs_c" />
 		<include src="s2r://panorama/scripts/itemtile_store.vjs_c" />
 		<include src="s2r://panorama/scripts/rankup_redemption_store.vjs_c" />
 	</scripts>

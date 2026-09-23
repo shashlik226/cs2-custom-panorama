@@ -46,7 +46,7 @@
 				<DropDown id="InspectDropdownCharModels" class="PopupButton horizontal-align-left" menuclass="DropDownMenu Width-250" />
 			</Panel>
 			<Panel id="id-character-button-container" class="hidden">
-				<Frame id="id-character-buttons" src="s2r://panorama/layout/characterbuttons.vxml_c" />
+				<Frame id="id-character-buttons" src="s2r://panorama/layout/characterbuttons.vxml" />
 			</Panel>
 			<Button id="InspectItemCert" class="IconButton">
 				<Image class="" src="s2r://panorama/images/icons/ui/info.vsvg" />

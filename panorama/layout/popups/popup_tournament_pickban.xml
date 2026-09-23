@@ -6,7 +6,7 @@
 		<include src="s2r://panorama/styles/popups/popup_tournament_pickban.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_tournament_pickban.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_tournament_pickban.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="PickBanOptionSnippet">

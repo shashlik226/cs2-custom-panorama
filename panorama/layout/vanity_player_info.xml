@@ -13,7 +13,7 @@
 		<Image id="vanity-crown-icon" class="vanity-info-crown-icon" src="s2r://panorama/images/icons/ui/lobby_leader.vsvg" />
 		<Panel class="left-right-flow horizontal-center bottom-margin">
 			<CSGOHonorIcon id="jsHonorIcon" do_fx="true" />
-			<Label class="stratum-medium-condensed fontSize-ml fontcolor-white vanity-info-name" text="{s:player_name}" html="true" />
+			<Label class="stratum-medium-condensed fontSize-ml fontcolor-white vanity-info-name" text="#friends_name_in_party" html="true" />
 		</Panel>
 		<Button id="vanity-xp-prestige" class="vanity-xp-prestige hidden">
 			<Panel class="left-right-flow horizontal-center">
@@ -35,7 +35,7 @@
 			<Panel class="vanity-info-seperator" />
 			<Panel id="vanity-rating-container" class="vanity-info-skill-group-container">
 				<Panel class="vanity-rating__icon-container">
-					<Frame src="s2r://panorama/layout/rating_emblem.vxml_c" />
+					<Frame src="s2r://panorama/layout/rating_emblem.vxml" />
 				</Panel>
 			</Panel>
 		</Panel>

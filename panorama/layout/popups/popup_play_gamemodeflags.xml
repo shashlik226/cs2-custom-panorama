@@ -7,7 +7,7 @@
 		<include src="s2r://panorama/styles/csgostyles.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_play_gamemodeflags.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_play_gamemodeflags.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="option">

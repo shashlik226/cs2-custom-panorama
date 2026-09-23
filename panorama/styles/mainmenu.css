@@ -47,7 +47,7 @@ CSGOMainMenu.PopupBackgroundBlur #MainMenuInput.HiddenByPopup
 
 CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 {
-	blur: mipmapgaussian( 4, 4, 2);
+	blur: mipmapgaussian( 4, 4, 4);
 }
 
 #MainMenuVanityOverlay
@@ -170,8 +170,7 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 	overflow: noclip;
 }
 
-#VanityControls,
-.VanityControls
+#VanityControls
 {
 	opacity: 1;
 	vertical-align: bottom;
@@ -182,8 +181,7 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 	transition-timing-function: ease-in-out;
 }
 
-#VanityControls Button,
-.VanityControls Button
+#VanityControls Button
 {
 	vertical-align:center;
 	brightness: 1;
@@ -195,16 +193,14 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 	transition-timing-function: ease-in-out;
 }
 
-#VanityControls Button Image,
-.VanityControls Button Image
+#VanityControls Button Image
 {
 	vertical-align: center;
 	horizontal-align: center;
 	img-shadow: 0px 0px 4px 1 rgba(0, 0, 0, 0.04);
 }
 
-#VanityControls:hover Button,
-.VanityControls:hover Button
+#VanityControls:hover Button
 {
 	background-color: rgba(255, 255, 255, 0.205);
 	transition-property: background-color;
@@ -569,7 +565,6 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 	vertical-align: center;
 	flow-children: none;
 	margin: 0px 8px;
-	border-radius: 3px;
 	width: 32px;
 	height: 32px;
 	overflow: noclip;
@@ -602,6 +597,16 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 .mainmenu-top-navbar__radio-iconbtn:disabled:hover
 {
 	background-color: rgba(255, 255, 255, 0);
+}
+
+#VacNet
+{
+	visibility: collapse;
+}
+
+.show-vacnet-link #VacNet
+{
+	visibility: visible;
 }
 
 .mainmenu-top-navbar__alerts
@@ -1269,22 +1274,6 @@ CSGOMainMenu.PopupBackgroundBlur.pet-event-blur #MainMenuInput
 	color: gold;
 }
 
-.content-navbar__tabs__btn Label.new
-{
-	font-size: 10px;
-	margin: 0px;
-	padding: 1px 3px;
-	border-radius: 3px;
-	text-align: center;
-	horizontal-align: center;
-	margin-left: 2px;
-	transform: translateX(4px);
-	background-color: new-item-gradient;
-	color: white;
-	font-weight: medium;
-	box-shadow: shadowOffset;
-}
-
 RadioButton.content-navbar__tabs__btn--small Label
 {
 	font-size: 12px;
@@ -1635,16 +1624,6 @@ RadioButton.content-navbar__tabs__btn--small Label
 }
 
 .MainMenuRootPanel--PauseMenuDuringDemoPlayback .DisableDuringDemoPlayback
-{
-	visibility: collapse;
-}
-
-.settings-notification
-{
-	visibility: collapse;
-}
-
-.settings-notification.has-new-settings
 {
 	visibility: collapse;
 }

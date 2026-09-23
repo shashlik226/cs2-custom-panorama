@@ -62,7 +62,7 @@
 						<ParticleScenePanel id="id-eom-skillgroup-emblem--new__pfx--above" class="eom-skillgroup-emblem--new__pfx--above" hittest="true" startActive="false" particleName="" cameraOrigin="0 300 0" lookAt="0 0 0" fov="60" />
 					</Panel>
 				</Panel>
-				<Frame id="jsRatingEmblem" class="horizontal-align-center" src="s2r://panorama/layout/rating_emblem.vxml_c" />
+				<Frame id="jsRatingEmblem" class="horizontal-align-center" src="s2r://panorama/layout/rating_emblem.vxml" />
 			</Panel>
 		</Panel>
 	</CSGOEndOfMatchSkillgroupPanel>

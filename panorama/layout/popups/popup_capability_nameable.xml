@@ -24,10 +24,10 @@
 		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" hittest="true">
 			<Panel class="full-width full-height">
 				<Panel class="popup-nameable-item-models">
-					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml_c" />
+					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml" />
 					<MapItemPreviewPanel id="id-inspect-nametag-model" class="full-width full-height" map="ui/nametag" camera="cam_nametag_initial" player="false" require-composition-layer="true" initial_entity="nametag" mouse_rotate="true" />
 				</Panel>
-				<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml_c" />
+				<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml" />
 				<Panel class="popup-nameable__info-block" hittest="true">
 					<Panel id="NameableTextEntryBlock" class="left-right-flow horizontal-center bottom-padding-medium">
 						<TextEntry id="NameableTextEntry" class="popup-nameable__textentry" placeholder="#nameable_textentry_placeholder" onfocus="" oncancel="CapabilityNameable.ClosePopup();" />
@@ -42,8 +42,8 @@
 						</Button>
 					</Panel>
 				</Panel>
-				<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml_c" />
-				<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml_c" />
+				<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml" />
+				<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml" />
 			</Panel>
 		</Panel>
 	</PopupCustomLayout>

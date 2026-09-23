@@ -21,7 +21,7 @@
 			<Panel class="popup-acknowledge__item">
 				<ParticleScenePanel id="popup-acknowledge__item__particle" class="full-width full-height" hittest="false" startActive="false" particleName="" cameraOrigin="0 300 0" lookAt="0 0 0" fov="60" />
 				<Panel id="AcknowledgeItemContainer" class="popup-acknowledge__item__model">
-					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml_c" />
+					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml" />
 				</Panel>
 				<Panel class="popup-acknowledge-inspect-border" hittest="false" />
 				<Panel id="AcknowledgeBar" class="popup__rarity-bar" />

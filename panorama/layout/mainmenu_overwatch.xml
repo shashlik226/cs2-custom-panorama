@@ -6,7 +6,7 @@
 		<include src="s2r://panorama/styles/mainmenu_overwatch.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/mainmenu_overwatch.vjs_c" />
+		<include src="s2r://panorama/scripts/mainmenu_overwatch.vjs" />
 	</scripts>
 	<Panel class="mainmenu-content__container">
 		<Panel id="JsOverwatchContent" class="overwatch-context-container">

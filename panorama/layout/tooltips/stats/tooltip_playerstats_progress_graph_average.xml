@@ -7,7 +7,7 @@
 	</styles>
 	<scripts>
 		<include src="s2r://panorama/scripts/common/dateutil.vjs_c" />
-		<include src="s2r://panorama/scripts/tooltips/stats/tooltip_playerstats_linegraph_avg.vjs_c" />
+		<include src="s2r://panorama/scripts/tooltips/stats/tooltip_playerstats_linegraph_avg.vjs" />
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
 	</scripts>
 	<snippets>

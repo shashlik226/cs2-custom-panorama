@@ -4,7 +4,7 @@
 		<include src="s2r://panorama/styles/gamestyles.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/context_menus/context_menu_custom_layout_test.vjs_c" />
+		<include src="s2r://panorama/scripts/context_menus/context_menu_custom_layout_test.vjs" />
 	</scripts>
 	<Panel onload="SetupContextMenu()">
 		<TextButton id="DynamicButton" class="PopupButton" onactivate="OnTestPressed()" />

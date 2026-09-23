@@ -9,12 +9,14 @@ var MainMenuRightColumn = ( function(){
         let glove = $.GetContextPanel().FindChildTraverse("fakevanity_glove").text;
         let agent = $.GetContextPanel().FindChildTraverse("fakevanity_agent").text;
         let team = $.GetContextPanel().FindChildTraverse("fakevanity_team").text;
+        let pet = $.GetContextPanel().FindChildTraverse("fakevanity_pet").text;
 
         globalObject.fakevanitysettings = {
             gloves: glove,
             weapon: weapon,
             team: team,
-            agent: agent
+            agent: agent,
+            pet: pet
         }
         $.DispatchEvent( 'OpenStatsMenu' );
     }

@@ -19,6 +19,8 @@
 			<TextEntry id="fakevanity_team" style="margin-bottom: 5px;" placeholder="Team" />
 			<Label text="Agent"/>
 			<TextEntry id="fakevanity_agent" style="margin-bottom: 5px;" placeholder="Agent" />
+			<Label text="Pet"/>
+			<TextEntry id="fakevanity_pet" style="margin-bottom: 5px;" placeholder="Pet" />
 		</Panel>
 		<Panel class="VanityControls" hittest="true">
 			<Button id="reloadvanitybutton"

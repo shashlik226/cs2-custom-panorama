@@ -7,7 +7,7 @@
 		<include src="s2r://panorama/styles/popups/popup_tournament_journal.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_tournament_journal.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_tournament_journal.vjs" />
 		<include src="s2r://panorama/scripts/generated/items_event_current_generated_store.vjs_c" />
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
 	</scripts>

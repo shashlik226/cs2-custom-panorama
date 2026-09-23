@@ -7,7 +7,7 @@
 		<include src="s2r://panorama/styles/popups/popup_tournament_controlroom.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/popups/popup_tournament_controlroom.vjs_c" />
+		<include src="s2r://panorama/scripts/popups/popup_tournament_controlroom.vjs" />
 	</scripts>
 	<snippets>
 		<snippet name="tournamentcontrolroom-entry">

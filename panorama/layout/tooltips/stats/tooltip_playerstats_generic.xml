@@ -5,8 +5,8 @@
 		<include src="s2r://panorama/styles/stats/playerstats.vcss_c" />
 	</styles>
 	<scripts>
-		<include src="s2r://panorama/scripts/tooltips/stats/tooltip_playerstats_generic.vjs_c" />
-		<include src="s2r://panorama/scripts/stats/fakestats.vjs_c" />
+		<include src="s2r://panorama/scripts/tooltips/stats/tooltip_playerstats_generic.vjs" />
+		<include src="s2r://panorama/scripts/stats/fakestats.vjs" />
 		<include src="s2r://panorama/scripts/common/formattext.vjs_c" />
 	</scripts>
 	<snippets />

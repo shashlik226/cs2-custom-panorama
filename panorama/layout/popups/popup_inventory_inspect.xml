@@ -26,10 +26,10 @@
 		<Panel class="mainmenu-content__container mainmenu-content__container--inspect" useglobalcontext="true">
 			<Panel class="full-width full-height top-bottom-flow vertical-center">
 				<Panel id="PopUpInspectFullScreenHostContainer" class="full-width full-height">
-					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml_c" />
+					<Frame id="PopUpInspectModelOrImage" src="s2r://panorama/layout/inspect.vxml" />
 					<Panel class="popup-inspect-border" hittest="false" />
-					<Frame id="PopUpInspectHeader" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_header.vxml_c" />
-					<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml_c" />
+					<Frame id="PopUpInspectHeader" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_header.vxml" />
+					<Frame id="PopUpCapabilityHeader" class="hidden" src="s2r://panorama/layout/popups/popup_capability_header.vxml" />
 					<Panel id="id-lootlist-title-container" class="inv-lootlist-title-container">
 						<Label class="fontSize-sm" text="{s:lootlist-header}" />
 						<Label class="fontSize-m fontWeight-Bold left-margin" text="#popup_inv_lootlist_count" />
@@ -51,9 +51,9 @@
 						</Button>
 					</Panel>
 					<Panel class="bottom-top-flow vertical-align-bottom full-width horizontal-center">
-						<Frame id="PopUpInspectActionBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_action-bar.vxml_c" />
-						<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml_c" />
-						<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml_c" />
+						<Frame id="PopUpInspectActionBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_action-bar.vxml" />
+						<Frame id="PopUpInspectAsyncBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_async-bar.vxml" />
+						<Frame id="PopUpInspectPurchaseBar" class="hidden" src="s2r://panorama/layout/popups/popup_inspect_purchase-bar.vxml" />
 						<Label id="InspectItemDesc" html="true" htmlescapednewlines="true" class="popup-inspect__desc" text="{s:item_description}" />
 					</Panel>
 				</Panel>

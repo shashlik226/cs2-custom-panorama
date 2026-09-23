@@ -12,6 +12,11 @@ var g_ActiveTournamentInfo = {
         10499,
         10500
     ],
+    rankingids: [
+        11331,
+        11332,
+        11333
+    ],
     itemid_pass: 5310,
     itemid_pack: 5311,
     itemid_coins: [
@@ -20,6 +25,7 @@ var g_ActiveTournamentInfo = {
     itemid_charge: 5309,
     itemid_dynamic_stickers: 5316,
     itemid_champion_stickers: 5329,
+    itemid_rankings_stickers: 4040,
     souvenir_cost: 1,
     num_global_offerings: 1,
     num_stages_with_swiss: 3,
@@ -36,6 +42,11 @@ var g_ActiveTournamentTeams = [
             10371,
             10372
         ],
+        rankingids: [
+            11235,
+            11236,
+            11237
+        ],
         team_group: 'legends',
         players: [
             {
@@ -48,6 +59,11 @@ var g_ActiveTournamentTeams = [
                     10536,
                     10537
                 ],
+                rankingids: [
+                    11334,
+                    11335,
+                    11336
+                ],
             },
             {
                 playerid: 29478439,
@@ -58,6 +74,11 @@ var g_ActiveTournamentTeams = [
                     10539,
                     10540,
                     10541
+                ],
+                rankingids: [
+                    11337,
+                    11338,
+                    11339
                 ],
             },
             {
@@ -70,6 +91,11 @@ var g_ActiveTournamentTeams = [
                     10544,
                     10545
                 ],
+                rankingids: [
+                    11340,
+                    11341,
+                    11342
+                ],
             },
             {
                 playerid: 18569432,
@@ -81,6 +107,11 @@ var g_ActiveTournamentTeams = [
                     10548,
                     10549
                 ],
+                rankingids: [
+                    11343,
+                    11344,
+                    11345
+                ],
             },
             {
                 playerid: 31006590,
@@ -91,6 +122,11 @@ var g_ActiveTournamentTeams = [
                     10551,
                     10552,
                     10553
+                ],
+                rankingids: [
+                    11346,
+                    11347,
+                    11348
                 ],
             },
         ],
@@ -106,6 +142,11 @@ var g_ActiveTournamentTeams = [
             10375,
             10376
         ],
+        rankingids: [
+            11238,
+            11239,
+            11240
+        ],
         team_group: 'legends',
         players: [
             {
@@ -118,6 +159,11 @@ var g_ActiveTournamentTeams = [
                     10556,
                     10557
                 ],
+                rankingids: [
+                    11349,
+                    11350,
+                    11351
+                ],
             },
             {
                 playerid: 52977598,
@@ -128,6 +174,11 @@ var g_ActiveTournamentTeams = [
                     10559,
                     10560,
                     10561
+                ],
+                rankingids: [
+                    11352,
+                    11353,
+                    11354
                 ],
             },
             {
@@ -140,6 +191,11 @@ var g_ActiveTournamentTeams = [
                     10564,
                     10565
                 ],
+                rankingids: [
+                    11355,
+                    11356,
+                    11357
+                ],
             },
             {
                 playerid: 89984505,
@@ -151,6 +207,11 @@ var g_ActiveTournamentTeams = [
                     10568,
                     10569
                 ],
+                rankingids: [
+                    11358,
+                    11359,
+                    11360
+                ],
             },
             {
                 playerid: 1115923884,
@@ -161,6 +222,11 @@ var g_ActiveTournamentTeams = [
                     10571,
                     10572,
                     10573
+                ],
+                rankingids: [
+                    11361,
+                    11362,
+                    11363
                 ],
             },
         ],
@@ -176,6 +242,11 @@ var g_ActiveTournamentTeams = [
             10379,
             10380
         ],
+        rankingids: [
+            11241,
+            11242,
+            11243
+        ],
         team_group: 'legends',
         players: [
             {
@@ -188,6 +259,11 @@ var g_ActiveTournamentTeams = [
                     10576,
                     10577
                 ],
+                rankingids: [
+                    11364,
+                    11365,
+                    11366
+                ],
             },
             {
                 playerid: 97016704,
@@ -198,6 +274,11 @@ var g_ActiveTournamentTeams = [
                     10579,
                     10580,
                     10581
+                ],
+                rankingids: [
+                    11367,
+                    11368,
+                    11369
                 ],
             },
             {
@@ -210,6 +291,11 @@ var g_ActiveTournamentTeams = [
                     10584,
                     10585
                 ],
+                rankingids: [
+                    11370,
+                    11371,
+                    11372
+                ],
             },
             {
                 playerid: 36412550,
@@ -221,6 +307,11 @@ var g_ActiveTournamentTeams = [
                     10588,
                     10589
                 ],
+                rankingids: [
+                    11373,
+                    11374,
+                    11375
+                ],
             },
             {
                 playerid: 1071740496,
@@ -231,6 +322,11 @@ var g_ActiveTournamentTeams = [
                     10591,
                     10592,
                     10593
+                ],
+                rankingids: [
+                    11376,
+                    11377,
+                    11378
                 ],
             },
         ],
@@ -245,6 +341,7 @@ var g_ActiveTournamentTeams = [
                     11176,
                     11177
                 ],
+                rankingids: [],
             },
             {
                 playerid: 97016704,
@@ -256,6 +353,7 @@ var g_ActiveTournamentTeams = [
                     11180,
                     11181
                 ],
+                rankingids: [],
             },
             {
                 playerid: 114497073,
@@ -267,6 +365,7 @@ var g_ActiveTournamentTeams = [
                     11184,
                     11185
                 ],
+                rankingids: [],
             },
             {
                 playerid: 36412550,
@@ -278,6 +377,7 @@ var g_ActiveTournamentTeams = [
                     11188,
                     11189
                 ],
+                rankingids: [],
             },
             {
                 playerid: 1071740496,
@@ -289,6 +389,7 @@ var g_ActiveTournamentTeams = [
                     11192,
                     11193
                 ],
+                rankingids: [],
             },
         ],
     },
@@ -302,6 +403,11 @@ var g_ActiveTournamentTeams = [
             10383,
             10384
         ],
+        rankingids: [
+            11244,
+            11245,
+            11246
+        ],
         team_group: 'legends',
         players: [
             {
@@ -314,6 +420,11 @@ var g_ActiveTournamentTeams = [
                     10596,
                     10597
                 ],
+                rankingids: [
+                    11379,
+                    11380,
+                    11381
+                ],
             },
             {
                 playerid: 1006074432,
@@ -324,6 +435,11 @@ var g_ActiveTournamentTeams = [
                     10599,
                     10600,
                     10601
+                ],
+                rankingids: [
+                    11382,
+                    11383,
+                    11384
                 ],
             },
             {
@@ -336,6 +452,11 @@ var g_ActiveTournamentTeams = [
                     10604,
                     10605
                 ],
+                rankingids: [
+                    11385,
+                    11386,
+                    11387
+                ],
             },
             {
                 playerid: 878556854,
@@ -347,6 +468,11 @@ var g_ActiveTournamentTeams = [
                     10608,
                     10609
                 ],
+                rankingids: [
+                    11388,
+                    11389,
+                    11390
+                ],
             },
             {
                 playerid: 1243297617,
@@ -357,6 +483,11 @@ var g_ActiveTournamentTeams = [
                     10611,
                     10612,
                     10613
+                ],
+                rankingids: [
+                    11391,
+                    11392,
+                    11393
                 ],
             },
         ],
@@ -372,6 +503,11 @@ var g_ActiveTournamentTeams = [
             10387,
             10388
         ],
+        rankingids: [
+            11247,
+            11248,
+            11249
+        ],
         team_group: 'legends',
         players: [
             {
@@ -384,6 +520,11 @@ var g_ActiveTournamentTeams = [
                     10616,
                     10617
                 ],
+                rankingids: [
+                    11394,
+                    11395,
+                    11396
+                ],
             },
             {
                 playerid: 1014804299,
@@ -394,6 +535,11 @@ var g_ActiveTournamentTeams = [
                     10619,
                     10620,
                     10621
+                ],
+                rankingids: [
+                    11397,
+                    11398,
+                    11399
                 ],
             },
             {
@@ -406,6 +552,11 @@ var g_ActiveTournamentTeams = [
                     10624,
                     10625
                 ],
+                rankingids: [
+                    11400,
+                    11401,
+                    11402
+                ],
             },
             {
                 playerid: 293404789,
@@ -417,6 +568,11 @@ var g_ActiveTournamentTeams = [
                     10628,
                     10629
                 ],
+                rankingids: [
+                    11403,
+                    11404,
+                    11405
+                ],
             },
             {
                 playerid: 250361011,
@@ -427,6 +583,11 @@ var g_ActiveTournamentTeams = [
                     10631,
                     10632,
                     10633
+                ],
+                rankingids: [
+                    11406,
+                    11407,
+                    11408
                 ],
             },
         ],
@@ -442,6 +603,11 @@ var g_ActiveTournamentTeams = [
             10391,
             10392
         ],
+        rankingids: [
+            11250,
+            11251,
+            11252
+        ],
         team_group: 'legends',
         players: [
             {
@@ -454,6 +620,11 @@ var g_ActiveTournamentTeams = [
                     10636,
                     10637
                 ],
+                rankingids: [
+                    11409,
+                    11410,
+                    11411
+                ],
             },
             {
                 playerid: 366802450,
@@ -464,6 +635,11 @@ var g_ActiveTournamentTeams = [
                     10639,
                     10640,
                     10641
+                ],
+                rankingids: [
+                    11412,
+                    11413,
+                    11414
                 ],
             },
             {
@@ -476,6 +652,11 @@ var g_ActiveTournamentTeams = [
                     10644,
                     10645
                 ],
+                rankingids: [
+                    11415,
+                    11416,
+                    11417
+                ],
             },
             {
                 playerid: 7167161,
@@ -487,6 +668,11 @@ var g_ActiveTournamentTeams = [
                     10648,
                     10649
                 ],
+                rankingids: [
+                    11418,
+                    11419,
+                    11420
+                ],
             },
             {
                 playerid: 123219778,
@@ -497,6 +683,11 @@ var g_ActiveTournamentTeams = [
                     10651,
                     10652,
                     10653
+                ],
+                rankingids: [
+                    11421,
+                    11422,
+                    11423
                 ],
             },
         ],
@@ -512,6 +703,11 @@ var g_ActiveTournamentTeams = [
             10395,
             10396
         ],
+        rankingids: [
+            11253,
+            11254,
+            11255
+        ],
         team_group: 'legends',
         players: [
             {
@@ -524,6 +720,11 @@ var g_ActiveTournamentTeams = [
                     10656,
                     10657
                 ],
+                rankingids: [
+                    11424,
+                    11425,
+                    11426
+                ],
             },
             {
                 playerid: 98234764,
@@ -534,6 +735,11 @@ var g_ActiveTournamentTeams = [
                     10659,
                     10660,
                     10661
+                ],
+                rankingids: [
+                    11427,
+                    11428,
+                    11429
                 ],
             },
             {
@@ -546,6 +752,11 @@ var g_ActiveTournamentTeams = [
                     10664,
                     10665
                 ],
+                rankingids: [
+                    11430,
+                    11431,
+                    11432
+                ],
             },
             {
                 playerid: 240716562,
@@ -557,6 +768,11 @@ var g_ActiveTournamentTeams = [
                     10668,
                     10669
                 ],
+                rankingids: [
+                    11433,
+                    11434,
+                    11435
+                ],
             },
             {
                 playerid: 204704832,
@@ -567,6 +783,11 @@ var g_ActiveTournamentTeams = [
                     10671,
                     10672,
                     10673
+                ],
+                rankingids: [
+                    11436,
+                    11437,
+                    11438
                 ],
             },
         ],
@@ -582,6 +803,11 @@ var g_ActiveTournamentTeams = [
             10399,
             10400
         ],
+        rankingids: [
+            11256,
+            11257,
+            11258
+        ],
         team_group: 'legends',
         players: [
             {
@@ -594,6 +820,11 @@ var g_ActiveTournamentTeams = [
                     10676,
                     10677
                 ],
+                rankingids: [
+                    11439,
+                    11440,
+                    11441
+                ],
             },
             {
                 playerid: 178562747,
@@ -604,6 +835,11 @@ var g_ActiveTournamentTeams = [
                     10679,
                     10680,
                     10681
+                ],
+                rankingids: [
+                    11442,
+                    11443,
+                    11444
                 ],
             },
             {
@@ -616,6 +852,11 @@ var g_ActiveTournamentTeams = [
                     10684,
                     10685
                 ],
+                rankingids: [
+                    11445,
+                    11446,
+                    11447
+                ],
             },
             {
                 playerid: 395473484,
@@ -627,6 +868,11 @@ var g_ActiveTournamentTeams = [
                     10688,
                     10689
                 ],
+                rankingids: [
+                    11448,
+                    11449,
+                    11450
+                ],
             },
             {
                 playerid: 232908406,
@@ -637,6 +883,11 @@ var g_ActiveTournamentTeams = [
                     10691,
                     10692,
                     10693
+                ],
+                rankingids: [
+                    11451,
+                    11452,
+                    11453
                 ],
             },
         ],
@@ -652,6 +903,11 @@ var g_ActiveTournamentTeams = [
             10403,
             10404
         ],
+        rankingids: [
+            11259,
+            11260,
+            11261
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -664,6 +920,11 @@ var g_ActiveTournamentTeams = [
                     10696,
                     10697
                 ],
+                rankingids: [
+                    11454,
+                    11455,
+                    11456
+                ],
             },
             {
                 playerid: 1012530125,
@@ -674,6 +935,11 @@ var g_ActiveTournamentTeams = [
                     10699,
                     10700,
                     10701
+                ],
+                rankingids: [
+                    11457,
+                    11458,
+                    11459
                 ],
             },
             {
@@ -686,6 +952,11 @@ var g_ActiveTournamentTeams = [
                     10704,
                     10705
                 ],
+                rankingids: [
+                    11460,
+                    11461,
+                    11462
+                ],
             },
             {
                 playerid: 1353702531,
@@ -697,6 +968,11 @@ var g_ActiveTournamentTeams = [
                     10708,
                     10709
                 ],
+                rankingids: [
+                    11463,
+                    11464,
+                    11465
+                ],
             },
             {
                 playerid: 1140460110,
@@ -707,6 +983,11 @@ var g_ActiveTournamentTeams = [
                     10711,
                     10712,
                     10713
+                ],
+                rankingids: [
+                    11466,
+                    11467,
+                    11468
                 ],
             },
         ],
@@ -722,6 +1003,11 @@ var g_ActiveTournamentTeams = [
             10407,
             10408
         ],
+        rankingids: [
+            11262,
+            11263,
+            11264
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -734,6 +1020,11 @@ var g_ActiveTournamentTeams = [
                     10716,
                     10717
                 ],
+                rankingids: [
+                    11469,
+                    11470,
+                    11471
+                ],
             },
             {
                 playerid: 425999755,
@@ -744,6 +1035,11 @@ var g_ActiveTournamentTeams = [
                     10719,
                     10720,
                     10721
+                ],
+                rankingids: [
+                    11472,
+                    11473,
+                    11474
                 ],
             },
             {
@@ -756,6 +1052,11 @@ var g_ActiveTournamentTeams = [
                     10724,
                     10725
                 ],
+                rankingids: [
+                    11475,
+                    11476,
+                    11477
+                ],
             },
             {
                 playerid: 121219047,
@@ -767,6 +1068,11 @@ var g_ActiveTournamentTeams = [
                     10728,
                     10729
                 ],
+                rankingids: [
+                    11478,
+                    11479,
+                    11480
+                ],
             },
             {
                 playerid: 1035615149,
@@ -777,6 +1083,11 @@ var g_ActiveTournamentTeams = [
                     10731,
                     10732,
                     10733
+                ],
+                rankingids: [
+                    11481,
+                    11482,
+                    11483
                 ],
             },
         ],
@@ -792,6 +1103,11 @@ var g_ActiveTournamentTeams = [
             10411,
             10412
         ],
+        rankingids: [
+            11265,
+            11266,
+            11267
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -804,6 +1120,11 @@ var g_ActiveTournamentTeams = [
                     10736,
                     10737
                 ],
+                rankingids: [
+                    11484,
+                    11485,
+                    11486
+                ],
             },
             {
                 playerid: 447933315,
@@ -814,6 +1135,11 @@ var g_ActiveTournamentTeams = [
                     10739,
                     10740,
                     10741
+                ],
+                rankingids: [
+                    11487,
+                    11488,
+                    11489
                 ],
             },
             {
@@ -826,6 +1152,11 @@ var g_ActiveTournamentTeams = [
                     10744,
                     10745
                 ],
+                rankingids: [
+                    11490,
+                    11491,
+                    11492
+                ],
             },
             {
                 playerid: 160291620,
@@ -837,6 +1168,11 @@ var g_ActiveTournamentTeams = [
                     10748,
                     10749
                 ],
+                rankingids: [
+                    11493,
+                    11494,
+                    11495
+                ],
             },
             {
                 playerid: 44842089,
@@ -847,6 +1183,11 @@ var g_ActiveTournamentTeams = [
                     10751,
                     10752,
                     10753
+                ],
+                rankingids: [
+                    11496,
+                    11497,
+                    11498
                 ],
             },
         ],
@@ -862,6 +1203,11 @@ var g_ActiveTournamentTeams = [
             10415,
             10416
         ],
+        rankingids: [
+            11268,
+            11269,
+            11270
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -874,6 +1220,11 @@ var g_ActiveTournamentTeams = [
                     10756,
                     10757
                 ],
+                rankingids: [
+                    11499,
+                    11500,
+                    11501
+                ],
             },
             {
                 playerid: 107737265,
@@ -884,6 +1235,11 @@ var g_ActiveTournamentTeams = [
                     10759,
                     10760,
                     10761
+                ],
+                rankingids: [
+                    11502,
+                    11503,
+                    11504
                 ],
             },
             {
@@ -896,6 +1252,11 @@ var g_ActiveTournamentTeams = [
                     10764,
                     10765
                 ],
+                rankingids: [
+                    11505,
+                    11506,
+                    11507
+                ],
             },
             {
                 playerid: 349573813,
@@ -907,6 +1268,11 @@ var g_ActiveTournamentTeams = [
                     10768,
                     10769
                 ],
+                rankingids: [
+                    11508,
+                    11509,
+                    11510
+                ],
             },
             {
                 playerid: 1086212773,
@@ -917,6 +1283,11 @@ var g_ActiveTournamentTeams = [
                     10771,
                     10772,
                     10773
+                ],
+                rankingids: [
+                    11511,
+                    11512,
+                    11513
                 ],
             },
         ],
@@ -932,6 +1303,11 @@ var g_ActiveTournamentTeams = [
             10419,
             10420
         ],
+        rankingids: [
+            11271,
+            11272,
+            11273
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -944,6 +1320,11 @@ var g_ActiveTournamentTeams = [
                     10776,
                     10777
                 ],
+                rankingids: [
+                    11514,
+                    11515,
+                    11516
+                ],
             },
             {
                 playerid: 889754458,
@@ -954,6 +1335,11 @@ var g_ActiveTournamentTeams = [
                     10779,
                     10780,
                     10781
+                ],
+                rankingids: [
+                    11517,
+                    11518,
+                    11519
                 ],
             },
             {
@@ -966,6 +1352,11 @@ var g_ActiveTournamentTeams = [
                     10784,
                     10785
                 ],
+                rankingids: [
+                    11520,
+                    11521,
+                    11522
+                ],
             },
             {
                 playerid: 140229234,
@@ -977,6 +1368,11 @@ var g_ActiveTournamentTeams = [
                     10788,
                     10789
                 ],
+                rankingids: [
+                    11523,
+                    11524,
+                    11525
+                ],
             },
             {
                 playerid: 101497868,
@@ -987,6 +1383,11 @@ var g_ActiveTournamentTeams = [
                     10791,
                     10792,
                     10793
+                ],
+                rankingids: [
+                    11526,
+                    11527,
+                    11528
                 ],
             },
         ],
@@ -1002,6 +1403,11 @@ var g_ActiveTournamentTeams = [
             10423,
             10424
         ],
+        rankingids: [
+            11274,
+            11275,
+            11276
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -1014,6 +1420,11 @@ var g_ActiveTournamentTeams = [
                     10796,
                     10797
                 ],
+                rankingids: [
+                    11529,
+                    11530,
+                    11531
+                ],
             },
             {
                 playerid: 390076777,
@@ -1024,6 +1435,11 @@ var g_ActiveTournamentTeams = [
                     10799,
                     10800,
                     10801
+                ],
+                rankingids: [
+                    11532,
+                    11533,
+                    11534
                 ],
             },
             {
@@ -1036,6 +1452,11 @@ var g_ActiveTournamentTeams = [
                     10804,
                     10805
                 ],
+                rankingids: [
+                    11535,
+                    11536,
+                    11537
+                ],
             },
             {
                 playerid: 436072455,
@@ -1047,6 +1468,11 @@ var g_ActiveTournamentTeams = [
                     10808,
                     10809
                 ],
+                rankingids: [
+                    11538,
+                    11539,
+                    11540
+                ],
             },
             {
                 playerid: 51467095,
@@ -1057,6 +1483,11 @@ var g_ActiveTournamentTeams = [
                     10811,
                     10812,
                     10813
+                ],
+                rankingids: [
+                    11541,
+                    11542,
+                    11543
                 ],
             },
         ],
@@ -1072,6 +1503,11 @@ var g_ActiveTournamentTeams = [
             10427,
             10428
         ],
+        rankingids: [
+            11277,
+            11278,
+            11279
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -1084,6 +1520,11 @@ var g_ActiveTournamentTeams = [
                     10816,
                     10817
                 ],
+                rankingids: [
+                    11544,
+                    11545,
+                    11546
+                ],
             },
             {
                 playerid: 133120627,
@@ -1094,6 +1535,11 @@ var g_ActiveTournamentTeams = [
                     10819,
                     10820,
                     10821
+                ],
+                rankingids: [
+                    11547,
+                    11548,
+                    11549
                 ],
             },
             {
@@ -1106,6 +1552,11 @@ var g_ActiveTournamentTeams = [
                     10824,
                     10825
                 ],
+                rankingids: [
+                    11550,
+                    11551,
+                    11552
+                ],
             },
             {
                 playerid: 383961258,
@@ -1117,6 +1568,11 @@ var g_ActiveTournamentTeams = [
                     10828,
                     10829
                 ],
+                rankingids: [
+                    11553,
+                    11554,
+                    11555
+                ],
             },
             {
                 playerid: 1014228401,
@@ -1127,6 +1583,11 @@ var g_ActiveTournamentTeams = [
                     10831,
                     10832,
                     10833
+                ],
+                rankingids: [
+                    11556,
+                    11557,
+                    11558
                 ],
             },
         ],
@@ -1142,6 +1603,11 @@ var g_ActiveTournamentTeams = [
             10431,
             10432
         ],
+        rankingids: [
+            11280,
+            11281,
+            11282
+        ],
         team_group: 'challengers',
         players: [
             {
@@ -1154,6 +1620,11 @@ var g_ActiveTournamentTeams = [
                     10836,
                     10837
                 ],
+                rankingids: [
+                    11559,
+                    11560,
+                    11561
+                ],
             },
             {
                 playerid: 256625848,
@@ -1164,6 +1635,11 @@ var g_ActiveTournamentTeams = [
                     10839,
                     10840,
                     10841
+                ],
+                rankingids: [
+                    11562,
+                    11563,
+                    11564
                 ],
             },
             {
@@ -1176,6 +1652,11 @@ var g_ActiveTournamentTeams = [
                     10844,
                     10845
                 ],
+                rankingids: [
+                    11565,
+                    11566,
+                    11567
+                ],
             },
             {
                 playerid: 107456470,
@@ -1187,6 +1668,11 @@ var g_ActiveTournamentTeams = [
                     10848,
                     10849
                 ],
+                rankingids: [
+                    11568,
+                    11569,
+                    11570
+                ],
             },
             {
                 playerid: 359457480,
@@ -1197,6 +1683,11 @@ var g_ActiveTournamentTeams = [
                     10851,
                     10852,
                     10853
+                ],
+                rankingids: [
+                    11571,
+                    11572,
+                    11573
                 ],
             },
         ],
@@ -1212,6 +1703,11 @@ var g_ActiveTournamentTeams = [
             10435,
             10436
         ],
+        rankingids: [
+            11283,
+            11284,
+            11285
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1224,6 +1720,11 @@ var g_ActiveTournamentTeams = [
                     10856,
                     10857
                 ],
+                rankingids: [
+                    11574,
+                    11575,
+                    11576
+                ],
             },
             {
                 playerid: 73906687,
@@ -1234,6 +1735,11 @@ var g_ActiveTournamentTeams = [
                     10859,
                     10860,
                     10861
+                ],
+                rankingids: [
+                    11577,
+                    11578,
+                    11579
                 ],
             },
             {
@@ -1246,6 +1752,11 @@ var g_ActiveTournamentTeams = [
                     10864,
                     10865
                 ],
+                rankingids: [
+                    11580,
+                    11581,
+                    11582
+                ],
             },
             {
                 playerid: 350295751,
@@ -1257,6 +1768,11 @@ var g_ActiveTournamentTeams = [
                     10868,
                     10869
                 ],
+                rankingids: [
+                    11583,
+                    11584,
+                    11585
+                ],
             },
             {
                 playerid: 294421006,
@@ -1267,6 +1783,11 @@ var g_ActiveTournamentTeams = [
                     10871,
                     10872,
                     10873
+                ],
+                rankingids: [
+                    11586,
+                    11587,
+                    11588
                 ],
             },
         ],
@@ -1282,6 +1803,11 @@ var g_ActiveTournamentTeams = [
             10439,
             10440
         ],
+        rankingids: [
+            11286,
+            11287,
+            11288
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1294,6 +1820,11 @@ var g_ActiveTournamentTeams = [
                     10876,
                     10877
                 ],
+                rankingids: [
+                    11589,
+                    11590,
+                    11591
+                ],
             },
             {
                 playerid: 344771176,
@@ -1304,6 +1835,11 @@ var g_ActiveTournamentTeams = [
                     10879,
                     10880,
                     10881
+                ],
+                rankingids: [
+                    11592,
+                    11593,
+                    11594
                 ],
             },
             {
@@ -1316,6 +1852,11 @@ var g_ActiveTournamentTeams = [
                     10884,
                     10885
                 ],
+                rankingids: [
+                    11595,
+                    11596,
+                    11597
+                ],
             },
             {
                 playerid: 343849791,
@@ -1327,6 +1868,11 @@ var g_ActiveTournamentTeams = [
                     10888,
                     10889
                 ],
+                rankingids: [
+                    11598,
+                    11599,
+                    11600
+                ],
             },
             {
                 playerid: 421907931,
@@ -1337,6 +1883,11 @@ var g_ActiveTournamentTeams = [
                     10891,
                     10892,
                     10893
+                ],
+                rankingids: [
+                    11601,
+                    11602,
+                    11603
                 ],
             },
         ],
@@ -1352,6 +1903,11 @@ var g_ActiveTournamentTeams = [
             10443,
             10444
         ],
+        rankingids: [
+            11289,
+            11290,
+            11291
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1364,6 +1920,11 @@ var g_ActiveTournamentTeams = [
                     10896,
                     10897
                 ],
+                rankingids: [
+                    11604,
+                    11605,
+                    11606
+                ],
             },
             {
                 playerid: 200790839,
@@ -1374,6 +1935,11 @@ var g_ActiveTournamentTeams = [
                     10899,
                     10900,
                     10901
+                ],
+                rankingids: [
+                    11607,
+                    11608,
+                    11609
                 ],
             },
             {
@@ -1386,6 +1952,11 @@ var g_ActiveTournamentTeams = [
                     10904,
                     10905
                 ],
+                rankingids: [
+                    11610,
+                    11611,
+                    11612
+                ],
             },
             {
                 playerid: 332333072,
@@ -1397,6 +1968,11 @@ var g_ActiveTournamentTeams = [
                     10908,
                     10909
                 ],
+                rankingids: [
+                    11613,
+                    11614,
+                    11615
+                ],
             },
             {
                 playerid: 1176878177,
@@ -1407,6 +1983,11 @@ var g_ActiveTournamentTeams = [
                     10911,
                     10912,
                     10913
+                ],
+                rankingids: [
+                    11616,
+                    11617,
+                    11618
                 ],
             },
         ],
@@ -1422,6 +2003,11 @@ var g_ActiveTournamentTeams = [
             10447,
             10448
         ],
+        rankingids: [
+            11292,
+            11293,
+            11294
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1434,6 +2020,11 @@ var g_ActiveTournamentTeams = [
                     10916,
                     10917
                 ],
+                rankingids: [
+                    11619,
+                    11620,
+                    11621
+                ],
             },
             {
                 playerid: 99348674,
@@ -1444,6 +2035,11 @@ var g_ActiveTournamentTeams = [
                     10919,
                     10920,
                     10921
+                ],
+                rankingids: [
+                    11622,
+                    11623,
+                    11624
                 ],
             },
             {
@@ -1456,6 +2052,11 @@ var g_ActiveTournamentTeams = [
                     10924,
                     10925
                 ],
+                rankingids: [
+                    11625,
+                    11626,
+                    11627
+                ],
             },
             {
                 playerid: 53993406,
@@ -1467,6 +2068,11 @@ var g_ActiveTournamentTeams = [
                     10928,
                     10929
                 ],
+                rankingids: [
+                    11628,
+                    11629,
+                    11630
+                ],
             },
             {
                 playerid: 411757486,
@@ -1477,6 +2083,11 @@ var g_ActiveTournamentTeams = [
                     10931,
                     10932,
                     10933
+                ],
+                rankingids: [
+                    11631,
+                    11632,
+                    11633
                 ],
             },
         ],
@@ -1492,6 +2103,11 @@ var g_ActiveTournamentTeams = [
             10451,
             10452
         ],
+        rankingids: [
+            11295,
+            11296,
+            11297
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1504,6 +2120,11 @@ var g_ActiveTournamentTeams = [
                     10936,
                     10937
                 ],
+                rankingids: [
+                    11634,
+                    11635,
+                    11636
+                ],
             },
             {
                 playerid: 118505645,
@@ -1514,6 +2135,11 @@ var g_ActiveTournamentTeams = [
                     10939,
                     10940,
                     10941
+                ],
+                rankingids: [
+                    11637,
+                    11638,
+                    11639
                 ],
             },
             {
@@ -1526,6 +2152,11 @@ var g_ActiveTournamentTeams = [
                     10944,
                     10945
                 ],
+                rankingids: [
+                    11640,
+                    11641,
+                    11642
+                ],
             },
             {
                 playerid: 68193075,
@@ -1537,6 +2168,11 @@ var g_ActiveTournamentTeams = [
                     10948,
                     10949
                 ],
+                rankingids: [
+                    11643,
+                    11644,
+                    11645
+                ],
             },
             {
                 playerid: 409910954,
@@ -1547,6 +2183,11 @@ var g_ActiveTournamentTeams = [
                     10951,
                     10952,
                     10953
+                ],
+                rankingids: [
+                    11646,
+                    11647,
+                    11648
                 ],
             },
         ],
@@ -1562,6 +2203,11 @@ var g_ActiveTournamentTeams = [
             10455,
             10456
         ],
+        rankingids: [
+            11298,
+            11299,
+            11300
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1574,6 +2220,11 @@ var g_ActiveTournamentTeams = [
                     10956,
                     10957
                 ],
+                rankingids: [
+                    11649,
+                    11650,
+                    11651
+                ],
             },
             {
                 playerid: 377218468,
@@ -1584,6 +2235,11 @@ var g_ActiveTournamentTeams = [
                     10959,
                     10960,
                     10961
+                ],
+                rankingids: [
+                    11652,
+                    11653,
+                    11654
                 ],
             },
             {
@@ -1596,6 +2252,11 @@ var g_ActiveTournamentTeams = [
                     10964,
                     10965
                 ],
+                rankingids: [
+                    11655,
+                    11656,
+                    11657
+                ],
             },
             {
                 playerid: 230197733,
@@ -1607,6 +2268,11 @@ var g_ActiveTournamentTeams = [
                     10968,
                     10969
                 ],
+                rankingids: [
+                    11658,
+                    11659,
+                    11660
+                ],
             },
             {
                 playerid: 104087441,
@@ -1617,6 +2283,11 @@ var g_ActiveTournamentTeams = [
                     10971,
                     10972,
                     10973
+                ],
+                rankingids: [
+                    11661,
+                    11662,
+                    11663
                 ],
             },
         ],
@@ -1632,6 +2303,11 @@ var g_ActiveTournamentTeams = [
             10459,
             10460
         ],
+        rankingids: [
+            11301,
+            11302,
+            11303
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1644,6 +2320,11 @@ var g_ActiveTournamentTeams = [
                     10976,
                     10977
                 ],
+                rankingids: [
+                    11664,
+                    11665,
+                    11666
+                ],
             },
             {
                 playerid: 101158002,
@@ -1654,6 +2335,11 @@ var g_ActiveTournamentTeams = [
                     10979,
                     10980,
                     10981
+                ],
+                rankingids: [
+                    11667,
+                    11668,
+                    11669
                 ],
             },
             {
@@ -1666,6 +2352,11 @@ var g_ActiveTournamentTeams = [
                     10984,
                     10985
                 ],
+                rankingids: [
+                    11670,
+                    11671,
+                    11672
+                ],
             },
             {
                 playerid: 257999525,
@@ -1677,6 +2368,11 @@ var g_ActiveTournamentTeams = [
                     10988,
                     10989
                 ],
+                rankingids: [
+                    11673,
+                    11674,
+                    11675
+                ],
             },
             {
                 playerid: 164802903,
@@ -1687,6 +2383,11 @@ var g_ActiveTournamentTeams = [
                     10991,
                     10992,
                     10993
+                ],
+                rankingids: [
+                    11676,
+                    11677,
+                    11678
                 ],
             },
         ],
@@ -1702,6 +2403,11 @@ var g_ActiveTournamentTeams = [
             10463,
             10464
         ],
+        rankingids: [
+            11304,
+            11305,
+            11306
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1714,6 +2420,11 @@ var g_ActiveTournamentTeams = [
                     10996,
                     10997
                 ],
+                rankingids: [
+                    11679,
+                    11680,
+                    11681
+                ],
             },
             {
                 playerid: 209294569,
@@ -1724,6 +2435,11 @@ var g_ActiveTournamentTeams = [
                     10999,
                     11000,
                     11001
+                ],
+                rankingids: [
+                    11682,
+                    11683,
+                    11684
                 ],
             },
             {
@@ -1736,6 +2452,11 @@ var g_ActiveTournamentTeams = [
                     11004,
                     11005
                 ],
+                rankingids: [
+                    11685,
+                    11686,
+                    11687
+                ],
             },
             {
                 playerid: 292476348,
@@ -1747,6 +2468,11 @@ var g_ActiveTournamentTeams = [
                     11008,
                     11009
                 ],
+                rankingids: [
+                    11688,
+                    11689,
+                    11690
+                ],
             },
             {
                 playerid: 344171388,
@@ -1757,6 +2483,11 @@ var g_ActiveTournamentTeams = [
                     11011,
                     11012,
                     11013
+                ],
+                rankingids: [
+                    11691,
+                    11692,
+                    11693
                 ],
             },
         ],
@@ -1772,6 +2503,11 @@ var g_ActiveTournamentTeams = [
             10467,
             10468
         ],
+        rankingids: [
+            11307,
+            11308,
+            11309
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1784,6 +2520,11 @@ var g_ActiveTournamentTeams = [
                     11016,
                     11017
                 ],
+                rankingids: [
+                    11694,
+                    11695,
+                    11696
+                ],
             },
             {
                 playerid: 100218065,
@@ -1794,6 +2535,11 @@ var g_ActiveTournamentTeams = [
                     11019,
                     11020,
                     11021
+                ],
+                rankingids: [
+                    11697,
+                    11698,
+                    11699
                 ],
             },
             {
@@ -1806,6 +2552,11 @@ var g_ActiveTournamentTeams = [
                     11024,
                     11025
                 ],
+                rankingids: [
+                    11700,
+                    11701,
+                    11702
+                ],
             },
             {
                 playerid: 14864123,
@@ -1817,6 +2568,11 @@ var g_ActiveTournamentTeams = [
                     11028,
                     11029
                 ],
+                rankingids: [
+                    11703,
+                    11704,
+                    11705
+                ],
             },
             {
                 playerid: 35624002,
@@ -1827,6 +2583,11 @@ var g_ActiveTournamentTeams = [
                     11031,
                     11032,
                     11033
+                ],
+                rankingids: [
+                    11706,
+                    11707,
+                    11708
                 ],
             },
         ],
@@ -1842,6 +2603,11 @@ var g_ActiveTournamentTeams = [
             10471,
             10472
         ],
+        rankingids: [
+            11310,
+            11311,
+            11312
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1854,6 +2620,11 @@ var g_ActiveTournamentTeams = [
                     11036,
                     11037
                 ],
+                rankingids: [
+                    11709,
+                    11710,
+                    11711
+                ],
             },
             {
                 playerid: 400141913,
@@ -1864,6 +2635,11 @@ var g_ActiveTournamentTeams = [
                     11039,
                     11040,
                     11041
+                ],
+                rankingids: [
+                    11712,
+                    11713,
+                    11714
                 ],
             },
             {
@@ -1876,6 +2652,11 @@ var g_ActiveTournamentTeams = [
                     11044,
                     11045
                 ],
+                rankingids: [
+                    11715,
+                    11716,
+                    11717
+                ],
             },
             {
                 playerid: 394931794,
@@ -1887,6 +2668,11 @@ var g_ActiveTournamentTeams = [
                     11048,
                     11049
                 ],
+                rankingids: [
+                    11718,
+                    11719,
+                    11720
+                ],
             },
             {
                 playerid: 996643915,
@@ -1897,6 +2683,11 @@ var g_ActiveTournamentTeams = [
                     11051,
                     11052,
                     11053
+                ],
+                rankingids: [
+                    11721,
+                    11722,
+                    11723
                 ],
             },
         ],
@@ -1912,6 +2703,11 @@ var g_ActiveTournamentTeams = [
             10475,
             10476
         ],
+        rankingids: [
+            11313,
+            11314,
+            11315
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1924,6 +2720,11 @@ var g_ActiveTournamentTeams = [
                     11056,
                     11057
                 ],
+                rankingids: [
+                    11724,
+                    11725,
+                    11726
+                ],
             },
             {
                 playerid: 849196548,
@@ -1934,6 +2735,11 @@ var g_ActiveTournamentTeams = [
                     11059,
                     11060,
                     11061
+                ],
+                rankingids: [
+                    11727,
+                    11728,
+                    11729
                 ],
             },
             {
@@ -1946,6 +2752,11 @@ var g_ActiveTournamentTeams = [
                     11064,
                     11065
                 ],
+                rankingids: [
+                    11730,
+                    11731,
+                    11732
+                ],
             },
             {
                 playerid: 347468740,
@@ -1957,6 +2768,11 @@ var g_ActiveTournamentTeams = [
                     11068,
                     11069
                 ],
+                rankingids: [
+                    11733,
+                    11734,
+                    11735
+                ],
             },
             {
                 playerid: 135630812,
@@ -1967,6 +2783,11 @@ var g_ActiveTournamentTeams = [
                     11071,
                     11072,
                     11073
+                ],
+                rankingids: [
+                    11736,
+                    11737,
+                    11738
                 ],
             },
         ],
@@ -1982,6 +2803,11 @@ var g_ActiveTournamentTeams = [
             10479,
             10480
         ],
+        rankingids: [
+            11316,
+            11317,
+            11318
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -1994,6 +2820,11 @@ var g_ActiveTournamentTeams = [
                     11076,
                     11077
                 ],
+                rankingids: [
+                    11739,
+                    11740,
+                    11741
+                ],
             },
             {
                 playerid: 22765766,
@@ -2004,6 +2835,11 @@ var g_ActiveTournamentTeams = [
                     11079,
                     11080,
                     11081
+                ],
+                rankingids: [
+                    11742,
+                    11743,
+                    11744
                 ],
             },
             {
@@ -2016,6 +2852,11 @@ var g_ActiveTournamentTeams = [
                     11084,
                     11085
                 ],
+                rankingids: [
+                    11745,
+                    11746,
+                    11747
+                ],
             },
             {
                 playerid: 46114258,
@@ -2027,6 +2868,11 @@ var g_ActiveTournamentTeams = [
                     11088,
                     11089
                 ],
+                rankingids: [
+                    11748,
+                    11749,
+                    11750
+                ],
             },
             {
                 playerid: 94554756,
@@ -2037,6 +2883,11 @@ var g_ActiveTournamentTeams = [
                     11091,
                     11092,
                     11093
+                ],
+                rankingids: [
+                    11751,
+                    11752,
+                    11753
                 ],
             },
         ],
@@ -2052,6 +2903,11 @@ var g_ActiveTournamentTeams = [
             10483,
             10484
         ],
+        rankingids: [
+            11319,
+            11320,
+            11321
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -2064,6 +2920,11 @@ var g_ActiveTournamentTeams = [
                     11096,
                     11097
                 ],
+                rankingids: [
+                    11754,
+                    11755,
+                    11756
+                ],
             },
             {
                 playerid: 323723495,
@@ -2074,6 +2935,11 @@ var g_ActiveTournamentTeams = [
                     11099,
                     11100,
                     11101
+                ],
+                rankingids: [
+                    11757,
+                    11758,
+                    11759
                 ],
             },
             {
@@ -2086,6 +2952,11 @@ var g_ActiveTournamentTeams = [
                     11104,
                     11105
                 ],
+                rankingids: [
+                    11760,
+                    11761,
+                    11762
+                ],
             },
             {
                 playerid: 190407632,
@@ -2097,6 +2968,11 @@ var g_ActiveTournamentTeams = [
                     11108,
                     11109
                 ],
+                rankingids: [
+                    11763,
+                    11764,
+                    11765
+                ],
             },
             {
                 playerid: 40885967,
@@ -2107,6 +2983,11 @@ var g_ActiveTournamentTeams = [
                     11111,
                     11112,
                     11113
+                ],
+                rankingids: [
+                    11766,
+                    11767,
+                    11768
                 ],
             },
         ],
@@ -2122,6 +3003,11 @@ var g_ActiveTournamentTeams = [
             10487,
             10488
         ],
+        rankingids: [
+            11322,
+            11323,
+            11324
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -2134,6 +3020,11 @@ var g_ActiveTournamentTeams = [
                     11116,
                     11117
                 ],
+                rankingids: [
+                    11769,
+                    11770,
+                    11771
+                ],
             },
             {
                 playerid: 177517735,
@@ -2144,6 +3035,11 @@ var g_ActiveTournamentTeams = [
                     11119,
                     11120,
                     11121
+                ],
+                rankingids: [
+                    11772,
+                    11773,
+                    11774
                 ],
             },
             {
@@ -2156,6 +3052,11 @@ var g_ActiveTournamentTeams = [
                     11124,
                     11125
                 ],
+                rankingids: [
+                    11775,
+                    11776,
+                    11777
+                ],
             },
             {
                 playerid: 856465673,
@@ -2167,6 +3068,11 @@ var g_ActiveTournamentTeams = [
                     11128,
                     11129
                 ],
+                rankingids: [
+                    11778,
+                    11779,
+                    11780
+                ],
             },
             {
                 playerid: 456122416,
@@ -2177,6 +3083,11 @@ var g_ActiveTournamentTeams = [
                     11131,
                     11132,
                     11133
+                ],
+                rankingids: [
+                    11781,
+                    11782,
+                    11783
                 ],
             },
         ],
@@ -2192,6 +3103,11 @@ var g_ActiveTournamentTeams = [
             10491,
             10492
         ],
+        rankingids: [
+            11325,
+            11326,
+            11327
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -2204,6 +3120,11 @@ var g_ActiveTournamentTeams = [
                     11136,
                     11137
                 ],
+                rankingids: [
+                    11784,
+                    11785,
+                    11786
+                ],
             },
             {
                 playerid: 112055988,
@@ -2214,6 +3135,11 @@ var g_ActiveTournamentTeams = [
                     11139,
                     11140,
                     11141
+                ],
+                rankingids: [
+                    11787,
+                    11788,
+                    11789
                 ],
             },
             {
@@ -2226,6 +3152,11 @@ var g_ActiveTournamentTeams = [
                     11144,
                     11145
                 ],
+                rankingids: [
+                    11790,
+                    11791,
+                    11792
+                ],
             },
             {
                 playerid: 68391216,
@@ -2237,6 +3168,11 @@ var g_ActiveTournamentTeams = [
                     11148,
                     11149
                 ],
+                rankingids: [
+                    11793,
+                    11794,
+                    11795
+                ],
             },
             {
                 playerid: 203514302,
@@ -2247,6 +3183,11 @@ var g_ActiveTournamentTeams = [
                     11151,
                     11152,
                     11153
+                ],
+                rankingids: [
+                    11796,
+                    11797,
+                    11798
                 ],
             },
         ],
@@ -2262,6 +3203,11 @@ var g_ActiveTournamentTeams = [
             10495,
             10496
         ],
+        rankingids: [
+            11328,
+            11329,
+            11330
+        ],
         team_group: 'contenders',
         players: [
             {
@@ -2274,6 +3220,11 @@ var g_ActiveTournamentTeams = [
                     11156,
                     11157
                 ],
+                rankingids: [
+                    11799,
+                    11800,
+                    11801
+                ],
             },
             {
                 playerid: 16839456,
@@ -2284,6 +3235,11 @@ var g_ActiveTournamentTeams = [
                     11159,
                     11160,
                     11161
+                ],
+                rankingids: [
+                    11802,
+                    11803,
+                    11804
                 ],
             },
             {
@@ -2296,6 +3252,11 @@ var g_ActiveTournamentTeams = [
                     11164,
                     11165
                 ],
+                rankingids: [
+                    11805,
+                    11806,
+                    11807
+                ],
             },
             {
                 playerid: 105182632,
@@ -2307,6 +3268,11 @@ var g_ActiveTournamentTeams = [
                     11168,
                     11169
                 ],
+                rankingids: [
+                    11808,
+                    11809,
+                    11810
+                ],
             },
             {
                 playerid: 372579523,
@@ -2317,6 +3283,11 @@ var g_ActiveTournamentTeams = [
                     11171,
                     11172,
                     11173
+                ],
+                rankingids: [
+                    11811,
+                    11812,
+                    11813
                 ],
             },
         ],
@@ -2930,6 +3901,7 @@ var g_ActiveTournamentPasses = [
 var g_ActiveTournamentDynamicContainers = [
     5316,
     5329,
+    4040,
     5323,
     5324,
     5325,
@@ -2937,4 +3909,4 @@ var g_ActiveTournamentDynamicContainers = [
     5327,
     5328,
 ];
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXRlbXNfZXZlbnRfY3VycmVudF9nZW5lcmF0ZWRfc3RvcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9jb250ZW50L2NzZ28vcGFub3JhbWEvc2NyaXB0cy9nZW5lcmF0ZWQvaXRlbXNfZXZlbnRfY3VycmVudF9nZW5lcmF0ZWRfc3RvcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLGlFQUFpRTtBQVdqRSxJQUFJLHNCQUFzQixHQUMxQjtJQUNDLE9BQU8sRUFBRSxFQUFFO0lBQ1gsVUFBVSxFQUFFLEVBQUU7SUFDZCxZQUFZLEVBQUUsS0FBSztJQUNuQixRQUFRLEVBQUUsYUFBYTtJQUN2QixrQkFBa0IsRUFBRSxLQUFLO0lBQ3pCLFVBQVUsRUFBRTtRQUNYLEtBQUs7UUFDTCxLQUFLO1FBQ0wsS0FBSztRQUNMLEtBQUs7S0FDTDtJQUNELFdBQVcsRUFBRSxJQUFJO0lBQ2pCLFdBQVcsRUFBRSxJQUFJO0lBQ2pCLFlBQVksRUFBRTtRQUNiLElBQUksRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLElBQUk7S0FDdEI7SUFDRCxhQUFhLEVBQUUsSUFBSTtJQUNuQix1QkFBdUIsRUFBRSxJQUFJO0lBQzdCLHdCQUF3QixFQUFFLElBQUk7SUFDOUIsYUFBYSxFQUFFLENBQUM7SUFDaEIsb0JBQW9CLEVBQUUsQ0FBQztJQUN2QixxQkFBcUIsRUFBRSxDQUFDO0lBQ3hCLE1BQU0sRUFBRSxJQUFJO0NBQ1osQ0FBQztBQU1GLElBQUksdUJBQXVCLEdBQzNCO0lBRUM7UUFDQyxNQUFNLEVBQUUsRUFBRTtRQUNWLElBQUksRUFBRSxNQUFNO1FBQ1osa0JBQWtCLEVBQUUsS0FBSztRQUN6QixVQUFVLEVBQUU7WUFDWCxLQUFLO1lBQ0wsS0FBSztZQUNMLEtBQUs7WUFDTCxLQUFLO1NBQ0w7UUFDRCxVQUFVLEVBQUUsU0FBUztRQUNyQixPQUFPLEVBQUU7WUFDUjtnQkFDQyxRQUFRLEVBQUUsU0FBUztnQkFDbkIsSUFB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
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXRlbXNfZXZlbnRfY3VycmVudF9nZW5lcmF0ZWRfc3RvcmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9jb250ZW50L2NzZ28vcGFub3JhbWEvc2NyaXB0cy9nZW5lcmF0ZWQvaXRlbXNfZXZlbnRfY3VycmVudF9nZW5lcmF0ZWRfc3RvcmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLGlFQUFpRTtBQVdqRSxJQUFJLHNCQUFzQixHQUMxQjtJQUNDLE9BQU8sRUFBRSxFQUFFO0lBQ1gsVUFBVSxFQUFFLEVBQUU7SUFDZCxZQUFZLEVBQUUsS0FBSztJQUNuQixRQUFRLEVBQUUsYUFBYTtJQUN2QixrQkFBa0IsRUFBRSxLQUFLO0lBQ3pCLFVBQVUsRUFBRTtRQUNYLEtBQUs7UUFDTCxLQUFLO1FBQ0wsS0FBSztRQUNMLEtBQUs7S0FDTDtJQUNELFVBQVUsRUFBRTtRQUNYLEtBQUs7UUFDTCxLQUFLO1FBQ0wsS0FBSztLQUNMO0lBQ0QsV0FBVyxFQUFFLElBQUk7SUFDakIsV0FBVyxFQUFFLElBQUk7SUFDakIsWUFBWSxFQUFFO1FBQ2IsSUFBSSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsSUFBSTtLQUN0QjtJQUNELGFBQWEsRUFBRSxJQUFJO0lBQ25CLHVCQUF1QixFQUFFLElBQUk7SUFDN0Isd0JBQXdCLEVBQUUsSUFBSTtJQUM5Qix3QkFBd0IsRUFBRSxJQUFJO0lBQzlCLGFBQWEsRUFBRSxDQUFDO0lBQ2hCLG9CQUFvQixFQUFFLENBQUM7SUFDdkIscUJBQXFCLEVBQUUsQ0FBQztJQUN4QixNQUFNLEVBQUUsSUFBSTtDQUNaLENBQUM7QUFNRixJQUFJLHVCQUF1QixHQUMzQjtJQUVDO1FBQ0MsTUFBTSxFQUFFLEVBQUU7UUFDVixJQUFJLEVBQUUsTUFBTTtRQUNaLGtCQUFrQixFQUFFLEtBQUs7UUFDekIsVUFBVSxFQUFFO1lBQ1gsS0FBSztZQUNMLEtBQUs7WUFDTCxLQUFLO1lBQ0wsS0FBSztTQUNM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Q0QsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO2lCQUNMO2FBQ0Q7WUFDRDtnQkFDQyxRQUFRLEVBQUUsVUFBVTtnQkFDcEIsSUFBSSxFQUFFLE9BQU87Z0JBQ2IsSUFBSSxFQUFFLE9BQU87Z0JBQ2IsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO29CQUNMLEtBQUs7aUJBQ0w7Z0JBQ0QsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO2lCQUNMO2FBQ0Q7WUFDRDtnQkFDQyxRQUFRLEVBQUUsVUFBVTtnQkFDcEIsSUFBSSxFQUFFLFNBQVM7Z0JBQ2YsSUFBSSxFQUFFLFNBQVM7Z0JBQ2YsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO29CQUNMLEtBQUs7aUJBQ0w7Z0JBQ0QsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO2lCQUNMO2FBQ0Q7WUFDRDtnQkFDQyxRQUFRLEVBQUUsVUFBVTtnQkFDcEIsSUFBSSxFQUFFLE9BQU87Z0JBQ2IsSUFBSSxFQUFFLE9BQU87Z0JBQ2IsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO29CQUNMLEtBQUs7aUJBQ0w7Z0JBQ0QsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO2lCQUNMO2FBQ0Q7WUFDRDtnQkFDQyxRQUFRLEVBQUUsVUFBVTtnQkFDcEIsSUFBSSxFQUFFLFNBQVM7Z0JBQ2YsSUFBSSxFQUFFLFNBQVM7Z0JBQ2YsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO29CQUNMLEtBQUs7aUJBQ0w7Z0JBQ0QsVUFBVSxFQUFFO29CQUNYLEtBQUs7b0JBQ0wsS0FBSztvQkFDTCxLQUFLO2lCQUNMO2FBQ0Q7U0FDRDtRQUNELFNBQVMsRUFBRSxFQUNWO0tBQ0Q7SUFFRDtRQUNDLE1BQU0sRUFBRSxFQUFFO1FBQ1YsSUFB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

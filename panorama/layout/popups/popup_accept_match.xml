@@ -29,7 +29,7 @@
 					<CSGOAvatarImage id="JsAvatarImage" class="avatar-image__icon" />
 					<Image id="JsAvatarTeamColor" class="avatar-teamcolor" src="s2r://panorama/images/icons/ui/teamcolor.vsvg" texturewidth="28" textureheight="-1" />
 				</Panel>
-				<Label class="map-draft-phase-button__avatar-name stratum-font" text="{s:teammate_name}" />
+				<Label class="map-draft-phase-button__avatar-name stratum-font" text="#friends_name_in_accept" html="true" />
 			</Panel>
 		</snippet>
 	</snippets>
@@ -88,6 +88,6 @@
 				</Panel>
 			</Panel>
 		</Panel>
-		<Frame id="id-premier-pick-ban" class="" src="s2r://panorama/layout/popups/popup_premier_pick_ban.vxml_c" />
+		<Frame id="id-premier-pick-ban" class="" src="s2r://panorama/layout/popups/popup_premier_pick_ban.vxml" />
 	</PopupCustomLayout>
 </root>

@@ -8,7 +8,7 @@
 	<scripts>
 		<include src="s2r://panorama/scripts/common/iteminfo.vjs_c" />
 		<include src="s2r://panorama/scripts/common/tint_spray_icon.vjs_c" />
-		<include src="s2r://panorama/scripts/mainmenu_store_tile_linked.vjs_c" />
+		<include src="s2r://panorama/scripts/mainmenu_store_tile_linked.vjs" />
 	</scripts>
 	<Panel class="store-panel__carousel__item" onload="MainMenuStoreTileLinked.Init();">
 		<Label id="ShortName" class="store-panel__carousel__item__header stratum-font" text="" />
